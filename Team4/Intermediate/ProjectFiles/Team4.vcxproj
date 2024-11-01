@@ -252,11 +252,16 @@
     <None Include="..\..\Team4.uproject"/>
     <None Include="..\..\Source\Team4.Target.cs"/>
     <None Include="..\..\Source\Team4Editor.Target.cs"/>
+    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
+    <ClCompile Include="..\..\Source\Team4\MyCharacter.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Team4\MyCharacter.h"/>
     <None Include="..\..\Source\Team4\Team4.Build.cs"/>
     <ClCompile Include="..\..\Source\Team4\Team4.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

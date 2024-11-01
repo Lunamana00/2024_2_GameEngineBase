@@ -11,6 +11,7 @@
     <None Include="..\..\Source\Team4Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -32,6 +33,12 @@
     <Filter Include="Source\Team4">
       <UniqueIdentifier>{2865D469-8018-3B5B-BE79-DF0D99C61652}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Team4\MyCharacter.cpp">
+      <Filter>Source\Team4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Team4\MyCharacter.h">
+      <Filter>Source\Team4</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Team4\Team4.Build.cs">
       <Filter>Source\Team4</Filter>
     </None>
