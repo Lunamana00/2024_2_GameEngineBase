@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Team4-0001.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\Team4Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h.obj"
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\Team4.init.gen.cpp.obj"
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\UDraggableCanvasWidget.gen.cpp.obj"
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\Team4.cpp.obj"
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\UDraggableCanvasWidget.cpp.obj"
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\Default.rc2.res"
+/OUT:"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\UnrealEditor-Team4-0001.lib"
