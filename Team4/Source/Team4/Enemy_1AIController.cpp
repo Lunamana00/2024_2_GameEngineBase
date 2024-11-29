@@ -9,9 +9,7 @@ void AEnemy_1AIController::BeginPlay() {
 
 	Super::BeginPlay();
 	APawn* PlayerPawn = UGameplayStatics::UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-
-
-	
+	GetBlackboardComponent()->SetValueAsObject(TEXT("Player"), GetPawn());
 
 	
 
@@ -22,6 +20,7 @@ void AEnemy_1AIController::Tick(float DeltaSeconds) {
 	Super::Tick(DeltaSeconds);
 	APawn* PlayerPawn = UGameplayStatics::UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 
+	
 	GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
 	GetBlackboardComponent()->SetValueAsVector(TEXT("ActorLocation"), GetPawn()->GetActorLocation());
 
