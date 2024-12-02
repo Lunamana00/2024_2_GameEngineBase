@@ -4,7 +4,10 @@
 #include "Components/ActorComponent.h"
 #include "CanvasComponent.generated.h"
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+// 전방 선언
+class ACanvasActor;
+
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class TEAM4_API UCanvasComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -12,26 +15,30 @@ class TEAM4_API UCanvasComponent : public UActorComponent
 public:    
 	UCanvasComponent();
 
+	UFUNCTION(BlueprintCallable)
+	void StartPlacingCanvas();
+
+	UFUNCTION(BlueprintCallable)
+	void StopPlacingCanvas();
+
+	UFUNCTION(BlueprintCallable)
+	void AdjustCanvasDistance(float Value);
+
 protected:
 	virtual void BeginPlay() override;
-
-public:    
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	// 캔버스 메쉬 컴포넌트
-	UPROPERTY(VisibleAnywhere, Category="Canvas")
-	UStaticMeshComponent* CanvasMesh;
-
-	// 위치 조정 모드 여부
-	bool bIsAdjustingPosition;
-
-	// 마우스 휠 입력 함수
-	void AdjustCanvasPosition(float AxisValue);
-
-	// 위치 조정 모드 토글 함수
-	void ToggleAdjustMode();
-
 private:
-	// 캔버스 생성 함수
-	void CreateCanvas();
+	// 캔버스 미리보기 메쉬
+	UPROPERTY()
+	class UStaticMeshComponent* CanvasPreviewMesh;
+
+	bool bIsPlacingCanvas;
+	float CanvasDistance;
+
+	APlayerController* PlayerController;
+
+	// 캔버스 액터 클래스
+	UPROPERTY(EditDefaultsOnly, Category = "Canvas")
+	TSubclassOf<ACanvasActor> CanvasActorClass;
 };
