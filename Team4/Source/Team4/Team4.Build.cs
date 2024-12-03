@@ -8,7 +8,7 @@ public class Team4 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "Renderer", "RenderCore", "RHI" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
