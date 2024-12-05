@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Team4ModuleRules
+build_property.ProjectDir = C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\BuildRulesProjects\Team4ModuleRules\
