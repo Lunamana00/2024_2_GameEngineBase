@@ -1,11 +1,8 @@
 #include "CanvasComponent.h"
-#include "CanvasActor.h" // 추가
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/Pawn.h"
-#include "Components/StaticMeshComponent.h"
-#include "Kismet/GameplayStatics.h"
-#include "Engine/StaticMesh.h"
 #include "Engine/World.h"
+#include "Kismet/GameplayStatics.h"
 
 UCanvasComponent::UCanvasComponent()
 {
@@ -14,37 +11,12 @@ UCanvasComponent::UCanvasComponent()
     bIsPlacingCanvas = false;
     CanvasDistance = 1000.0f; // 기본 거리
 
-    // 캔버스 미리보기 메쉬 컴포넌트 생성
-    CanvasPreviewMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CanvasPreviewMesh"));
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> CanvasMeshAsset(TEXT("/Engine/BasicShapes/Plane"));
-    if (CanvasMeshAsset.Succeeded())
-    {
-        CanvasPreviewMesh->SetStaticMesh(CanvasMeshAsset.Object);
-    }
-    CanvasPreviewMesh->SetVisibility(false);
-    CanvasPreviewMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision); // 충돌 비활성화
-
-    // **ConstructorHelpers::FClassFinder를 생성자로 이동**
-    static ConstructorHelpers::FClassFinder<ACanvasActor> CanvasActorBPClass(TEXT("/Game/Blueprints/BP_CanvasActor"));
-    if (CanvasActorBPClass.Succeeded())
-    {
-        CanvasActorClass = CanvasActorBPClass.Class;
-    }
+    PreviewActor = nullptr;
 }
-
 
 void UCanvasComponent::BeginPlay()
 {
     Super::BeginPlay();
-
-    // 부모 설정
-    if (AActor* Owner = GetOwner())
-    {
-        if (USceneComponent* RootComponent = Owner->GetRootComponent())
-        {
-            CanvasPreviewMesh->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
-        }
-    }
 
     // PlayerController 가져오기
     if (APawn* PawnOwner = Cast<APawn>(GetOwner()))
@@ -56,44 +28,65 @@ void UCanvasComponent::BeginPlay()
 void UCanvasComponent::StartPlacingCanvas()
 {
     bIsPlacingCanvas = true;
-    CanvasPreviewMesh->SetVisibility(true);
-}
 
-void UCanvasComponent::StopPlacingCanvas()
-{
-    bIsPlacingCanvas = false;
-    CanvasPreviewMesh->SetVisibility(false);
-
-    if (PlayerController)
+    // 기존 미리보기 액터 제거
+    if (PreviewActor)
     {
-        FVector WorldLocation;
-        FVector WorldDirection;
-        PlayerController->DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
+        UE_LOG(LogTemp, Log, TEXT("StartPlacingCanvas: Destroying existing Preview Actor."));
+        PreviewActor->Destroy();
+        PreviewActor = nullptr;
+    }
 
-        FVector SpawnLocation = WorldLocation + (WorldDirection * CanvasDistance);
+    // 미리보기 블루프린트 액터 새로 생성
+    if (PreviewBlueprintClass && GetWorld())
+    {
+        FActorSpawnParameters SpawnParams;
+        SpawnParams.Owner = GetOwner();
+        SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-        // 회전을 고정된 값으로 설정
-        FRotator SpawnRotation = FRotator(0.0f, 0.0f, 90.0f); // 예: 회전을 고정
+        PreviewActor = GetWorld()->SpawnActor<AActor>(PreviewBlueprintClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
 
-        if (GetWorld() && CanvasActorClass)
+        if (PreviewActor)
         {
-            FActorSpawnParameters SpawnParams;
-            SpawnParams.Owner = GetOwner();
-            SpawnParams.Instigator = GetOwner()->GetInstigator();
-
-            // 캔버스 액터 스폰
-            ACanvasActor* SpawnedCanvas = GetWorld()->SpawnActor<ACanvasActor>(CanvasActorClass, SpawnLocation, SpawnRotation, SpawnParams);
-            if (SpawnedCanvas)
-            {
-                // 필요에 따라 추가 설정
-            }
+            PreviewActor->SetActorEnableCollision(false); // 충돌 비활성화
+            PreviewActor->SetActorHiddenInGame(false);    // 표시
+            UE_LOG(LogTemp, Log, TEXT("Preview Actor successfully spawned."));
         }
         else
         {
-            UE_LOG(LogTemp, Warning, TEXT("CanvasActorClass가 설정되지 않았습니다."));
+            UE_LOG(LogTemp, Warning, TEXT("Failed to spawn Preview Actor."));
         }
     }
+    else
+    {
+        UE_LOG(LogTemp, Warning, TEXT("PreviewBlueprintClass is not set or GetWorld() is null."));
+    }
 }
+
+
+void UCanvasComponent::StopPlacingCanvas()
+{
+    if (!bIsPlacingCanvas || !PreviewActor)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("StopPlacingCanvas: Invalid state or PreviewActor is null."));
+        return;
+    }
+
+    // 배치 종료
+    bIsPlacingCanvas = false;
+
+    // 미리보기 액터의 위치와 회전 유지 (고정)
+    FVector FinalLocation = PreviewActor->GetActorLocation();
+    FRotator FinalRotation = PreviewActor->GetActorRotation();
+
+    // 미리보기 액터를 고정 상태로 전환
+    PreviewActor->SetActorEnableCollision(true); // 충돌 활성화 (필요 시)
+    PreviewActor->SetActorHiddenInGame(false);   // 표시 상태 유지
+
+    UE_LOG(LogTemp, Log, TEXT("Preview Actor fixed at location (%s) with rotation (%s)."),
+           *FinalLocation.ToString(), *FinalRotation.ToString());
+}
+
 
 
 void UCanvasComponent::AdjustCanvasDistance(float Value)
@@ -101,22 +94,31 @@ void UCanvasComponent::AdjustCanvasDistance(float Value)
     CanvasDistance += Value * 50.0f; // 휠 스크롤에 따른 거리 조절
 }
 
+
 void UCanvasComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-    if (bIsPlacingCanvas && PlayerController)
+    if (bIsPlacingCanvas && PlayerController && PreviewActor)
     {
         FVector WorldLocation;
         FVector WorldDirection;
         PlayerController->DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
 
         FVector NewLocation = WorldLocation + (WorldDirection * CanvasDistance);
-        CanvasPreviewMesh->SetWorldLocation(NewLocation);
+        PreviewActor->SetActorLocation(NewLocation);
 
-        // 캔버스의 회전을 고정된 값으로 설정
-        FRotator FixedRotation = FRotator(0.0f, 0.0f, 90.0f); // 예: 회전을 고정
-        CanvasPreviewMesh->SetWorldRotation(FixedRotation);
+        // 카메라를 향한 Z축 회전 설정
+        FVector CameraLocation;
+        FRotator CameraRotation;
+        PlayerController->GetPlayerViewPoint(CameraLocation, CameraRotation);
+
+        // LookAt 방식으로 Z축(Yaw) 회전만 계산
+        FVector ToCameraDirection = (CameraLocation - NewLocation).GetSafeNormal();
+        FRotator LookAtRotation = ToCameraDirection.Rotation();
+        FRotator FinalRotation = FRotator(-90.0f, LookAtRotation.Yaw, 0.0f); // Z축(Yaw)만 유지, Pitch와 Roll 고정
+
+        // 미리보기 액터 회전 설정
+        PreviewActor->SetActorRotation(FinalRotation);
     }
 }
-

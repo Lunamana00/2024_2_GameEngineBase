@@ -117,7 +117,7 @@ void UDrawingComponent::UpdateDrawing()
                     if (bGotUV)
                     {
                         UE_LOG(LogTemp, Log, TEXT("UpdateDrawing: UV = (%f, %f)"), UV.X, UV.Y);
-                        CurrentCanvasActor->DrawAtUV(UV);
+                        /*CurrentCanvasActor->DrawAtWorldLocation(UV);*/
                         UE_LOG(LogTemp, Log, TEXT("UpdateDrawing: Called DrawAtUV"));
                     }
                     else

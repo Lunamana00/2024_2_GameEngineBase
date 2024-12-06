@@ -3,8 +3,9 @@ from tensorflow.keras.applications import MobileNet
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import GlobalAveragePooling2D, Dense
 from tensorflow.keras.optimizers import Adam
+import tensorflow as tf
 import preprocessing  # 데이터 전처리 코드 가져오기
-import zlib
+
 def build_model():
     # MobileNet 모델 정의
     base_model = MobileNet(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
@@ -42,6 +43,16 @@ def train_model():
 
     # 모델 저장
     model.save('mobilenet_classification_model.h5')
+
+    # TensorFlow Lite 모델로 변환
+    converter = tf.lite.TFLiteConverter.from_keras_model(model)
+    tflite_model = converter.convert()
+
+    # TensorFlow Lite 모델 저장
+    with open('mobilenet_classification_model.tflite', 'wb') as f:
+        f.write(tflite_model)
+
+    print("TFLite 모델 저장 완료: mobilenet_classification_model.tflite")
 
 if __name__ == "__main__":
     train_model()

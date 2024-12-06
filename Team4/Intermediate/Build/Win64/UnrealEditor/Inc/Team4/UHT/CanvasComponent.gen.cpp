@@ -11,9 +11,8 @@ void EmptyLinkFunctionForGeneratedCodeCanvasComponent() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-TEAM4_API UClass* Z_Construct_UClass_ACanvasActor_NoRegister();
 TEAM4_API UClass* Z_Construct_UClass_UCanvasComponent();
 TEAM4_API UClass* Z_Construct_UClass_UCanvasComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Team4();
@@ -144,28 +143,22 @@ struct Z_Construct_UClass_UCanvasComponent_Statics
 		{ "IncludePath", "CanvasComponent.h" },
 		{ "ModuleRelativePath", "CanvasComponent.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanvasPreviewMesh_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PreviewBlueprintClass_MetaData[] = {
+		{ "Category", "Canvas" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xec\xba\x94\xeb\xb2\x84\xec\x8a\xa4 \xeb\xaf\xb8\xeb\xa6\xac\xeb\xb3\xb4\xea\xb8\xb0 \xeb\xa9\x94\xec\x89\xac\n" },
+		{ "Comment", "// \xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8 \xed\x81\xb4\xeb\x9e\x98\xec\x8a\xa4\xeb\xa5\xbc \xec\x84\xa4\xec\xa0\x95\n" },
 #endif
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "CanvasComponent.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xec\xba\x94\xeb\xb2\x84\xec\x8a\xa4 \xeb\xaf\xb8\xeb\xa6\xac\xeb\xb3\xb4\xea\xb8\xb0 \xeb\xa9\x94\xec\x89\xac" },
+		{ "ToolTip", "\xeb\xb8\x94\xeb\xa3\xa8\xed\x94\x84\xeb\xa6\xb0\xed\x8a\xb8 \xed\x81\xb4\xeb\x9e\x98\xec\x8a\xa4\xeb\xa5\xbc \xec\x84\xa4\xec\xa0\x95" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanvasActorClass_MetaData[] = {
 		{ "Category", "Canvas" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// \xec\xba\x94\xeb\xb2\x84\xec\x8a\xa4 \xec\x95\xa1\xed\x84\xb0 \xed\x81\xb4\xeb\x9e\x98\xec\x8a\xa4\n" },
-#endif
 		{ "ModuleRelativePath", "CanvasComponent.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "\xec\xba\x94\xeb\xb2\x84\xec\x8a\xa4 \xec\x95\xa1\xed\x84\xb0 \xed\x81\xb4\xeb\x9e\x98\xec\x8a\xa4" },
-#endif
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CanvasPreviewMesh;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_PreviewBlueprintClass;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_CanvasActorClass;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -180,10 +173,10 @@ struct Z_Construct_UClass_UCanvasComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCanvasComponent_Statics::NewProp_CanvasPreviewMesh = { "CanvasPreviewMesh", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCanvasComponent, CanvasPreviewMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanvasPreviewMesh_MetaData), NewProp_CanvasPreviewMesh_MetaData) };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCanvasComponent_Statics::NewProp_CanvasActorClass = { "CanvasActorClass", nullptr, (EPropertyFlags)0x0044000000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCanvasComponent, CanvasActorClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ACanvasActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanvasActorClass_MetaData), NewProp_CanvasActorClass_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCanvasComponent_Statics::NewProp_PreviewBlueprintClass = { "PreviewBlueprintClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCanvasComponent, PreviewBlueprintClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PreviewBlueprintClass_MetaData), NewProp_PreviewBlueprintClass_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCanvasComponent_Statics::NewProp_CanvasActorClass = { "CanvasActorClass", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCanvasComponent, CanvasActorClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanvasActorClass_MetaData), NewProp_CanvasActorClass_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCanvasComponent_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCanvasComponent_Statics::NewProp_CanvasPreviewMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCanvasComponent_Statics::NewProp_PreviewBlueprintClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCanvasComponent_Statics::NewProp_CanvasActorClass,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCanvasComponent_Statics::PropPointers) < 2048);
@@ -227,10 +220,10 @@ UCanvasComponent::~UCanvasComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCanvasComponent, UCanvasComponent::StaticClass, TEXT("UCanvasComponent"), &Z_Registration_Info_UClass_UCanvasComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCanvasComponent), 1201379840U) },
+		{ Z_Construct_UClass_UCanvasComponent, UCanvasComponent::StaticClass, TEXT("UCanvasComponent"), &Z_Registration_Info_UClass_UCanvasComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCanvasComponent), 3136452295U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_3889534281(TEXT("/Script/Team4"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_2538416563(TEXT("/Script/Team4"),
 	Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
