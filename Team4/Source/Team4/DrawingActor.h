@@ -36,8 +36,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Drawing")
 	void DrawAtLocation(const FVector& HitLocation);
 
+	// 새로운 전역 변수 추가
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Drawing")
+	FString PredictedClass;
+
+	
 	UFUNCTION(BlueprintCallable, Category = "Drawing")
 	void SaveDrawing();
-
+	bool ExecutePrediction(const FString& ImagePath, FString& OutClass);
 	void BeginDestroy() override;
 };

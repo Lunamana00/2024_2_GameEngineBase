@@ -143,10 +143,21 @@ struct Z_Construct_UClass_ADrawingActor_Statics
 		{ "Category", "DrawingActor" },
 		{ "ModuleRelativePath", "DrawingActor.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PredictedClass_MetaData[] = {
+		{ "Category", "Drawing" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xec\x83\x88\xeb\xa1\x9c\xec\x9a\xb4 \xec\xa0\x84\xec\x97\xad \xeb\xb3\x80\xec\x88\x98 \xec\xb6\x94\xea\xb0\x80\n" },
+#endif
+		{ "ModuleRelativePath", "DrawingActor.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xec\x83\x88\xeb\xa1\x9c\xec\x9a\xb4 \xec\xa0\x84\xec\x97\xad \xeb\xb3\x80\xec\x88\x98 \xec\xb6\x94\xea\xb0\x80" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DynamicMaterial;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RenderTarget;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_PredictedClass;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -162,10 +173,12 @@ struct Z_Construct_UClass_ADrawingActor_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADrawingActor_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADrawingActor, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeshComponent_MetaData), NewProp_MeshComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADrawingActor_Statics::NewProp_DynamicMaterial = { "DynamicMaterial", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADrawingActor, DynamicMaterial), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DynamicMaterial_MetaData), NewProp_DynamicMaterial_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADrawingActor_Statics::NewProp_RenderTarget = { "RenderTarget", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADrawingActor, RenderTarget), Z_Construct_UClass_UTextureRenderTarget2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RenderTarget_MetaData), NewProp_RenderTarget_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_ADrawingActor_Statics::NewProp_PredictedClass = { "PredictedClass", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADrawingActor, PredictedClass), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PredictedClass_MetaData), NewProp_PredictedClass_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADrawingActor_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADrawingActor_Statics::NewProp_MeshComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADrawingActor_Statics::NewProp_DynamicMaterial,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADrawingActor_Statics::NewProp_RenderTarget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADrawingActor_Statics::NewProp_PredictedClass,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADrawingActor_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ADrawingActor_Statics::DependentSingletons[])() = {
@@ -208,10 +221,10 @@ ADrawingActor::~ADrawingActor() {}
 struct Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADrawingActor, ADrawingActor::StaticClass, TEXT("ADrawingActor"), &Z_Registration_Info_UClass_ADrawingActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADrawingActor), 2030349891U) },
+		{ Z_Construct_UClass_ADrawingActor, ADrawingActor::StaticClass, TEXT("ADrawingActor"), &Z_Registration_Info_UClass_ADrawingActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADrawingActor), 712523245U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingActor_h_2342724216(TEXT("/Script/Team4"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingActor_h_91924495(TEXT("/Script/Team4"),
 	Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
