@@ -105,6 +105,12 @@
     <ClInclude Include="..\..\Source\Team4\CPP_Prjectile.h">
       <Filter>Source\Team4</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Team4\CPP_Projectile.cpp">
+      <Filter>Source\Team4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Team4\CPP_Projectile.h">
+      <Filter>Source\Team4</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Team4\CPP_TestCharacter.cpp">
       <Filter>Source\Team4</Filter>
     </ClCompile>

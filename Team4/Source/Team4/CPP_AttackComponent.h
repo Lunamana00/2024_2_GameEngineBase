@@ -15,19 +15,13 @@ DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(
 	UCPP_AttackComponent, OnUpdatedTargetDelegate,
 	AActor*, NewTargetActorRef
 );
-
 struct FInputActionValue;
 class ACPP_TestCharacter;
 class UCPP_AttributeComponent;
 class UCPP_AttributeForPlayerComponent;
 class ACPP_MeleeWeapon;
 class ACPP_EnemyTest;
-
-
-//class AFractTestEnemy;
-//class AFractProjectile;
-//class AFractPlayerWeapon;
-//class UFractPlayerAttributeComponent;
+class ACPP_Projectile;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TEAM4_API UCPP_AttackComponent : public UActorComponent
@@ -75,8 +69,8 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Combat")
 	void ResetAttackState();
 
-	//UPROPERTY(EditAnywhere)
-	//TSubclassOf<AFractProjectile> ProjectileClass;
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<ACPP_Projectile> ProjectileClass;
 
 	FVector HitLocation;
 
@@ -100,14 +94,16 @@ protected:
 	
 	void RotateToInputDirection(float DeltaTime);
 
+
+
 	UPROPERTY(EditDefaultsOnly, Category = "Combat")
 	bool bHasTarget = false;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat")
 	bool bCanRotateToInputDirection = false;
 
-	/*UFUNCTION(BlueprintCallable, Category = "Combat")
-	void SpawnProjectile();*/
+	UFUNCTION(BlueprintCallable, Category = "Combat")
+	void SpawnProjectile();
 
 
 	bool bIsRangedAttacking = false;
@@ -123,35 +119,8 @@ protected:
 
 	FVector DefaultCameraLocation;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Combat|UI")
+	UPROPERTY(EditDefaultsOnly, Category = "CombatUI")
 	UUserWidget* CrosshairWidget;
-
-	//UFUNCTION(BlueprintCallable)
-	//void FireGroundSkillEnd();
-	//UFUNCTION(BlueprintCallable)
-	//void ActivateFireGroundSkill();
-	//UFUNCTION(BlueprintCallable)
-
-	//void DeactivateFireGroundSkill();
-
-	//void ApplyFireGroundSkillDamage();
-	//FTimerHandle FireGroundSkillDamageTimerHandle;
-
-	//UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	//UParticleSystemComponent* FireGroundSkillParticleSystemComponent;
-
-	//UPROPERTY(EditDefaultsOnly, Category = "Combat|UI")
-	//UUserWidget* CrosshairWidget;
-
-	//UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	//bool bIsGroundSkillOnCooldown = false;
-	//UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	//bool bIsAerialSkillOnCooldown = false;
-
-	//UFUNCTION()
-	//void OnGroundSkillCooldownEnd();
-	//UFUNCTION()
-	//void OnAerialSkillCooldownEnd();
 
 public:	
 

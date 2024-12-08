@@ -11,10 +11,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCPP_AttackComponent() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+TEAM4_API UClass* Z_Construct_UClass_ACPP_Projectile_NoRegister();
 TEAM4_API UClass* Z_Construct_UClass_ACPP_TestCharacter_NoRegister();
 TEAM4_API UClass* Z_Construct_UClass_UCPP_AttackComponent();
 TEAM4_API UClass* Z_Construct_UClass_UCPP_AttackComponent_NoRegister();
@@ -222,6 +224,36 @@ DEFINE_FUNCTION(UCPP_AttackComponent::execSetCurrentAttackState)
 }
 // End Class UCPP_AttackComponent Function SetCurrentAttackState
 
+// Begin Class UCPP_AttackComponent Function SpawnProjectile
+struct Z_Construct_UFunction_UCPP_AttackComponent_SpawnProjectile_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Combat" },
+		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCPP_AttackComponent_SpawnProjectile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCPP_AttackComponent, nullptr, "SpawnProjectile", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCPP_AttackComponent_SpawnProjectile_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCPP_AttackComponent_SpawnProjectile_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UCPP_AttackComponent_SpawnProjectile()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCPP_AttackComponent_SpawnProjectile_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCPP_AttackComponent::execSpawnProjectile)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SpawnProjectile();
+	P_NATIVE_END;
+}
+// End Class UCPP_AttackComponent Function SpawnProjectile
+
 // Begin Class UCPP_AttackComponent
 void UCPP_AttackComponent::StaticRegisterNativesUCPP_AttackComponent()
 {
@@ -231,6 +263,7 @@ void UCPP_AttackComponent::StaticRegisterNativesUCPP_AttackComponent()
 		{ "ResetAttackState", &UCPP_AttackComponent::execResetAttackState },
 		{ "ResetCombo", &UCPP_AttackComponent::execResetCombo },
 		{ "SetCurrentAttackState", &UCPP_AttackComponent::execSetCurrentAttackState },
+		{ "SpawnProjectile", &UCPP_AttackComponent::execSpawnProjectile },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -245,14 +278,8 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//class AFractTestEnemy;\n//class AFractProjectile;\n//class AFractPlayerWeapon;\n//class UFractPlayerAttributeComponent;\n" },
-#endif
 		{ "IncludePath", "CPP_AttackComponent.h" },
 		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "class AFractTestEnemy;\nclass AFractProjectile;\nclass AFractPlayerWeapon;\nclass UFractPlayerAttributeComponent;" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Character_MetaData[] = {
 		{ "Category", "Player" },
@@ -287,6 +314,10 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "UPROPERTY(EditDefaultsOnly, Category = \"Combat|Skills\")\nTArray<FFractSkill> Skills;" },
 #endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[] = {
+		{ "Category", "CPP_AttackComponent" },
+		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AutoTargetRange_MetaData[] = {
 		{ "Category", "Combat" },
@@ -324,7 +355,7 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CrosshairWidget_MetaData[] = {
-		{ "Category", "Combat|UI" },
+		{ "Category", "CombatUI" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
 	};
@@ -358,6 +389,7 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp_RangedAttacks_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_RangedAttacks;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ComboCount;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_AutoTargetRange;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_AutoTargetAngle;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_AttackDirection;
@@ -385,6 +417,7 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 		{ &Z_Construct_UFunction_UCPP_AttackComponent_ResetAttackState, "ResetAttackState" }, // 3687323576
 		{ &Z_Construct_UFunction_UCPP_AttackComponent_ResetCombo, "ResetCombo" }, // 3254253862
 		{ &Z_Construct_UFunction_UCPP_AttackComponent_SetCurrentAttackState, "SetCurrentAttackState" }, // 1636456581
+		{ &Z_Construct_UFunction_UCPP_AttackComponent_SpawnProjectile, "SpawnProjectile" }, // 1774704543
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -407,6 +440,7 @@ const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCPP_AttackComp
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks_Inner = { "RangedAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FAttack, METADATA_PARAMS(0, nullptr) }; // 3630077851
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks = { "RangedAttacks", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, RangedAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RangedAttacks_MetaData), NewProp_RangedAttacks_MetaData) }; // 3630077851
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_ComboCount = { "ComboCount", nullptr, (EPropertyFlags)0x0020080000030001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, ComboCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ComboCount_MetaData), NewProp_ComboCount_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, ProjectileClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ACPP_Projectile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileClass_MetaData), NewProp_ProjectileClass_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AutoTargetRange = { "AutoTargetRange", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, AutoTargetRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AutoTargetRange_MetaData), NewProp_AutoTargetRange_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AutoTargetAngle = { "AutoTargetAngle", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, AutoTargetAngle), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AutoTargetAngle_MetaData), NewProp_AutoTargetAngle_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AttackDirection = { "AttackDirection", nullptr, (EPropertyFlags)0x0020080000030001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, AttackDirection), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackDirection_MetaData), NewProp_AttackDirection_MetaData) };
@@ -454,6 +488,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCPP_Atta
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_ComboCount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_ProjectileClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AutoTargetRange,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AutoTargetAngle,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AttackDirection,
@@ -511,10 +546,10 @@ UCPP_AttackComponent::~UCPP_AttackComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCPP_AttackComponent, UCPP_AttackComponent::StaticClass, TEXT("UCPP_AttackComponent"), &Z_Registration_Info_UClass_UCPP_AttackComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCPP_AttackComponent), 2511123977U) },
+		{ Z_Construct_UClass_UCPP_AttackComponent, UCPP_AttackComponent::StaticClass, TEXT("UCPP_AttackComponent"), &Z_Registration_Info_UClass_UCPP_AttackComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCPP_AttackComponent), 3529944961U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_4039137773(TEXT("/Script/Team4"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_1406857079(TEXT("/Script/Team4"),
 	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

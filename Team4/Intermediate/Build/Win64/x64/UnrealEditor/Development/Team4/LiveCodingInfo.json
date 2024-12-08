@@ -5,7 +5,6 @@
 			"BTT_Attack_Enemy_1AI.gen.cpp.obj",
 			"CanvasActor.gen.cpp.obj",
 			"CanvasComponent.gen.cpp.obj",
-			"CPP_AttackComponent.gen.cpp.obj",
 			"CPP_AttributeComponent.gen.cpp.obj",
 			"CPP_AttributeForPlayerComponent.gen.cpp.obj",
 			"CPP_Datatype.gen.cpp.obj",
@@ -17,11 +16,9 @@
 			"CPP_TestCharacter.gen.cpp.obj",
 			"DrawingComponent.gen.cpp.obj",
 			"Enemy_1AIController.gen.cpp.obj",
-			"Team4.init.gen.cpp.obj",
 			"BTT_Attack_Enemy_1AI.cpp.obj",
 			"CanvasActor.cpp.obj",
 			"CanvasComponent.cpp.obj",
-			"CPP_AttackComponent.cpp.obj",
 			"CPP_AttributeComponent.cpp.obj",
 			"CPP_AttributeForPlayerComponent.cpp.obj",
 			"CPP_Datatype.cpp.obj",
@@ -30,10 +27,15 @@
 			"CPP_HitInterface.cpp.obj",
 			"CPP_MeleeWeapon.cpp.obj",
 			"CPP_Prjectile.cpp.obj",
-			"CPP_TestCharacter.cpp.obj",
 			"DrawingComponent.cpp.obj",
 			"Enemy_1AIController.cpp.obj",
-			"Team4.cpp.obj"
+			"Team4.cpp.obj",
+			"CPP_AttackComponent.gen.cpp.obj",
+			"CPP_Projectile.gen.cpp.obj",
+			"Team4.init.gen.cpp.obj",
+			"CPP_AttackComponent.cpp.obj",
+			"CPP_Projectile.cpp.obj",
+			"CPP_TestCharacter.cpp.obj"
 		]
 	}
 }

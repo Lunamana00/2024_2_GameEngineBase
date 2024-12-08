@@ -94,10 +94,10 @@ void ACPP_TestCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (Attribute->GetHealthPercent() < 1.f && Attribute->GetHealthPercent() > 0.f)
+	/*if (Attribute->GetHealthPercent() < 1.f && Attribute->GetHealthPercent() > 0.f)
 	{
 		Attribute->HealHealth(RestoreHealthPerSecond * DeltaTime);
-	}
+	}*/
 
 	if (!Attribute->IsAlive() && !bIsDying)
 	{

@@ -189,7 +189,9 @@
             "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_enemyinterface.generated.h",
             "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_enemytest.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\cpp_projectile.h",
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_projectile.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

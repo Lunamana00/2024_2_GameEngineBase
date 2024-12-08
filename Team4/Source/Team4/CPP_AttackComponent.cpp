@@ -19,7 +19,7 @@
 #include "CPP_MeleeWeapon.h"
 #include "CPP_EnemyTest.h"
 #include "InputActionValue.h"
-//#include "Weapons/FractProjectile.h"
+#include "CPP_Projectile.h"
 
 
 #define TRACE_LENGTH 80000.f
@@ -240,28 +240,28 @@ void UCPP_AttackComponent::RotateToInputDirection(float DeltaTime)
 	Character->SetActorRotation(InterpRotation);
 }
 
-//void UCPP_AttackComponent::SpawnProjectile()
-//{
-//	FVector MuzzleLocation = Character->GetWeapon()->GetWeaponMuzzle()->GetComponentLocation();
-//
-//	FVector AimDirection = HitLocation - MuzzleLocation;
-//	AimDirection = AimDirection.GetSafeNormal();
-//	FRotator SpawnRotation = AimDirection.Rotation();
-//
-//	if (ProjectileClass && GetWorld())
-//	{
-//		FActorSpawnParameters SpawnParams;
-//		SpawnParams.Owner = GetOwner();
-//		SpawnParams.Instigator = Cast<APawn>(GetOwner());
-//
-//		GetWorld()->SpawnActor<AFractProjectile>(
-//			ProjectileClass,
-//			MuzzleLocation,
-//			SpawnRotation,
-//			SpawnParams
-//		);
-//	}
-//}
+void UCPP_AttackComponent::SpawnProjectile()
+{
+	FVector MuzzleLocation = Character->GetWeapon()->GetWeaponMuzzle()->GetComponentLocation();
+
+	FVector AimDirection = HitLocation - MuzzleLocation;
+	AimDirection = AimDirection.GetSafeNormal();
+	FRotator SpawnRotation = AimDirection.Rotation();
+
+	if (ProjectileClass && GetWorld())
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Owner = GetOwner();
+		SpawnParams.Instigator = Cast<APawn>(GetOwner());
+
+		GetWorld()->SpawnActor<ACPP_Projectile>(
+			ProjectileClass,
+			MuzzleLocation,
+			SpawnRotation,
+			SpawnParams
+		);
+	}
+}
 
 void UCPP_AttackComponent::TraceUnderCrosshairs(FHitResult& TraceHitResult)
 {
