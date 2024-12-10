@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\kth00\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\aic_enemy_red.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\kth00\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\team4editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "c:\\users\\kth00\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\team4\\definitions.team4.h",
+            "c:\\users\\kth00\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\aic_enemy_red.h",
+            "c:\\users\\kth00\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\aic_boss.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\aicontroller.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\aitypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\ai\\navigationsystemconfig.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navigationsystemconfig.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\aitypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptionlistenerinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\aiperceptionlistenerinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\visuallogger\\visualloggerdebugsnapshotinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\visualloggerdebugsnapshotinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\aicontroller.generated.h",
+            "c:\\users\\kth00\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\aic_boss.generated.h",
+            "c:\\users\\kth00\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\aic_enemy_red.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
