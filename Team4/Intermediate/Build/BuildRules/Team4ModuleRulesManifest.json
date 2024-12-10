@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\kth00\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Source\\Team4\\Team4.Build.cs",
-		"C:\\Users\\kth00\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Source\\Team4.Target.cs",
-		"C:\\Users\\kth00\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Source\\Team4Editor.Target.cs"
+		"C:\\Users\\User\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Source\\Team4\\Team4.Build.cs",
+		"C:\\Users\\User\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Source\\Team4.Target.cs",
+		"C:\\Users\\User\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Source\\Team4Editor.Target.cs"
 	],
 	"EngineVersion": "5.4.4"
 }
