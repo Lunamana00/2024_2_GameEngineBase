@@ -217,14 +217,14 @@ UCanvasComponent::~UCanvasComponent() {}
 // End Class UCanvasComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Team4_Source_Team4_CanvasComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UCanvasComponent, UCanvasComponent::StaticClass, TEXT("UCanvasComponent"), &Z_Registration_Info_UClass_UCanvasComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCanvasComponent), 3136452295U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_2538416563(TEXT("/Script/Team4"),
-	Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Team4_Source_Team4_CanvasComponent_h_2538416563(TEXT("/Script/Team4"),
+	Z_CompiledInDeferFile_FID_Team4_Source_Team4_CanvasComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Team4_Source_Team4_CanvasComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

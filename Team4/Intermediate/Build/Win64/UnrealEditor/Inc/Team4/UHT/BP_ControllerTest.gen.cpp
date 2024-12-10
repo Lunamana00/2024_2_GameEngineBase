@@ -81,14 +81,14 @@ ABP_ControllerTest::~ABP_ControllerTest() {}
 // End Class ABP_ControllerTest
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BP_ControllerTest_h_Statics
+struct Z_CompiledInDeferFile_FID_Team4_Source_Team4_BP_ControllerTest_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ABP_ControllerTest, ABP_ControllerTest::StaticClass, TEXT("ABP_ControllerTest"), &Z_Registration_Info_UClass_ABP_ControllerTest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABP_ControllerTest), 1266056581U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BP_ControllerTest_h_3981060605(TEXT("/Script/Team4"),
-	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BP_ControllerTest_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BP_ControllerTest_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Team4_Source_Team4_BP_ControllerTest_h_3981060605(TEXT("/Script/Team4"),
+	Z_CompiledInDeferFile_FID_Team4_Source_Team4_BP_ControllerTest_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Team4_Source_Team4_BP_ControllerTest_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

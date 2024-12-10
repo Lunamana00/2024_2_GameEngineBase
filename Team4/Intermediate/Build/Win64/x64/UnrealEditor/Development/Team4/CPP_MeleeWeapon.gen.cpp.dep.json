@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_meleeweapon.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\x64\\team4editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\team4\\definitions.team4.h",
+            "f:\\ue5\\gameengine\\team4\\source\\team4\\cpp_meleeweapon.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
+            "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_meleeweapon.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

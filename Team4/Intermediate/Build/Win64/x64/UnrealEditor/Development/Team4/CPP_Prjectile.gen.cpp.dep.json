@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_prjectile.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\x64\\team4editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\team4\\definitions.team4.h",
+            "f:\\ue5\\gameengine\\team4\\source\\team4\\cpp_prjectile.h",
+            "f:\\ue5\\gameengine\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_prjectile.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
