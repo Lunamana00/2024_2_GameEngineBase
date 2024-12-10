@@ -2959,22 +2959,6 @@
           "bin/placeholder/EpicGames.UHT.dll": {}
         }
       },
-      "MarketplaceRules/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "EpicGames.Build": "1.0.0",
-          "UE5ProgramRules": "1.0.0",
-          "UE5Rules": "1.0.0",
-          "UnrealBuildTool": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/MarketplaceRules.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MarketplaceRules.dll": {}
-        }
-      },
       "UE5ProgramRules/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -8531,11 +8515,6 @@
       "path": "../../../../../../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj",
       "msbuildProject": "../../../../../../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj"
     },
-    "MarketplaceRules/1.0.0": {
-      "type": "project",
-      "path": "../../../../../../../../../../Program Files/Epic Games/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj",
-      "msbuildProject": "../../../../../../../../../../Program Files/Epic Games/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj"
-    },
     "UE5ProgramRules/1.0.0": {
       "type": "project",
       "path": "../../../../../../../../../../Program Files/Epic Games/UE_5.4/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj",
@@ -8555,31 +8534,25 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "EpicGames.Build >= 1.0.0",
-      "MarketplaceRules >= 1.0.0",
       "UE5ProgramRules >= 1.0.0",
       "UE5Rules >= 1.0.0",
       "UnrealBuildTool >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kth00\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kth00\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Intermediate\\Build\\BuildRulesProjects\\Team4ModuleRules\\Team4ModuleRules.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Intermediate\\Build\\BuildRulesProjects\\Team4ModuleRules\\Team4ModuleRules.csproj",
       "projectName": "Team4ModuleRules",
-      "projectPath": "C:\\Users\\kth00\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Intermediate\\Build\\BuildRulesProjects\\Team4ModuleRules\\Team4ModuleRules.csproj",
-      "packagesPath": "C:\\Users\\kth00\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kth00\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Intermediate\\Build\\BuildRulesProjects\\Team4ModuleRules\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Intermediate\\Build\\BuildRulesProjects\\Team4ModuleRules\\Team4ModuleRules.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\2024_2_GameEngineBase\\Team4\\Intermediate\\Build\\BuildRulesProjects\\Team4ModuleRules\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kth00\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8593,9 +8566,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj": {
-              "projectPath": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj"
-            },
             "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj": {
               "projectPath": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj"
             },
@@ -8636,12 +8606,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
