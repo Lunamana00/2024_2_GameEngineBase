@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAM4_CanvasActor_generated_h
 
-#define FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACanvasActor(); \
 	friend struct Z_Construct_UClass_ACanvasActor_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ACanvasActor)
 
 
-#define FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACanvasActor(ACanvasActor&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ACanvasActor();
 
 
-#define FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_7_PROLOG
-#define FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_GENERATED_BODY \
+#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_7_PROLOG
+#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_INCLASS_NO_PURE_DECLS \
-	FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAM4_API UClass* StaticClass<class ACanvasActor>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_kth00_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h
+#define CURRENT_FILE_ID FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CanvasActor_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
