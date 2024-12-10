@@ -74,12 +74,6 @@ struct FAttack
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     EAttackType AttackType = EAttackType::Normal;
 
-    //UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    //EElementType Element = EElementType::None;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    bool bIsFlyingAttack = false;
-
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
     TArray<UAnimMontage*> AttackMontages;
 

@@ -139,7 +139,6 @@ void ACPP_MeleeWeapon::Tick(float DeltaTime)
 			TargetsToIgnore.AddUnique(TargetEnemy);
 		};
 
-
 	}
 
 

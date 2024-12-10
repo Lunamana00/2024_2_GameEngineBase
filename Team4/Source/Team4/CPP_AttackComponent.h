@@ -132,8 +132,6 @@ public:
 	void AimDownSight(const FInputActionValue& Value);
 	
 	FORCEINLINE FAttack* GetNormalAttack();
-	
-	//FORCEINLINE FFractSkill* GetSkill();
 
 	FORCEINLINE ACharacter* GetCurrentTarget() const { return CurrentTarget; }
 	UFUNCTION(BlueprintCallable)
@@ -143,11 +141,7 @@ public:
 	
 	void SetCurrentAttackState(const EAttackState& InAttackState) { AttackState = InAttackState; }
 	
-	//void CancelFireGroundSkill();
-	
 	void UseNormalAttack();
-	
-	//void UseSkill();
 	
 	void StartLockOn();
 	
@@ -161,20 +155,5 @@ public:
 	bool bHasLockOnTarget = false;
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;
-	UPROPERTY()
-	bool bIsCancellingSkill = false;
-
-	//float GetCurrentSkillCooldown();
-	//
-	//UPROPERTY()
-	//UAudioComponent* FireGroundSkillAudioComponent;
-	//
-	//UPROPERTY(EditDefaultsOnly, Category = "Combat")
-	//USoundBase* FireGroundSkillSound;
-
-	//UFUNCTION(BlueprintCallable)
-	//void PlayFireGroundSkillSound();
-	//UFUNCTION(BlueprintCallable)
-	//void StopFireGroundSkillSound();
 
 };

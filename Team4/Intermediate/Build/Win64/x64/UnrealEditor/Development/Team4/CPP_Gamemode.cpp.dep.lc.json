@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\cpp_gamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\team4editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\team4\\definitions.team4.h",
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\cpp_gamemode.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\cpp_gamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

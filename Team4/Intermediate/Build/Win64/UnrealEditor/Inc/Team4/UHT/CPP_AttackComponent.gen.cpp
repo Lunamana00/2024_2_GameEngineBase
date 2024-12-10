@@ -373,9 +373,6 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 		{ "Category", "Combat" },
 		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsCancellingSkill_MetaData[] = {
-		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
-	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Character;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentRange_Underlying;
@@ -408,8 +405,6 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bHasLockOnTarget;
 	static void NewProp_bIsAiming_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsAiming;
-	static void NewProp_bIsCancellingSkill_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsCancellingSkill;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -435,10 +430,10 @@ void Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsFlying_SetBit(v
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsFlying = { "bIsFlying", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UCPP_AttackComponent), &Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsFlying_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsFlying_MetaData), NewProp_bIsFlying_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AttackState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AttackState = { "AttackState", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, AttackState), Z_Construct_UEnum_Team4_EAttackState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackState_MetaData), NewProp_AttackState_MetaData) }; // 1787572842
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_MeleeAttacks_Inner = { "MeleeAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FAttack, METADATA_PARAMS(0, nullptr) }; // 3630077851
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_MeleeAttacks = { "MeleeAttacks", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, MeleeAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeleeAttacks_MetaData), NewProp_MeleeAttacks_MetaData) }; // 3630077851
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks_Inner = { "RangedAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FAttack, METADATA_PARAMS(0, nullptr) }; // 3630077851
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks = { "RangedAttacks", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, RangedAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RangedAttacks_MetaData), NewProp_RangedAttacks_MetaData) }; // 3630077851
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_MeleeAttacks_Inner = { "MeleeAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FAttack, METADATA_PARAMS(0, nullptr) }; // 4042316160
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_MeleeAttacks = { "MeleeAttacks", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, MeleeAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeleeAttacks_MetaData), NewProp_MeleeAttacks_MetaData) }; // 4042316160
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks_Inner = { "RangedAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FAttack, METADATA_PARAMS(0, nullptr) }; // 4042316160
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_RangedAttacks = { "RangedAttacks", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, RangedAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RangedAttacks_MetaData), NewProp_RangedAttacks_MetaData) }; // 4042316160
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_ComboCount = { "ComboCount", nullptr, (EPropertyFlags)0x0020080000030001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, ComboCount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ComboCount_MetaData), NewProp_ComboCount_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, ProjectileClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ACPP_Projectile_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileClass_MetaData), NewProp_ProjectileClass_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_AutoTargetRange = { "AutoTargetRange", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCPP_AttackComponent, AutoTargetRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AutoTargetRange_MetaData), NewProp_AutoTargetRange_MetaData) };
@@ -471,11 +466,6 @@ void Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsAiming_SetBit(v
 	((UCPP_AttackComponent*)Obj)->bIsAiming = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsAiming = { "bIsAiming", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UCPP_AttackComponent), &Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsAiming_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsAiming_MetaData), NewProp_bIsAiming_MetaData) };
-void Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsCancellingSkill_SetBit(void* Obj)
-{
-	((UCPP_AttackComponent*)Obj)->bIsCancellingSkill = 1;
-}
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsCancellingSkill = { "bIsCancellingSkill", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UCPP_AttackComponent), &Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsCancellingSkill_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsCancellingSkill_MetaData), NewProp_bIsCancellingSkill_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCPP_AttackComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_Character,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_CurrentRange_Underlying,
@@ -503,7 +493,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCPP_Atta
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_CurrentLockOnTargetActor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bHasLockOnTarget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsAiming,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCPP_AttackComponent_Statics::NewProp_bIsCancellingSkill,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCPP_AttackComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UCPP_AttackComponent_Statics::DependentSingletons[])() = {
@@ -546,10 +535,10 @@ UCPP_AttackComponent::~UCPP_AttackComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCPP_AttackComponent, UCPP_AttackComponent::StaticClass, TEXT("UCPP_AttackComponent"), &Z_Registration_Info_UClass_UCPP_AttackComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCPP_AttackComponent), 3529944961U) },
+		{ Z_Construct_UClass_UCPP_AttackComponent, UCPP_AttackComponent::StaticClass, TEXT("UCPP_AttackComponent"), &Z_Registration_Info_UClass_UCPP_AttackComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCPP_AttackComponent), 1476560853U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_1406857079(TEXT("/Script/Team4"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_4102970785(TEXT("/Script/Team4"),
 	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

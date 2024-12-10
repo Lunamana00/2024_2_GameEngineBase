@@ -319,16 +319,6 @@ struct Z_Construct_UScriptStruct_FAttack_Statics
 		{ "Category", "Attack" },
 		{ "ModuleRelativePath", "CPP_Datatype.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsFlyingAttack_MetaData[] = {
-		{ "Category", "Attack" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//UPROPERTY(EditAnywhere, BlueprintReadWrite)\n//EElementType Element = EElementType::None;\n" },
-#endif
-		{ "ModuleRelativePath", "CPP_Datatype.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "UPROPERTY(EditAnywhere, BlueprintReadWrite)\nEElementType Element = EElementType::None;" },
-#endif
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AttackMontages_MetaData[] = {
 		{ "Category", "Attack" },
 		{ "ModuleRelativePath", "CPP_Datatype.h" },
@@ -339,8 +329,6 @@ struct Z_Construct_UScriptStruct_FAttack_Statics
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_Range;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_AttackType_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_AttackType;
-	static void NewProp_bIsFlyingAttack_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsFlyingAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttackMontages_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_AttackMontages;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -355,11 +343,6 @@ const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FAttack_S
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FAttack_Statics::NewProp_Range = { "Range", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAttack, Range), Z_Construct_UEnum_Team4_EAttackRange, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Range_MetaData), NewProp_Range_MetaData) }; // 2408776091
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackType = { "AttackType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAttack, AttackType), Z_Construct_UEnum_Team4_EAttackType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackType_MetaData), NewProp_AttackType_MetaData) }; // 1384900435
-void Z_Construct_UScriptStruct_FAttack_Statics::NewProp_bIsFlyingAttack_SetBit(void* Obj)
-{
-	((FAttack*)Obj)->bIsFlyingAttack = 1;
-}
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FAttack_Statics::NewProp_bIsFlyingAttack = { "bIsFlyingAttack", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FAttack), &Z_Construct_UScriptStruct_FAttack_Statics::NewProp_bIsFlyingAttack_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsFlyingAttack_MetaData), NewProp_bIsFlyingAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackMontages_Inner = { "AttackMontages", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackMontages = { "AttackMontages", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FAttack, AttackMontages), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackMontages_MetaData), NewProp_AttackMontages_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FAttack_Statics::PropPointers[] = {
@@ -368,7 +351,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FA
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttack_Statics::NewProp_Range,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackType,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttack_Statics::NewProp_bIsFlyingAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackMontages_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FAttack_Statics::NewProp_AttackMontages,
 };
@@ -611,11 +593,11 @@ struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBa
 		{ EAttackState_StaticEnum, TEXT("EAttackState"), &Z_Registration_Info_UEnum_EAttackState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1787572842U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FAttack::StaticStruct, Z_Construct_UScriptStruct_FAttack_Statics::NewStructOps, TEXT("Attack"), &Z_Registration_Info_UScriptStruct_Attack, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAttack), 3630077851U) },
+		{ FAttack::StaticStruct, Z_Construct_UScriptStruct_FAttack_Statics::NewStructOps, TEXT("Attack"), &Z_Registration_Info_UScriptStruct_Attack, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAttack), 4042316160U) },
 		{ FSkill::StaticStruct, Z_Construct_UScriptStruct_FSkill_Statics::NewStructOps, TEXT("Skill"), &Z_Registration_Info_UScriptStruct_Skill, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkill), 1843076497U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_3860872202(TEXT("/Script/Team4"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_2741361694(TEXT("/Script/Team4"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::EnumInfo));

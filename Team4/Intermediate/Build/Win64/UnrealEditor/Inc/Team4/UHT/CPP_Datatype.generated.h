@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> TEAM4_API UScriptStruct* StaticStruct<struct FAttack>();
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_92_GENERATED_BODY \
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_86_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSkill_Statics; \
 	TEAM4_API static class UScriptStruct* StaticStruct();
 

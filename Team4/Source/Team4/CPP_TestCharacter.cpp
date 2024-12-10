@@ -54,11 +54,10 @@ ACPP_TestCharacter::ACPP_TestCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
 
-	//Attribute = CreateDefaultSubobject<UFractPlayerAttributeComponent>(TEXT("Player Attribute Component"));
-	//AttackComponent = CreateDefaultSubobject<UFractPlayerAttackComponent>(TEXT("Player Attack Component"));
-	//MotionWarpingComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("Motion Warping Component"));
-	//FlightComponent = CreateDefaultSubobject<UCPP_FlightActorComponent>(TEXT("FlightComponent"));
-
+	Attribute = CreateDefaultSubobject<UCPP_AttributeForPlayerComponent>(TEXT("Player Attribute Component"));
+	AttackComponent = CreateDefaultSubobject<UCPP_AttackComponent>(TEXT("Player Attack Component"));
+	MotionWarpingComponent = CreateDefaultSubobject<UMotionWarpingComponent>(TEXT("Motion Warping Component"));
+	
 }
 
 // Called when the game starts or when spawned
@@ -85,7 +84,7 @@ void ACPP_TestCharacter::BeginPlay()
 		Weapon->AttachToComponent(
 			GetMesh(),
 			FAttachmentTransformRules::SnapToTargetIncludingScale,
-			"RightWeaponSocket");
+			"SOC_hand_r");
 	}
 }
 
@@ -94,16 +93,12 @@ void ACPP_TestCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	/*if (Attribute->GetHealthPercent() < 1.f && Attribute->GetHealthPercent() > 0.f)
-	{
-		Attribute->HealHealth(RestoreHealthPerSecond * DeltaTime);
-	}*/
 
-	if (!Attribute->IsAlive() && !bIsDying)
+	/*if (!Attribute->IsAlive() && !bIsDying)
 	{
 		bIsDying = true;
 		Die();
-	}
+	}*/
 }
 
 // Called to bind functionality to input
@@ -121,9 +116,6 @@ void ACPP_TestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
-		// Jumping
-		//EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
-		//EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ACPP_TestCharacter::Move);
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Completed, this, &ACPP_TestCharacter::StopMoving);
@@ -298,12 +290,12 @@ void ACPP_TestCharacter::SwitchWeaponSocket(bool bIsRight) const
 		if (bIsRight)
 		{
 			Weapon->AttachToComponent(GetMesh(),
-				FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("RightWeaponSocket"));
+				FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("SOC_hand_r"));
 		}
 		else
 		{
 			Weapon->AttachToComponent(GetMesh(),
-				FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("LeftWeaponSocket"));
+				FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("SOC_hand_l"));
 		}
 	}
 }

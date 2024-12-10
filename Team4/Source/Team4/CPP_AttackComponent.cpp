@@ -115,10 +115,6 @@ void UCPP_AttackComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 		}
 	}
 
-
-
-
-
 }
 
 // Called when the game starts
@@ -333,35 +329,20 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 
 FAttack* UCPP_AttackComponent::GetNormalAttack()
 {
-	if (CurrentRange == EAttackRange::Melee)
+	if (CurrentRange == EAttackRange::Melee && MeleeAttacks.Num() > 0)
 	{
-		for (int32 i = 0; i < MeleeAttacks.Num(); i++)
-		{
-			//return &MeleeAttacks[i];			
-		}
-		return nullptr;
+	
+		return &MeleeAttacks[0];			
+	
 	}
 
-	if (CurrentRange == EAttackRange::Ranged)
+	if (CurrentRange == EAttackRange::Ranged && RangedAttacks.Num() > 0)
 	{
-		for (int32 i = 0; i < RangedAttacks.Num(); i++)
-		{
-			//return &RangedAttacks[i];
-		}
-		return nullptr;
+		return &RangedAttacks[0];
 	}
 	return nullptr;
 }
 
-//
-//FFractSkill* UCPP_AttackComponent::GetSkill()
-//{
-//	return nullptr;
-//}
-//
-//void UCPP_AttackComponent::CancelFireGroundSkill()
-//{
-//}
 
 void UCPP_AttackComponent::UseNormalAttack()
 {

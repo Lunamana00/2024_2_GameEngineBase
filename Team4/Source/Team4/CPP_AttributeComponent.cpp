@@ -44,6 +44,7 @@ void UCPP_AttributeComponent::HealHealth(const float HealAmount)
 
 bool UCPP_AttributeComponent::IsAlive() const
 {
+	//CurrentHealth > 0.f;
 	return CurrentHealth > 0.f;
 }
 

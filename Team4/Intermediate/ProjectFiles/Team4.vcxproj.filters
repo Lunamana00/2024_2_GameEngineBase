@@ -33,6 +33,12 @@
     <Filter Include="Source\Team4">
       <UniqueIdentifier>{2865D469-8018-3B5B-BE79-DF0D99C61652}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Team4\BP_ControllerTest.cpp">
+      <Filter>Source\Team4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Team4\BP_ControllerTest.h">
+      <Filter>Source\Team4</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Team4\BTT_Attack_Enemy_1AI.cpp">
       <Filter>Source\Team4</Filter>
     </ClCompile>
@@ -87,6 +93,12 @@
     <ClInclude Include="..\..\Source\Team4\CPP_EnemyTest.h">
       <Filter>Source\Team4</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Team4\CPP_Gamemode.cpp">
+      <Filter>Source\Team4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Team4\CPP_Gamemode.h">
+      <Filter>Source\Team4</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Team4\CPP_HitInterface.cpp">
       <Filter>Source\Team4</Filter>
     </ClCompile>
@@ -115,6 +127,12 @@
       <Filter>Source\Team4</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Team4\CPP_TestCharacter.h">
+      <Filter>Source\Team4</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Team4\CPP_TestCharacter_Gunner.cpp">
+      <Filter>Source\Team4</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Team4\CPP_TestCharacter_Gunner.h">
       <Filter>Source\Team4</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Team4\DrawingComponent.cpp">
