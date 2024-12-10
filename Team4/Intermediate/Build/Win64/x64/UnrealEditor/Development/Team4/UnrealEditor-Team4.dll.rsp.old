@@ -36,6 +36,7 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 /NATVIS:"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\RenderCore\RenderCore.natvis"
+/NATVIS:"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\Niagara.natvis"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\Team4Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\AIC_Boss.gen.cpp.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\BossProjectile.gen.cpp.obj"
@@ -65,6 +66,7 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Renderer\UnrealEditor-Renderer.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\RenderCore\UnrealEditor-RenderCore.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\RHI\UnrealEditor-RHI.lib"
+"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\UnrealEditor-Niagara.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

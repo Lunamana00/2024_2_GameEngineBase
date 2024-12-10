@@ -8,6 +8,7 @@
 /NODEFAULTLIB
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\Team4Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\AIC_Boss.gen.cpp.obj"
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\BossProjectile.gen.cpp.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\BTT_Attack_Enemy_1AI.gen.cpp.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\CanvasActor.gen.cpp.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\CanvasComponent.gen.cpp.obj"
@@ -23,5 +24,6 @@
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\Enemy_1AIController.cpp.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\Team4.cpp.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\AIC_Boss.cpp.obj"
+"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\BossProjectile.cpp.obj"
 "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\Default.rc2.res"
 /OUT:"C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Intermediate\Build\Win64\x64\UnrealEditor\Development\Team4\UnrealEditor-Team4.lib"
