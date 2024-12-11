@@ -16,11 +16,11 @@ enum class EAttackState : uint8;
 #endif
 #define TEAM4_CPP_AttackComponent_generated_h
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_17_DELEGATE \
+#define FID_Team4_Source_Team4_CPP_AttackComponent_h_17_DELEGATE \
 TEAM4_API void FOnUpdatedTargetSignature_DelegateWrapper(const FMulticastScriptDelegate& OnUpdatedTargetSignature, AActor* NewTargetActorRef);
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_CPP_AttackComponent_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execSetCurrentAttackState); \
 	DECLARE_FUNCTION(execGetCurrentAttackState); \
 	DECLARE_FUNCTION(execSpawnProjectile); \
@@ -28,7 +28,7 @@ TEAM4_API void FOnUpdatedTargetSignature_DelegateWrapper(const FMulticastScriptD
 	DECLARE_FUNCTION(execResetCombo);
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_29_INCLASS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_CPP_AttackComponent_h_29_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCPP_AttackComponent(); \
 	friend struct Z_Construct_UClass_UCPP_AttackComponent_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(UCPP_AttackComponent)
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_29_ENHANCED_CONSTRUCTORS \
+#define FID_Team4_Source_Team4_CPP_AttackComponent_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UCPP_AttackComponent(UCPP_AttackComponent&&); \
@@ -49,13 +49,13 @@ public: \
 	NO_API virtual ~UCPP_AttackComponent();
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_26_PROLOG
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_29_GENERATED_BODY \
+#define FID_Team4_Source_Team4_CPP_AttackComponent_h_26_PROLOG
+#define FID_Team4_Source_Team4_CPP_AttackComponent_h_29_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_29_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_29_ENHANCED_CONSTRUCTORS \
+	FID_Team4_Source_Team4_CPP_AttackComponent_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_CPP_AttackComponent_h_29_INCLASS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_CPP_AttackComponent_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,7 +63,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAM4_API UClass* StaticClass<class UCPP_AttackComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h
+#define CURRENT_FILE_ID FID_Team4_Source_Team4_CPP_AttackComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

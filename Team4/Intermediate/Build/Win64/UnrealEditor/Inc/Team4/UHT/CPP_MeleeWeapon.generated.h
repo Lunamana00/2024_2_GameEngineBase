@@ -17,13 +17,13 @@ struct FHitResult;
 #endif
 #define TEAM4_CPP_MeleeWeapon_generated_h
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_CPP_MeleeWeapon_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execEmptyIgnoreActorsArray); \
 	DECLARE_FUNCTION(execOnWeaponBoxEndOverlap); \
 	DECLARE_FUNCTION(execOnWeaponBoxOverlap);
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_CPP_MeleeWeapon_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACPP_MeleeWeapon(); \
 	friend struct Z_Construct_UClass_ACPP_MeleeWeapon_Statics; \
@@ -32,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(ACPP_MeleeWeapon)
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Team4_Source_Team4_CPP_MeleeWeapon_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACPP_MeleeWeapon(ACPP_MeleeWeapon&&); \
@@ -44,13 +44,13 @@ public: \
 	NO_API virtual ~ACPP_MeleeWeapon();
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_10_PROLOG
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_13_GENERATED_BODY \
+#define FID_Team4_Source_Team4_CPP_MeleeWeapon_h_10_PROLOG
+#define FID_Team4_Source_Team4_CPP_MeleeWeapon_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Team4_Source_Team4_CPP_MeleeWeapon_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_CPP_MeleeWeapon_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_CPP_MeleeWeapon_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -58,7 +58,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAM4_API UClass* StaticClass<class ACPP_MeleeWeapon>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_MeleeWeapon_h
+#define CURRENT_FILE_ID FID_Team4_Source_Team4_CPP_MeleeWeapon_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

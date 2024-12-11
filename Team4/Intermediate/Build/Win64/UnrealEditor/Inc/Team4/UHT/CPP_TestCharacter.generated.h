@@ -18,7 +18,7 @@ enum class ECharacterState : uint8;
 #endif
 #define TEAM4_CPP_TestCharacter_generated_h
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_CPP_TestCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetCurrentDodgeCooldown); \
 	DECLARE_FUNCTION(execRespawn); \
 	DECLARE_FUNCTION(execDie); \
@@ -32,7 +32,7 @@ enum class ECharacterState : uint8;
 	DECLARE_FUNCTION(execGetAttribute);
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_CPP_TestCharacter_h_26_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACPP_TestCharacter(); \
 	friend struct Z_Construct_UClass_ACPP_TestCharacter_Statics; \
@@ -41,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(ACPP_TestCharacter)
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_Team4_Source_Team4_CPP_TestCharacter_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ACPP_TestCharacter(ACPP_TestCharacter&&); \
@@ -53,13 +53,13 @@ public: \
 	NO_API virtual ~ACPP_TestCharacter();
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_23_PROLOG
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_26_GENERATED_BODY \
+#define FID_Team4_Source_Team4_CPP_TestCharacter_h_23_PROLOG
+#define FID_Team4_Source_Team4_CPP_TestCharacter_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_26_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h_26_ENHANCED_CONSTRUCTORS \
+	FID_Team4_Source_Team4_CPP_TestCharacter_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_CPP_TestCharacter_h_26_INCLASS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_CPP_TestCharacter_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -67,7 +67,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAM4_API UClass* StaticClass<class ACPP_TestCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_TestCharacter_h
+#define CURRENT_FILE_ID FID_Team4_Source_Team4_CPP_TestCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
