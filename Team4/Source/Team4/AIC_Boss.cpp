@@ -17,7 +17,8 @@ void AAIC_Boss::BeginPlay()
     {
         RunBehaviorTree(BehaviorTreeAsset);
 
-        // Initialize Blackboard
+        // Initialize Blackboar
+        
         if (BlackboardComponent && BehaviorTreeAsset->BlackboardAsset)
         {
             BlackboardComponent->InitializeBlackboard(*BehaviorTreeAsset->BlackboardAsset);
