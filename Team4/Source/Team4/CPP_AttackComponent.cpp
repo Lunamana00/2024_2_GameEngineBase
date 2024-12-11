@@ -424,14 +424,14 @@ void UCPP_AttackComponent::UseRangedAttack()
 					AttackDirection = Character->GetActorForwardVector();
 				}
 
-				if (Attack->Range == EAttackRange::Melee)
-				{
-					AttackState = EAttackState::EAS_MeleeAttacking;
-					if (CurrentTarget)
-					{
-						AddMotionWarpTarget(CurrentTarget);
-					}
-				}
+				//if (Attack->Range == EAttackRange::Melee)
+				//{
+				//	AttackState = EAttackState::EAS_MeleeAttacking;
+				//	if (CurrentTarget)
+				//	{
+				//		AddMotionWarpTarget(CurrentTarget);
+				//	}
+				//}
 
 				if (Attack->Range == EAttackRange::Ranged)
 				{
@@ -450,6 +450,7 @@ void UCPP_AttackComponent::UseRangedAttack()
 
 		}
 	}
+	AttackState = EAttackState::EAS_Unoccupied;
 }
 
 void UCPP_AttackComponent::StartLockOn()
