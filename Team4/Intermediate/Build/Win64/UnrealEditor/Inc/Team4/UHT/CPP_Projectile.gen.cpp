@@ -215,14 +215,14 @@ ACPP_Projectile::~ACPP_Projectile() {}
 // End Class ACPP_Projectile
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Projectile_h_Statics
+struct Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Projectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACPP_Projectile, ACPP_Projectile::StaticClass, TEXT("ACPP_Projectile"), &Z_Registration_Info_UClass_ACPP_Projectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPP_Projectile), 2397711861U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Projectile_h_1767574242(TEXT("/Script/Team4"),
-	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Projectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Projectile_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Projectile_h_1767574242(TEXT("/Script/Team4"),
+	Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Projectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Projectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -15,14 +15,14 @@ class UObject;
 #endif
 #define TEAM4_AIC_Boss_generated_h
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_AIC_Boss_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execSetBlackboardValueAsObject); \
 	DECLARE_FUNCTION(execSetBlackboardValueAsInt); \
 	DECLARE_FUNCTION(execSetBlackboardValueAsBool); \
 	DECLARE_FUNCTION(execSetBlackboardValueAsVector);
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_AIC_Boss_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAIC_Boss(); \
 	friend struct Z_Construct_UClass_AAIC_Boss_Statics; \
@@ -31,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(AAIC_Boss)
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_Team4_Source_Team4_AIC_Boss_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AAIC_Boss(AAIC_Boss&&); \
@@ -43,13 +43,13 @@ public: \
 	NO_API virtual ~AAIC_Boss();
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_11_PROLOG
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_14_GENERATED_BODY \
+#define FID_Team4_Source_Team4_AIC_Boss_h_11_PROLOG
+#define FID_Team4_Source_Team4_AIC_Boss_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_14_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h_14_ENHANCED_CONSTRUCTORS \
+	FID_Team4_Source_Team4_AIC_Boss_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_AIC_Boss_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_AIC_Boss_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -57,7 +57,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAM4_API UClass* StaticClass<class AAIC_Boss>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_AIC_Boss_h
+#define CURRENT_FILE_ID FID_Team4_Source_Team4_AIC_Boss_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
