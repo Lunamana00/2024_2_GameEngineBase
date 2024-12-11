@@ -34,19 +34,6 @@ void ABossProjectile::BeginPlay()
 {
     Super::BeginPlay();
     
-    if (LaunchEffect)
-    {
-        LaunchEffectComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(
-            GetWorld(), LaunchEffect, GetActorLocation(), GetActorRotation());
-
-        if (LaunchEffectComponent)
-        {
-            LaunchEffectComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-        }
-    }
-    
-    GetWorldTimerManager().SetTimer(LaunchEffectTimerHandle, this, &ABossProjectile::StopLaunchEffect, 1.0f, false);
-    
     if (TrailEffect)
     {
         TrailEffectComponent = UNiagaraFunctionLibrary::SpawnSystemAttached(
