@@ -87,8 +87,9 @@ void ACPP_TestCharacter::BeginPlay()
 			"SOC_hand_r");
 	}
 
-	GetCharacterMovement()->bOrientRotationToMovement = false;
-	GetCharacterMovement()->bUseControllerDesiredRotation = true;
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->bUseControllerDesiredRotation = false;
+
 }
 
 // Called every frame
@@ -97,11 +98,11 @@ void ACPP_TestCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 
-	if (!Attribute->IsAlive() && !bIsDying)
-	{
-		bIsDying = true;
-		Die();
-	}
+	//if (!Attribute->IsAlive() && !bIsDying)
+	//{
+	//	bIsDying = true;
+	//	Die();
+	//}
 }
 
 // Called to bind functionality to input

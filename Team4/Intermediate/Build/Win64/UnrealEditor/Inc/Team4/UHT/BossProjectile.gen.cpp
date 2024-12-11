@@ -148,14 +148,14 @@ ABossProjectile::~ABossProjectile() {}
 // End Class ABossProjectile
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Team4_Source_Team4_BossProjectile_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ABossProjectile, ABossProjectile::StaticClass, TEXT("ABossProjectile"), &Z_Registration_Info_UClass_ABossProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossProjectile), 83468912U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Team4_Source_Team4_BossProjectile_h_1188567017(TEXT("/Script/Team4"),
-	Z_CompiledInDeferFile_FID_Team4_Source_Team4_BossProjectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Team4_Source_Team4_BossProjectile_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_1188567017(TEXT("/Script/Team4"),
+	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -4,12 +4,15 @@
 #include "CPP_TestCharacter_Gun.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "GameFramework/CharacterMovementComponent.h" 
 #include "CPP_AttackComponent.h"
 
 void ACPP_TestCharacter_Gun::BeginPlay()
 {
 	Super::BeginPlay();
 
+	GetCharacterMovement()->bOrientRotationToMovement = false;
+	GetCharacterMovement()->bUseControllerDesiredRotation = true;
 	
 }
 

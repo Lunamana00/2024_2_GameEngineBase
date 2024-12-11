@@ -14,14 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAM4_CPP_Datatype_generated_h
 
-#define FID_Team4_Source_Team4_CPP_Datatype_h_65_GENERATED_BODY \
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_65_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAttack_Statics; \
 	TEAM4_API static class UScriptStruct* StaticStruct();
 
 
 template<> TEAM4_API UScriptStruct* StaticStruct<struct FAttack>();
 
-#define FID_Team4_Source_Team4_CPP_Datatype_h_86_GENERATED_BODY \
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_86_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSkill_Statics; \
 	TEAM4_API static class UScriptStruct* StaticStruct();
 
@@ -29,7 +29,7 @@ template<> TEAM4_API UScriptStruct* StaticStruct<struct FAttack>();
 template<> TEAM4_API UScriptStruct* StaticStruct<struct FSkill>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Team4_Source_Team4_CPP_Datatype_h
+#define CURRENT_FILE_ID FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h
 
 
 #define FOREACH_ENUM_EATTACKRANGE(op) \
