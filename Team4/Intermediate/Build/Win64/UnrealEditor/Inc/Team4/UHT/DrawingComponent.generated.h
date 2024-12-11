@@ -14,13 +14,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAM4_DrawingComponent_generated_h
 
-#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUpdateDrawing); \
 	DECLARE_FUNCTION(execStopDrawing); \
 	DECLARE_FUNCTION(execStartDrawing);
 
 
-#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDrawingComponent(); \
 	friend struct Z_Construct_UClass_UDrawingComponent_Statics; \
@@ -29,7 +29,7 @@ public: \
 	DECLARE_SERIALIZER(UDrawingComponent)
 
 
-#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UDrawingComponent(UDrawingComponent&&); \
@@ -41,13 +41,13 @@ public: \
 	NO_API virtual ~UDrawingComponent();
 
 
-#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_7_PROLOG
-#define FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_GENERATED_BODY \
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_7_PROLOG
+#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_INCLASS_NO_PURE_DECLS \
-	FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_ENHANCED_CONSTRUCTORS \
+	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,7 +55,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAM4_API UClass* StaticClass<class UDrawingComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_JMKIM_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h
+#define CURRENT_FILE_ID FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_DrawingComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

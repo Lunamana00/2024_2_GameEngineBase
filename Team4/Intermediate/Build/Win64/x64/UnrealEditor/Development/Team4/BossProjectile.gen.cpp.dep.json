@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\khw17\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\bossprojectile.gen.cpp",
+        "Source": "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\bossprojectile.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\khw17\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\team4editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "PCH": "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\team4editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
         "Includes": [
-            "c:\\users\\khw17\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\team4\\definitions.team4.h",
-            "c:\\users\\khw17\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\bossprojectile.h",
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\team4\\definitions.team4.h",
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\source\\team4\\bossprojectile.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\fx\\niagara\\source\\niagara\\classes\\niagarasystem.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\fx\\niagara\\source\\niagara\\public\\niagaraassettagdefinitions.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\fx\\niagara\\intermediate\\build\\win64\\unrealeditor\\inc\\niagara\\uht\\niagaraassettagdefinitions.generated.h",
@@ -80,7 +80,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\movementcomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\movementcomponent.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\projectilemovementcomponent.generated.h",
-            "c:\\users\\khw17\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\bossprojectile.generated.h"
+            "c:\\users\\user\\documents\\github\\2024_2_gameenginebase\\team4\\intermediate\\build\\win64\\unrealeditor\\inc\\team4\\uht\\bossprojectile.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

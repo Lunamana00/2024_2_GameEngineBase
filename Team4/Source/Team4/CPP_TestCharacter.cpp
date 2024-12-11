@@ -86,6 +86,9 @@ void ACPP_TestCharacter::BeginPlay()
 			FAttachmentTransformRules::SnapToTargetIncludingScale,
 			"SOC_hand_r");
 	}
+
+	GetCharacterMovement()->bOrientRotationToMovement = false;
+	GetCharacterMovement()->bUseControllerDesiredRotation = true;
 }
 
 // Called every frame
@@ -94,11 +97,11 @@ void ACPP_TestCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 
-	/*if (!Attribute->IsAlive() && !bIsDying)
+	if (!Attribute->IsAlive() && !bIsDying)
 	{
 		bIsDying = true;
 		Die();
-	}*/
+	}
 }
 
 // Called to bind functionality to input
@@ -125,8 +128,10 @@ void ACPP_TestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ACPP_TestCharacter::Look);
 		// Attacking
 		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Started, this, &ACPP_TestCharacter::NormalAttack);
-		EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Triggered, AttackComponent, &UCPP_AttackComponent::AimDownSight);
-		EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, AttackComponent, &UCPP_AttackComponent::AimDownSight);
+		
+		//EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Triggered, AttackComponent, &UCPP_AttackComponent::AimDownSight);
+		//EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, AttackComponent, &UCPP_AttackComponent::AimDownSight);
+		
 		EnhancedInputComponent->BindAction(LockOnAction, ETriggerEvent::Started, AttackComponent, &UCPP_AttackComponent::ToggleLockOn);
 		//
 		// EnhancedInputComponent->BindAction(SkillAction, ETriggerEvent::Started, AttackComponent, &UCPP_AttackComponent::UseSkill);

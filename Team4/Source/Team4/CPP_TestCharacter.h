@@ -31,6 +31,8 @@ class TEAM4_API ACPP_TestCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FollowCamera;
 
+protected:
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputMappingContext* DefaultMappingContext;
 
@@ -50,7 +52,6 @@ public:
 	// Sets default values for this character's properties
 	ACPP_TestCharacter();
 
-protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -61,6 +62,7 @@ protected:
 	void StopMoving();
 
 	void Dodge();
+protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	float RestoreHealthPerSecond = 1.5f;
@@ -103,10 +105,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-private:
+protected:
 
 	UPROPERTY(VisibleAnywhere, Category = Attribute)
-	
 	UCPP_AttributeForPlayerComponent* Attribute;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attack, meta = (AllowPrivateAccess = "true"))
@@ -139,7 +140,7 @@ private:
 	UPROPERTY(VisibleDefaultsOnly, Category = Input)
 	FVector2D MovementInputVector;
 
-	void NormalAttack();
+	virtual void NormalAttack();
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = Attack, meta = (AllowPrivateAccess = "true"))
 	UMotionWarpingComponent* MotionWarpingComponent;

@@ -57,8 +57,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Combat|Attacks")
 	TArray<FAttack> RangedAttacks;
 
-	//UPROPERTY(EditDefaultsOnly, Category = "Combat|Skills")
-	//TArray<FFractSkill> Skills;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Combat")
 	int32 ComboCount = 0;
@@ -142,6 +140,8 @@ public:
 	void SetCurrentAttackState(const EAttackState& InAttackState) { AttackState = InAttackState; }
 	
 	void UseNormalAttack();
+
+	void UseRangedAttack();
 	
 	void StartLockOn();
 	

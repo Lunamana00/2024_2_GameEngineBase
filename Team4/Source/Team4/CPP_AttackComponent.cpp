@@ -322,8 +322,8 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 		}
 		CurrentRange = EAttackRange::Melee;
 		ResetCombo();
-		Character->GetCharacterMovement()->bOrientRotationToMovement = true;
-		Character->GetCharacterMovement()->bUseControllerDesiredRotation = false;
+		//Character->GetCharacterMovement()->bOrientRotationToMovement = true;
+		//Character->GetCharacterMovement()->bUseControllerDesiredRotation = false;
 	}
 }
 
@@ -377,14 +377,16 @@ void UCPP_AttackComponent::UseNormalAttack()
 						AddMotionWarpTarget(CurrentTarget);
 					}
 				}
-				else if (Attack->Range == EAttackRange::Ranged)
+				/*else if (Attack->Range == EAttackRange::Ranged)
 				{
 					AttackState = EAttackState::EAS_RangedAttacking;
 					FHitResult TraceResult;
 					TraceUnderCrosshairs(TraceResult);
 					CachedHitLocation = TraceResult.ImpactPoint;
 					bIsRangedAttacking = true;
-				}
+
+					SpawnProjectile();
+				}*/
 
 				ComboCount = ComboCount % Attack->AttackMontages.Num();
 				AnimInstance->Montage_Play(Attack->AttackMontages[ComboCount]);
@@ -395,9 +397,60 @@ void UCPP_AttackComponent::UseNormalAttack()
 	}
 }
 
-//void UCPP_AttackComponent::UseSkill()
-//{
-//}
+void UCPP_AttackComponent::UseRangedAttack()
+{
+	CurrentRange = EAttackRange::Ranged;
+
+	if (AttackState == EAttackState::EAS_Unoccupied
+		&& !Character->GetCharacterMovement()->IsFalling())
+	{
+		if (const FAttack* Attack = GetNormalAttack())
+		{
+			if (UAnimInstance* AnimInstance = Character->GetMesh()->GetAnimInstance())
+			{
+				const FVector2D InputVector = Character->GetMovementInputVector();
+				FVector CameraForwardVector = Character->GetFollowCamera()->GetForwardVector();
+				FVector CameraRightVector = Character->GetFollowCamera()->GetRightVector();
+				CameraForwardVector.Z = 0;
+				CameraRightVector.Z = 0;
+
+				if (!InputVector.IsZero())
+				{
+					AttackDirection = (CameraForwardVector * InputVector.Y +
+						CameraRightVector * InputVector.X).GetSafeNormal();
+				}
+				else
+				{
+					AttackDirection = Character->GetActorForwardVector();
+				}
+
+				if (Attack->Range == EAttackRange::Melee)
+				{
+					AttackState = EAttackState::EAS_MeleeAttacking;
+					if (CurrentTarget)
+					{
+						AddMotionWarpTarget(CurrentTarget);
+					}
+				}
+
+				if (Attack->Range == EAttackRange::Ranged)
+				{
+					AttackState = EAttackState::EAS_RangedAttacking;
+					FHitResult TraceResult;
+					TraceUnderCrosshairs(TraceResult);
+					CachedHitLocation = TraceResult.ImpactPoint;
+					bIsRangedAttacking = true;
+					SpawnProjectile();
+				}
+
+				ComboCount = ComboCount % Attack->AttackMontages.Num();
+				AnimInstance->Montage_Play(Attack->AttackMontages[ComboCount]);
+				ComboCount++;
+			}
+
+		}
+	}
+}
 
 void UCPP_AttackComponent::StartLockOn()
 {

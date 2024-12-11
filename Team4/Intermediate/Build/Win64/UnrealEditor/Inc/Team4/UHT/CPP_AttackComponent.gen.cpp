@@ -307,13 +307,7 @@ struct Z_Construct_UClass_UCPP_AttackComponent_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ComboCount_MetaData[] = {
 		{ "Category", "Combat" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//UPROPERTY(EditDefaultsOnly, Category = \"Combat|Skills\")\n//TArray<FFractSkill> Skills;\n" },
-#endif
 		{ "ModuleRelativePath", "CPP_AttackComponent.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "UPROPERTY(EditDefaultsOnly, Category = \"Combat|Skills\")\nTArray<FFractSkill> Skills;" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[] = {
 		{ "Category", "CPP_AttackComponent" },
@@ -535,10 +529,10 @@ UCPP_AttackComponent::~UCPP_AttackComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCPP_AttackComponent, UCPP_AttackComponent::StaticClass, TEXT("UCPP_AttackComponent"), &Z_Registration_Info_UClass_UCPP_AttackComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCPP_AttackComponent), 1476560853U) },
+		{ Z_Construct_UClass_UCPP_AttackComponent, UCPP_AttackComponent::StaticClass, TEXT("UCPP_AttackComponent"), &Z_Registration_Info_UClass_UCPP_AttackComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCPP_AttackComponent), 754155078U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_4102970785(TEXT("/Script/Team4"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_4090602695(TEXT("/Script/Team4"),
 	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_AttackComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
