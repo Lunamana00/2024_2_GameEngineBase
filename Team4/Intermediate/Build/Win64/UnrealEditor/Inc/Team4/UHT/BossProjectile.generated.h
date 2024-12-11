@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TEAM4_BossProjectile_generated_h
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_Team4_Source_Team4_BossProjectile_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABossProjectile(); \
 	friend struct Z_Construct_UClass_ABossProjectile_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ABossProjectile)
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_Team4_Source_Team4_BossProjectile_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABossProjectile(ABossProjectile&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ABossProjectile();
 
 
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_11_PROLOG
-#define FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_14_GENERATED_BODY \
+#define FID_Team4_Source_Team4_BossProjectile_h_11_PROLOG
+#define FID_Team4_Source_Team4_BossProjectile_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_14_INCLASS_NO_PURE_DECLS \
-	FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h_14_ENHANCED_CONSTRUCTORS \
+	FID_Team4_Source_Team4_BossProjectile_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Team4_Source_Team4_BossProjectile_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TEAM4_API UClass* StaticClass<class ABossProjectile>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_BossProjectile_h
+#define CURRENT_FILE_ID FID_Team4_Source_Team4_BossProjectile_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

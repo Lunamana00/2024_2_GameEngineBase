@@ -584,7 +584,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FSkill()
 // End ScriptStruct FSkill
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics
+struct Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Datatype_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EAttackRange_StaticEnum, TEXT("EAttackRange"), &Z_Registration_Info_UEnum_EAttackRange, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2408776091U) },
@@ -597,9 +597,9 @@ struct Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBa
 		{ FSkill::StaticStruct, Z_Construct_UScriptStruct_FSkill_Statics::NewStructOps, TEXT("Skill"), &Z_Registration_Info_UScriptStruct_Skill, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkill), 1843076497U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_2741361694(TEXT("/Script/Team4"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Datatype_h_2741361694(TEXT("/Script/Team4"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::ScriptStructInfo),
-	Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_User_Documents_GitHub_2024_2_GameEngineBase_Team4_Source_Team4_CPP_Datatype_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Datatype_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Datatype_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Datatype_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Team4_Source_Team4_CPP_Datatype_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
