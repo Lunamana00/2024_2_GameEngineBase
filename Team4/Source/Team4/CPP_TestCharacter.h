@@ -195,5 +195,10 @@ public:
 
 
 	float GetDodgeMaxCooldown();
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Drawing")
+	bool bIsDrawing = false;
+
+	bool GetIsDrawing() { return bIsDrawing; }
 };
 

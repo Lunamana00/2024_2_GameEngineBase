@@ -347,7 +347,8 @@ FAttack* UCPP_AttackComponent::GetNormalAttack()
 void UCPP_AttackComponent::UseNormalAttack()
 {
 	if (AttackState == EAttackState::EAS_Unoccupied
-		&& !Character->GetCharacterMovement()->IsFalling())
+		&& !Character->GetCharacterMovement()->IsFalling()
+		&& !Character->GetIsDrawing())
 	{
 		if (const FAttack* Attack = GetNormalAttack())
 		{
