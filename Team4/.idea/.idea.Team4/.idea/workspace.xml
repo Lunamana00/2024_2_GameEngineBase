@@ -14,23 +14,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/C/SH/LNMRAQCK4YRTCV6EK2EI8R.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/C/SH/LNMRAQCK4YRTCV6EK2EI8R.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BP_BOSS_KTH.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BP_BOSS_KTH.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Ghost/motion/bone/X_Bot_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Ghost/motion/bone/X_Bot_Skeleton.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/BB_Red_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/BB_Red_Slime.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AnimBP_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AnimBP_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Sword_Trail_Mask.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Sword_Trail_Mask.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Chase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Chase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BT_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BT_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/Semi_wep.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/AutoScreenshot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
