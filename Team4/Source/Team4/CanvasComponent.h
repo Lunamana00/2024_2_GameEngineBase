@@ -30,6 +30,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Canvas")
 	TSubclassOf<AActor> CanvasActorClass;
+
 	
 protected:
 	virtual void BeginPlay() override;

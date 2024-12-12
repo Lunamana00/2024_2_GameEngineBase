@@ -14,10 +14,67 @@
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.patch_0.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.patch_0.exp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.patch_0.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.patch_0.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Input/TestInput.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Input/TestInput.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/BP_DrawingActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/BP_DrawingActor.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/class_indices.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/cudatest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/C/C9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/K/K2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/K/K3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/K/K4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/K/K5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/K/K6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/K/K7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/K/k1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/T/T1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/T/T2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/T/T3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/T/T4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/T/T5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/T/T6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/train/T/T7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/C/C1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/C/C2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/C/C3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/C/C4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/C/C5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/C/C6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/C/C7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/K/K2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/K/K3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/K/K4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/K/K5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/K/K6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/K/K7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/K/k1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/T/T1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/T/T2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/T/T3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/T/T4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/T/T5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/T/T6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/dataset/validation/T/T7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/mobilenet_classification_model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/mobilenet_classification_model.tflite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/predict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/predict.pyw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/preprocessing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/train_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/CanvasComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/CanvasComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/DrawingActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/DrawingActor.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

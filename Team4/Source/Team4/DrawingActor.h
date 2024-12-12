@@ -40,9 +40,19 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Drawing")
 	FString PredictedClass;
 
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Prediction")
+	FString PredictionResult; // 블루프린트에서 접근 가능한 변수
+
+	UFUNCTION(BlueprintCallable, Category = "Prediction")
+	bool ExecutePrediction(const FString& ImagePath);
 	
 	UFUNCTION(BlueprintCallable, Category = "Drawing")
 	void SaveDrawing();
 	bool ExecutePrediction(const FString& ImagePath, FString& OutClass);
 	void BeginDestroy() override;
+
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPredictionComplete);
+
+	UPROPERTY(BlueprintAssignable, Category = "Prediction")
+	FOnPredictionComplete OnPredictionComplete;
 };

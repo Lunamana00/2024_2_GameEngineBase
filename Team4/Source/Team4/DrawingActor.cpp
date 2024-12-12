@@ -138,20 +138,17 @@ void ADrawingActor::SaveDrawing()
         return;
     }
 
-    // 파일 저장 경로 설정
     FString DirectoryPath = FPaths::ProjectSavedDir();
     FString FileName = TEXT("SavedDrawing.png");
     FString FullPath = FPaths::Combine(DirectoryPath, FileName);
 
-    // RenderTarget 저장
     UKismetRenderingLibrary::ExportRenderTarget(this, RenderTarget, DirectoryPath, FileName);
     UE_LOG(LogTemp, Log, TEXT("[ADrawingActor] RenderTarget saved at: %s"), *FullPath);
 
-    // Python 실행을 비동기로 처리
-    FString PythonExecutable = TEXT("pyw"); // 환경 변수에 Python이 설정되어 있어야 함
-    FString PythonScriptPath = FPaths::ProjectDir() / TEXT("Dataprocess/predict.pyw");
+    FString PythonExecutable = TEXT("pyw");
+    FString PythonScriptPath = FPaths::ProjectDir() / TEXT("/Content/Dataprocess/predict.pyw");
 
-    Async(EAsyncExecution::ThreadPool, [PythonExecutable, PythonScriptPath, FullPath]()
+    Async(EAsyncExecution::ThreadPool, [this, PythonExecutable, PythonScriptPath, FullPath]()
     {
         int32 ReturnCode;
         FString StdOut;
@@ -160,20 +157,16 @@ void ADrawingActor::SaveDrawing()
         FString Command = FString::Printf(TEXT("\"%s\" \"%s\""), *PythonScriptPath, *FullPath);
         bool bExecSuccess = FPlatformProcess::ExecProcess(*PythonExecutable, *Command, &ReturnCode, &StdOut, &StdErr);
 
-        if (bExecSuccess && ReturnCode == 0 && !StdOut.IsEmpty())
-        {
-            UE_LOG(LogTemp, Log, TEXT("[SaveDrawing] Python StdOut: %s"), *StdOut);
-        }
-        else
-        {
-            UE_LOG(LogTemp, Error, TEXT("[SaveDrawing] Python script failed. StdErr: %s"), *StdErr);
-        }
-
-        AsyncTask(ENamedThreads::GameThread, [StdOut, ReturnCode]()
+        AsyncTask(ENamedThreads::GameThread, [this, StdOut, ReturnCode]()
         {
             if (ReturnCode == 0 && !StdOut.IsEmpty())
             {
-                UE_LOG(LogTemp, Log, TEXT("[SaveDrawing] Python Result: %s"), *StdOut);
+                FString CleanedOutput = StdOut.TrimStartAndEnd();
+                PredictedClass = CleanedOutput;
+                UE_LOG(LogTemp, Log, TEXT("%s"), *PredictedClass);
+
+                // 블루프린트 이벤트 호출
+                OnPredictionComplete.Broadcast();
             }
             else
             {
@@ -186,13 +179,13 @@ void ADrawingActor::SaveDrawing()
 }
 
 
-bool ADrawingActor::ExecutePrediction(const FString& ImagePath, FString& OutClass)
+bool ADrawingActor::ExecutePrediction(const FString& ImagePath)
 {
     // Python 실행 파일 경로
     FString PythonExecutable = TEXT("pyw");
 
     // Python 스크립트 경로
-    FString PythonScriptPath = FPaths::ProjectDir() / TEXT("Dataprocess/predict.pyw");
+    FString PythonScriptPath = FPaths::ProjectDir() / TEXT("/Content/Dataprocess/predict.pyw");
 
     // 커맨드 구성
     FString CommandLineArgs = FString::Printf(TEXT("\"%s\" \"%s\""), *PythonScriptPath, *ImagePath);
@@ -245,8 +238,9 @@ bool ADrawingActor::ExecutePrediction(const FString& ImagePath, FString& OutClas
 
     if (ReturnCode == 0)
     {
-        OutClass = StdOut.TrimStartAndEnd();
-        UE_LOG(LogTemp, Log, TEXT("[ADrawingActor] Python Output: %s"), *StdOut);
+        FString TrimmedOutput = StdOut.TrimStartAndEnd();
+        PredictionResult = TrimmedOutput; // 결과값을 블루프린트 변수에 저장
+        UE_LOG(LogTemp, Log, TEXT("[ADrawingActor] Python Output: %s"), *TrimmedOutput);
         return true;
     }
     else
@@ -256,6 +250,7 @@ bool ADrawingActor::ExecutePrediction(const FString& ImagePath, FString& OutClas
         return false;
     }
 }
+
 
 
 
