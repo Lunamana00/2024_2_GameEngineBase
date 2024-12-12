@@ -37,24 +37,46 @@ void UCanvasComponent::StartPlacingCanvas()
         PreviewActor = nullptr;
     }
 
-    // 미리보기 블루프린트 액터 새로 생성
     if (PreviewBlueprintClass && GetWorld())
     {
         FActorSpawnParameters SpawnParams;
         SpawnParams.Owner = GetOwner();
         SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-        PreviewActor = GetWorld()->SpawnActor<AActor>(PreviewBlueprintClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+        // 카메라 위치와 방향 가져오기
+        FVector CameraLocation;
+        FRotator CameraRotation;
 
-        if (PreviewActor)
+        if (PlayerController)
         {
-            PreviewActor->SetActorEnableCollision(false); // 충돌 비활성화
-            PreviewActor->SetActorHiddenInGame(false);    // 표시
-            UE_LOG(LogTemp, Log, TEXT("Preview Actor successfully spawned."));
+            PlayerController->GetPlayerViewPoint(CameraLocation, CameraRotation);
+
+            // 카메라의 Forward 벡터(바라보는 방향)
+            FVector ForwardDirection = CameraRotation.Vector();
+
+            // 스폰 위치: 카메라 앞쪽 일정 거리
+            FVector SpawnLocation = CameraLocation + (ForwardDirection * CanvasDistance);
+
+            // 스폰 회전: 카메라 방향과 일치
+            FRotator SpawnRotation = CameraRotation;
+
+            // 액터 스폰
+            PreviewActor = GetWorld()->SpawnActor<AActor>(PreviewBlueprintClass, SpawnLocation, SpawnRotation, SpawnParams);
+
+            if (PreviewActor)
+            {
+                PreviewActor->SetActorEnableCollision(false); // 충돌 비활성화
+                PreviewActor->SetActorHiddenInGame(false);    // 표시
+                UE_LOG(LogTemp, Log, TEXT("Preview Actor successfully spawned at location (%s)."), *SpawnLocation.ToString());
+            }
+            else
+            {
+                UE_LOG(LogTemp, Warning, TEXT("Failed to spawn Preview Actor."));
+            }
         }
         else
         {
-            UE_LOG(LogTemp, Warning, TEXT("Failed to spawn Preview Actor."));
+            UE_LOG(LogTemp, Warning, TEXT("PlayerController is null."));
         }
     }
     else
@@ -62,6 +84,7 @@ void UCanvasComponent::StartPlacingCanvas()
         UE_LOG(LogTemp, Warning, TEXT("PreviewBlueprintClass is not set or GetWorld() is null."));
     }
 }
+
 
 
 void UCanvasComponent::StopPlacingCanvas()
@@ -85,13 +108,14 @@ void UCanvasComponent::StopPlacingCanvas()
 
     UE_LOG(LogTemp, Log, TEXT("Preview Actor fixed at location (%s) with rotation (%s)."),
            *FinalLocation.ToString(), *FinalRotation.ToString());
+    CanvasDistance = 1000.0f;
 }
 
 
 
 void UCanvasComponent::AdjustCanvasDistance(float Value)
 {
-    CanvasDistance += Value * 50.0f; // 휠 스크롤에 따른 거리 조절
+    CanvasDistance += Value * -50.0f; // 휠 스크롤에 따른 거리 조절
 }
 
 
@@ -101,16 +125,19 @@ void UCanvasComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
     if (bIsPlacingCanvas && PlayerController && PreviewActor)
     {
-        FVector WorldLocation;
-        FVector WorldDirection;
-        PlayerController->DeprojectMousePositionToWorld(WorldLocation, WorldDirection);
-
-        FVector NewLocation = WorldLocation + (WorldDirection * CanvasDistance);
-        PreviewActor->SetActorLocation(NewLocation);
-
-        // 카메라를 향한 Z축 회전 설정
         FVector CameraLocation;
         FRotator CameraRotation;
+        PlayerController->GetPlayerViewPoint(CameraLocation, CameraRotation);
+
+        // 카메라의 Forward 벡터(바라보는 방향)
+        FVector ForwardDirection = CameraRotation.Vector();
+
+        // 새 위치 계산: 카메라 앞쪽 일정 거리
+        FVector NewLocation = CameraLocation + (ForwardDirection * CanvasDistance);
+
+        // 미리보기 액터 위치 설정
+        PreviewActor->SetActorLocation(NewLocation);
+        
         PlayerController->GetPlayerViewPoint(CameraLocation, CameraRotation);
 
         // LookAt 방식으로 Z축(Yaw) 회전만 계산
