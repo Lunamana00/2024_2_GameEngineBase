@@ -18,7 +18,10 @@ ACPP_Projectile::ACPP_Projectile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	
+
+	bReplicates = true;
+	SetReplicatingMovement(true);
+
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
 	SetRootComponent(CollisionBox);
 
@@ -54,6 +57,8 @@ void ACPP_Projectile::BeginPlay()
 
 void ACPP_Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	if (!HasAuthority()) return;
+
 	if (ACPP_EnemyTest* TargetEnemy = Cast<ACPP_EnemyTest>(OtherActor))
 	{
 		FDamageEvent DamageEvent;
@@ -63,6 +68,8 @@ void ACPP_Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 	{
 		HitInterface->GetHit(Hit.ImpactPoint);
 	}
+	MulticastPlayImpactEffects();
+
 	Destroy();
 }
 
@@ -76,11 +83,18 @@ void ACPP_Projectile::Tick(float DeltaTime)
 void ACPP_Projectile::Destroyed()
 {
 	Super::Destroyed();
+}
+
+// Multicast RPC to play impact effects
+void ACPP_Projectile::MulticastPlayImpactEffects_Implementation()
+{
+	// Spawn visual effect
 	if (ImpactEffect)
 	{
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ImpactEffect, GetActorLocation(),
-			GetActorRotation());
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ImpactEffect, GetActorLocation(), GetActorRotation());
 	}
+
+	// Play sound effect
 	if (ImpactSound)
 	{
 		UGameplayStatics::PlaySoundAtLocation(this, ImpactSound, GetActorLocation());

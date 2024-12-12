@@ -23,7 +23,12 @@ protected:
 
 	UFUNCTION()
 	virtual void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp,
-		FVector NormalImpulse, const FHitResult& Hit);
+	FVector NormalImpulse, const FHitResult& Hit);
+
+	// Multicast RPC to play impact effects on all clients
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastPlayImpactEffects();
+	void MulticastPlayImpactEffects_Implementation();
 
 public:	
 	UPROPERTY(EditAnywhere)

@@ -103,6 +103,10 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Combat")
 	void SpawnProjectile();
 
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_SpawnProjectile(FVector MuzzleLocation, FRotator SpawnRotation);
+
+	void SpawnProjectileInternal(FVector MuzzleLocation, FRotator SpawnRotation);
 
 	bool bIsRangedAttacking = false;
 	FVector CachedHitLocation;

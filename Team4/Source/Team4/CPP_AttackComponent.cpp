@@ -238,27 +238,49 @@ void UCPP_AttackComponent::RotateToInputDirection(float DeltaTime)
 
 void UCPP_AttackComponent::SpawnProjectile()
 {
+	if (!ProjectileClass || !GetWorld() || !Character) return;
 	FVector MuzzleLocation = Character->GetWeapon()->GetWeaponMuzzle()->GetComponentLocation();
 
 	FVector AimDirection = HitLocation - MuzzleLocation;
 	AimDirection = AimDirection.GetSafeNormal();
 	FRotator SpawnRotation = AimDirection.Rotation();
 
-	if (ProjectileClass && GetWorld())
+	// 서버에서 투사체를 스폰하도록 호출
+	if (GetOwner()->HasAuthority())
 	{
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = GetOwner();
-		SpawnParams.Instigator = Cast<APawn>(GetOwner());
-
-		GetWorld()->SpawnActor<ACPP_Projectile>(
-			ProjectileClass,
-			MuzzleLocation,
-			SpawnRotation,
-			SpawnParams
-		);
+		SpawnProjectileInternal(MuzzleLocation, SpawnRotation);
+	}
+	else
+	{
+		Server_SpawnProjectile(MuzzleLocation, SpawnRotation);
 	}
 }
 
+void UCPP_AttackComponent::SpawnProjectileInternal(FVector MuzzleLocation, FRotator SpawnRotation)
+{
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = GetOwner();
+	SpawnParams.Instigator = Cast<APawn>(GetOwner());
+
+	ACPP_Projectile* SpawnedProjectile = GetWorld()->SpawnActor<ACPP_Projectile>(
+		ProjectileClass, MuzzleLocation, SpawnRotation, SpawnParams);
+
+	if (SpawnedProjectile)
+	{
+		SpawnedProjectile->SetOwner(GetOwner());
+	}
+}
+
+void UCPP_AttackComponent::Server_SpawnProjectile_Implementation(FVector MuzzleLocation, FRotator SpawnRotation)
+{
+	SpawnProjectileInternal(MuzzleLocation, SpawnRotation);
+}
+
+bool UCPP_AttackComponent::Server_SpawnProjectile_Validate(FVector MuzzleLocation, FRotator SpawnRotation)
+{
+	// Optional: 부정행위를 방지하기 위한 검증 로직
+	return true;
+}
 void UCPP_AttackComponent::TraceUnderCrosshairs(FHitResult& TraceHitResult)
 {
 	FVector2D ViewportSize;
