@@ -148,6 +148,12 @@ public:
 	void EndLockOn();
 	
 	void ToggleLockOn();
+
+	bool bComboCooldownActive = false;
+
+	FTimerHandle ComboCooldownTimerHandle;
+
+	float ComboCooldownTime = 1.0f;
 	
 	UPROPERTY()
 	AActor* CurrentLockOnTargetActor;

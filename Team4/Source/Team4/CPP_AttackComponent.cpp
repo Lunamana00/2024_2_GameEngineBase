@@ -347,8 +347,7 @@ FAttack* UCPP_AttackComponent::GetNormalAttack()
 void UCPP_AttackComponent::UseNormalAttack()
 {
 	if (AttackState == EAttackState::EAS_Unoccupied
-		&& !Character->GetCharacterMovement()->IsFalling()
-		&& !Character->GetIsDrawing())
+		&& !Character->GetCharacterMovement()->IsFalling())
 	{
 		if (const FAttack* Attack = GetNormalAttack())
 		{
@@ -378,16 +377,7 @@ void UCPP_AttackComponent::UseNormalAttack()
 						AddMotionWarpTarget(CurrentTarget);
 					}
 				}
-				/*else if (Attack->Range == EAttackRange::Ranged)
-				{
-					AttackState = EAttackState::EAS_RangedAttacking;
-					FHitResult TraceResult;
-					TraceUnderCrosshairs(TraceResult);
-					CachedHitLocation = TraceResult.ImpactPoint;
-					bIsRangedAttacking = true;
 
-					SpawnProjectile();
-				}*/
 
 				ComboCount = ComboCount % Attack->AttackMontages.Num();
 				AnimInstance->Montage_Play(Attack->AttackMontages[ComboCount]);
@@ -397,7 +387,6 @@ void UCPP_AttackComponent::UseNormalAttack()
 		}
 	}
 }
-
 void UCPP_AttackComponent::UseRangedAttack()
 {
 	CurrentRange = EAttackRange::Ranged;
@@ -424,15 +413,6 @@ void UCPP_AttackComponent::UseRangedAttack()
 				{
 					AttackDirection = Character->GetActorForwardVector();
 				}
-
-				//if (Attack->Range == EAttackRange::Melee)
-				//{
-				//	AttackState = EAttackState::EAS_MeleeAttacking;
-				//	if (CurrentTarget)
-				//	{
-				//		AddMotionWarpTarget(CurrentTarget);
-				//	}
-				//}
 
 				if (Attack->Range == EAttackRange::Ranged)
 				{

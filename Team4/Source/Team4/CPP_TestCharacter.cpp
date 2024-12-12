@@ -128,7 +128,9 @@ void ACPP_TestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ACPP_TestCharacter::Look);
 		// Attacking
-		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Started, this, &ACPP_TestCharacter::NormalAttack);
+		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Started, this, &ACPP_TestCharacter::OnAttackPressed);
+		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Completed, this, &ACPP_TestCharacter::OnAttackReleased);
+
 		
 		//EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Triggered, AttackComponent, &UCPP_AttackComponent::AimDownSight);
 		//EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, AttackComponent, &UCPP_AttackComponent::AimDownSight);
@@ -266,19 +268,101 @@ void ACPP_TestCharacter::StopDodge()
 }
 
 
+//
+//void ACPP_TestCharacter::NormalAttack()
+//{
+//
+//
+//	EAttackState AttackState = AttackComponent->GetCurrentAttackState();
+//	if (AttackState == EAttackState::EAS_Unoccupied)
+//	{
+//	
+//		AttackComponent->UseNormalAttack();
+//	}
+//	else if (AttackState == EAttackState::EAS_UsingFireGroundSkill)
+//	{
+//		 //AttackComponent->CancelFireGroundSkill();
+//	}
+//}
 
-void ACPP_TestCharacter::NormalAttack()
+
+
+
+void ACPP_TestCharacter::OnAttackPressed()
+{
+	// 이미 눌려있으면 무시
+	if (bIsPressed)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("OnAttackPressed ignored: Already pressed"));
+		return;
+	}
+
+	// 상태 초기화
+	bIsPressed = true;
+	bIsReleased = false;
+	bIsLongPress = false;
+
+	// 버튼을 누른 시간을 기록
+	PressedTime = GetWorld()->GetTimeSeconds();
+
+	// 이전 타이머가 있으면 제거
+	GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
+
+	// 일정 시간이 지나면 타이머가 실행되어 공격 취소
+	GetWorld()->GetTimerManager().SetTimer(
+		AttackHandle,
+		TFunction<void()>([this]() {
+			if (!bIsReleased) // 시간이 초과되고 버튼이 아직 떼어지지 않은 경우
+			{
+				bIsPressed = false;
+				bIsReleased = true; // 강제로 버튼이 떼진 상태로 처리
+				//UE_LOG(LogTemp, Warning, TEXT("Attack timed out without releasing"));
+				// 공격 타이머가 끝났음을 알리기 위해 상태 변경
+			}
+			}),
+		0.5f, // 대기 시간
+		false // 반복 안 함
+	);
+}
+
+void ACPP_TestCharacter::OnAttackReleased()
 {
 	EAttackState AttackState = AttackComponent->GetCurrentAttackState();
-	if (AttackState == EAttackState::EAS_Unoccupied)
+	
+	if (!bIsPressed)
 	{
-		AttackComponent->UseNormalAttack();
+		UE_LOG(LogTemp, Warning, TEXT("OnAttackReleased ignored: Button not pressed"));
+		return;
 	}
-	else if (AttackState == EAttackState::EAS_UsingFireGroundSkill)
+
+	bIsPressed = false;
+	bIsReleased = true;
+
+	// 눌려있던 시간 계산
+	float HeldTime = GetWorld()->GetTimeSeconds() - PressedTime;
+
+	// 시간 안에 버튼이 떼어진 경우 공격 실행
+	if (HeldTime < 0.5f) // <= 대신 < 사용
 	{
-		 //AttackComponent->CancelFireGroundSkill();
+		if (AttackState == EAttackState::EAS_Unoccupied)
+		{
+			AttackComponent->UseNormalAttack();
+			UE_LOG(LogTemp, Warning, TEXT("Normal attack executed after %.2f seconds"), HeldTime);
+		}
+		UE_LOG(LogTemp, Warning, TEXT("Normal attack executed after %.2f seconds"), HeldTime);
+		GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
 	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Attack timed out, no action taken"));
+		GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
+	}
+
+	// 타이머 취소
+	GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
 }
+
+
 
 void ACPP_TestCharacter::SetWeaponCollisionEnabled(ECollisionEnabled::Type CollisionEnabled)
 {

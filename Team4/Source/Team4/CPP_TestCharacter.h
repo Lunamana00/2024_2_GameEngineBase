@@ -92,11 +92,25 @@ protected:
 	void OnDodgeCooldownEnd();
 	
 	void StopDodge();
+
+	//void NormalAttack();
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Dodge")
 	float DodgeSpeed = 1500.f;
 	
 	bool bCanMoveInput = true;
+
+	bool bIsReleased = true;
+
+	bool bIsPressed = false;
+
+	bool bIsLongPress = false;
+	
+	double PressedTime;
+
+	float LongPressThreshold = 0.1f;
+
+	FTimerHandle AttackHandle;
 
 public:	
 	// Called every frame
@@ -140,7 +154,7 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, Category = Input)
 	FVector2D MovementInputVector;
 
-	virtual void NormalAttack();
+	//virtual void NormalAttack();
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = Attack, meta = (AllowPrivateAccess = "true"))
 	UMotionWarpingComponent* MotionWarpingComponent;
@@ -160,6 +174,12 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	FORCEINLINE void SetState(const ECharacterState State) { CharacterState = State; }
+
+	UFUNCTION(BlueprintCallable)
+	void OnAttackPressed();
+
+	UFUNCTION(BlueprintCallable)
+	void OnAttackReleased();
 
 	UFUNCTION(BluePrintCallable)
 	void SetWeaponCollisionEnabled(ECollisionEnabled::Type CollisionEnabled);
