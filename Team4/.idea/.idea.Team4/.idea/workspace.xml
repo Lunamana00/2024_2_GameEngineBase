@@ -14,11 +14,54 @@
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BT_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BT_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PolygonPrototype/Materials/Alts/M_PolygonPrototype_07.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap/C/YT/CQR16QFDKKEYP53M51TV4F.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/Body_MAT4.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/Enemy_2Task.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/Enemy_proj.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/EyeSpec_MAT2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/EyeSpec_MAT4.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/Lashes_MAT4.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Body_diffuse.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Body_diffuse1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Body_diffuse1_ncl1_1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Body_diffuse1_ncl1_2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Bottom5.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Bottom_diffuse1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Bottom_normal.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Bottom_specular.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Hair6.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Hair_diffuse.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Hair_normal.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Hair_specular.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Moustache5.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Moustache_diffuse.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Moustache_normal.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Moustache_specular.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Shoes6.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Shoes_diffuse1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Shoes_normal.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_Shoes_specular.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/MaleBruteA_StdNM.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/Spell_Cast.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/Spell_Cast_Anim.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/Spell_Cast_PhysicsAsset.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/axe_DIF2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/axe_NM2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/axe_SPEC.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/blinn7.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_2/phong4.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Ghost/BP_AIC_Enemy_2.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Ghost/BP_FractTestEnemy.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Ghost/Enemy2_proj.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/CanvasActor.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/CanvasActor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/DrawingComponent.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/DrawingComponent.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

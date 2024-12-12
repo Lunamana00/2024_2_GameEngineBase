@@ -37,7 +37,7 @@ void ADrawingActor::BeginPlay()
            RenderTarget->ClearColor.R, RenderTarget->ClearColor.G, RenderTarget->ClearColor.B, RenderTarget->ClearColor.A);
 
     // 머티리얼 로드 및 적용
-    UMaterialInterface* BaseMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/kth/M_DrawingCanvas.M_DrawingCanvas"));
+    UMaterialInterface* BaseMaterial = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/kth/M_DrawingCanvas.uasset"));
     if (!BaseMaterial)
     {
         UE_LOG(LogTemp, Error, TEXT("[ADrawingActor] Failed to load BaseMaterial!"));
@@ -114,7 +114,7 @@ void ADrawingActor::DrawAtLocation(const FVector& HitLocation)
 
         // 사각형 크기와 색상 설정
         FVector2D RectSize = FVector2D(10.0f, 10.0f);
-        FLinearColor RectColor = FLinearColor::White;
+        FLinearColor RectColor = FLinearColor::Black;
 
         // 사각형 그리기
         Canvas->K2_DrawBox(CanvasPosition - (RectSize * 0.5f), RectSize, 30.0f, RectColor);
