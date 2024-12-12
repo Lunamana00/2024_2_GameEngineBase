@@ -9,17 +9,31 @@
 #include "Engine/Canvas.h"
 #include "Misc/Paths.h"
 #include "HAL/PlatformProcess.h"
+#include "Net/UnrealNetwork.h"
 
 // Constructor
 ADrawingActor::ADrawingActor()
 {
     PrimaryActorTick.bCanEverTick = true;
 
+    // 네트워크 복제 활성화
+    bReplicates = true;
+    bAlwaysRelevant = true;
+
     // Static Mesh Component 생성
     MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
     RootComponent = MeshComponent;
 
     
+}
+
+// 네트워크 복제 변수 설정
+void ADrawingActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+    // LastHitLocation을 네트워크 복제 대상으로 설정
+    DOREPLIFETIME(ADrawingActor, LastHitLocation);
 }
 
 void ADrawingActor::BeginPlay()
@@ -84,53 +98,102 @@ void ADrawingActor::DrawAtLocation(const FVector& HitLocation)
 
     UKismetRenderingLibrary::BeginDrawCanvasToRenderTarget(this, RenderTarget, Canvas, CanvasSize, Context);
 
+    //if (Canvas)
+    //{
+    //    // 히트 위치를 로컬 좌표로 변환
+    //    FTransform MeshTransform = MeshComponent->GetComponentTransform();
+    //    FVector LocalHitLocation = MeshTransform.InverseTransformPosition(HitLocation);
+
+    //    // 디버깅: Local Hit Location, MeshExtent, WorldScale
+    //    FVector MeshExtent = MeshComponent->Bounds.BoxExtent;
+    //    FVector WorldScale = MeshComponent->GetComponentScale();
+    //    UE_LOG(LogTemp, Log, TEXT("Local Hit Location: (%f, %f, %f)"), LocalHitLocation.X, LocalHitLocation.Y, LocalHitLocation.Z);
+    //    UE_LOG(LogTemp, Log, TEXT("Mesh Extent: (%f, %f, %f)"), MeshExtent.X, MeshExtent.Y, MeshExtent.Z);
+    //    UE_LOG(LogTemp, Log, TEXT("World Scale: (%f, %f, %f)"), WorldScale.X, WorldScale.Y, WorldScale.Z);
+
+    //    // 메시 크기와 스케일을 이용한 UV 계산
+    //    FVector2D UV;
+    //    UV.X = (LocalHitLocation.X + 50.0f) / 100.0f;
+    //    UV.Y = (LocalHitLocation.Y + 50.0f) / 100.0f;
+
+    //    // UV 좌표를 0~1 범위로 제한
+    //    UV.X = FMath::Clamp(UV.X, 0.0f, 1.0f);
+    //    UV.Y = FMath::Clamp(UV.Y, 0.0f, 1.0f);
+
+    //    UE_LOG(LogTemp, Log, TEXT("UV Coordinates (Revised): (%f, %f)"), UV.X, UV.Y);
+
+    //    // UV 좌표를 Canvas 좌표로 변환
+    //    FVector2D CanvasPosition = UV * CanvasSize;
+    //    UE_LOG(LogTemp, Log, TEXT("Canvas Position: (%f, %f)"), CanvasPosition.X, CanvasPosition.Y);
+
+    //    // 사각형 크기와 색상 설정
+    //    FVector2D RectSize = FVector2D(10.0f, 10.0f);
+    //    FLinearColor RectColor = FLinearColor::White;
+
+    //    // 사각형 그리기
+    //    Canvas->K2_DrawBox(CanvasPosition - (RectSize * 0.5f), RectSize, 30.0f, RectColor);
+
+    //    // Canvas 그리기 종료
+    //    UKismetRenderingLibrary::EndDrawCanvasToRenderTarget(this, Context);
+
+    //    // Render Target 업데이트
+    //    RenderTarget->UpdateResourceImmediate(false);
+    //}
+    //else
+    //{
+    //    UE_LOG(LogTemp, Error, TEXT("Canvas is null!"));
+    //}
+        // 서버에서 실행
+    if (HasAuthority())
+    {
+        Server_DrawAtLocation(HitLocation);
+    }
+}
+// 서버에서 실행되는 함수
+void ADrawingActor::Server_DrawAtLocation_Implementation(const FVector& HitLocation)
+{
+    // 클라이언트에 브로드캐스트
+    Multicast_DrawAtLocation(HitLocation);
+}
+
+
+bool ADrawingActor::Server_DrawAtLocation_Validate(const FVector& HitLocation)
+{
+    // 서버 호출 검증 (여기선 항상 true)
+    return true;
+}
+
+void ADrawingActor::Multicast_DrawAtLocation_Implementation(const FVector& HitLocation)
+{
+    // HitLocation 저장
+    LastHitLocation = HitLocation;
+
+    // 캔버스에 그리기
+    if (!RenderTarget) return;
+
+    UCanvas* Canvas = nullptr;
+    FVector2D CanvasSize;
+    FDrawToRenderTargetContext Context;
+
+    UKismetRenderingLibrary::BeginDrawCanvasToRenderTarget(this, RenderTarget, Canvas, CanvasSize, Context);
+
     if (Canvas)
     {
-        // 히트 위치를 로컬 좌표로 변환
         FTransform MeshTransform = MeshComponent->GetComponentTransform();
         FVector LocalHitLocation = MeshTransform.InverseTransformPosition(HitLocation);
 
-        // 디버깅: Local Hit Location, MeshExtent, WorldScale
-        FVector MeshExtent = MeshComponent->Bounds.BoxExtent;
-        FVector WorldScale = MeshComponent->GetComponentScale();
-        UE_LOG(LogTemp, Log, TEXT("Local Hit Location: (%f, %f, %f)"), LocalHitLocation.X, LocalHitLocation.Y, LocalHitLocation.Z);
-        UE_LOG(LogTemp, Log, TEXT("Mesh Extent: (%f, %f, %f)"), MeshExtent.X, MeshExtent.Y, MeshExtent.Z);
-        UE_LOG(LogTemp, Log, TEXT("World Scale: (%f, %f, %f)"), WorldScale.X, WorldScale.Y, WorldScale.Z);
-
-        // 메시 크기와 스케일을 이용한 UV 계산
         FVector2D UV;
-        UV.X = (LocalHitLocation.X + 50.0f) / 100.0f;
-        UV.Y = (LocalHitLocation.Y + 50.0f) / 100.0f;
+        UV.X = FMath::Clamp((LocalHitLocation.X + 50.0f) / 100.0f, 0.0f, 1.0f);
+        UV.Y = FMath::Clamp((LocalHitLocation.Y + 50.0f) / 100.0f, 0.0f, 1.0f);
 
-        // UV 좌표를 0~1 범위로 제한
-        UV.X = FMath::Clamp(UV.X, 0.0f, 1.0f);
-        UV.Y = FMath::Clamp(UV.Y, 0.0f, 1.0f);
-
-        UE_LOG(LogTemp, Log, TEXT("UV Coordinates (Revised): (%f, %f)"), UV.X, UV.Y);
-
-        // UV 좌표를 Canvas 좌표로 변환
         FVector2D CanvasPosition = UV * CanvasSize;
-        UE_LOG(LogTemp, Log, TEXT("Canvas Position: (%f, %f)"), CanvasPosition.X, CanvasPosition.Y);
 
-        // 사각형 크기와 색상 설정
-        FVector2D RectSize = FVector2D(10.0f, 10.0f);
-        FLinearColor RectColor = FLinearColor::White;
+        Canvas->K2_DrawBox(CanvasPosition - FVector2D(5.0f, 5.0f), FVector2D(10.0f, 10.0f), 30.0f, FLinearColor::White);
 
-        // 사각형 그리기
-        Canvas->K2_DrawBox(CanvasPosition - (RectSize * 0.5f), RectSize, 30.0f, RectColor);
-
-        // Canvas 그리기 종료
         UKismetRenderingLibrary::EndDrawCanvasToRenderTarget(this, Context);
-
-        // Render Target 업데이트
         RenderTarget->UpdateResourceImmediate(false);
     }
-    else
-    {
-        UE_LOG(LogTemp, Error, TEXT("Canvas is null!"));
-    }
 }
-
 void ADrawingActor::SaveDrawing()
 {
     if (!RenderTarget)
