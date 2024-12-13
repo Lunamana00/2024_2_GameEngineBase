@@ -8,43 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="919f37fe-979f-4b2f-939c-1acaad7f4ce2" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss_Mat/M_Elemental_Black.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss_Mat/M_Elemental_Blue.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss_Mat/M_Elemental_Green.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss_Mat/M_Elemental_Red.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/Anim_Enemy_1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/BB_Enemy_1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/BP_AIC_Enemy_1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/BTT_ATTACK.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/BTTask_Wander.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/BTTask_find.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/BT_Enemy_1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/Enemy1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/NewBlueprint.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Enemy_1/Standin_Attack_Downward.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/ANIMBP_Red_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/ANIMBP_Red_Slime.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry_0.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-00.16.27.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-09.33.07.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-10.24.22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-10.25.59.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-10.45.57.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-11.06.54.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-11.13.35.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-11.20.04.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-11.51.01.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-12.59.13.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-13.23.50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4-backup-2024.12.10-14.23.40.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/Team4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/Team4.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Telemetry/Telemetry.json" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Telemetry/Telemetry.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Team4/AIC_Boss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/AIC_Boss.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/6/FP/JZIF7POOO0P0IU2AM2D1PE.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/9/BC/OV5ER9PE3UAX7TS9OF1ZZN.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/9/H7/6V4LQMCDCYRWZJL0SKPUF1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/G0/VM97OFF1E6L4DZX8WTOWMV.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/HJ/7TVDW4GLCQ3YX3IAX1ZTHB.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ThirdPersonMap1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ThirdPersonMap1.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +162,7 @@
       <workItem from="1733516506462" duration="341000" />
       <workItem from="1733569362372" duration="8218000" />
       <workItem from="1733825946377" duration="9155000" />
+      <workItem from="1734115318550" duration="594000" />
     </task>
     <servers />
   </component>

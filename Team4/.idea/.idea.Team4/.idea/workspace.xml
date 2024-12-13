@@ -15,9 +15,16 @@
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/6/FP/JZIF7POOO0P0IU2AM2D1PE.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/9/BC/OV5ER9PE3UAX7TS9OF1ZZN.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/9/H7/6V4LQMCDCYRWZJL0SKPUF1.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/G0/VM97OFF1E6L4DZX8WTOWMV.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/HJ/7TVDW4GLCQ3YX3IAX1ZTHB.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dataprocess/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/Dataprocess/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ThirdPersonMap1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ThirdPersonMap1.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +192,7 @@
       <workItem from="1733925476025" duration="84000" />
       <workItem from="1734041899670" duration="17471000" />
       <workItem from="1734093265450" duration="878000" />
+      <workItem from="1734102225603" duration="5717000" />
     </task>
     <servers />
   </component>
