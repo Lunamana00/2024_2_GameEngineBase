@@ -321,11 +321,34 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 			CrosshairWidget->RemoveFromParent();
 		}
 		CurrentRange = EAttackRange::Melee;
-		ResetCombo();
+		//ResetCombo();
 		//Character->GetCharacterMovement()->bOrientRotationToMovement = true;
 		//Character->GetCharacterMovement()->bUseControllerDesiredRotation = false;
 	}
 }
+
+//void UCPP_AttackComponent::AImForDrawing()
+//{
+//	if (CrosshairWidget && !CrosshairWidget->IsInViewport())
+//	{
+//		CrosshairWidget->AddToViewport();
+//	}
+//	CurrentRange = EAttackRange::Ranged;
+//	Character->GetCharacterMovement()->bOrientRotationToMovement = false;
+//	Character->GetCharacterMovement()->bUseControllerDesiredRotation = true;
+//}
+//
+//void UCPP_AttackComponent::AImOutDrawing()
+//{
+//	if (CrosshairWidget)
+//	{
+//		CrosshairWidget->RemoveFromParent();
+//	}
+//	CurrentRange = EAttackRange::Melee;
+//	ResetCombo();
+//	Character->GetCharacterMovement()->bOrientRotationToMovement = true;
+//	Character->GetCharacterMovement()->bUseControllerDesiredRotation = false;
+//}
 
 FAttack* UCPP_AttackComponent::GetNormalAttack()
 {

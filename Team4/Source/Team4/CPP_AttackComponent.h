@@ -128,6 +128,10 @@ public:
 	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
 	
 	void AimDownSight(const FInputActionValue& Value);
+
+	void AImForDrawing();
+
+	void AImOutDrawing();
 	
 	FORCEINLINE FAttack* GetNormalAttack();
 

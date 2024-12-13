@@ -176,10 +176,10 @@ public:
 	FORCEINLINE void SetState(const ECharacterState State) { CharacterState = State; }
 
 	UFUNCTION(BlueprintCallable)
-	void OnAttackPressed();
+	void OnAttackPressed(const FInputActionValue& Value);
 
 	UFUNCTION(BlueprintCallable)
-	void OnAttackReleased();
+	void OnAttackReleased(const FInputActionValue& Value);
 
 	UFUNCTION(BluePrintCallable)
 	void SetWeaponCollisionEnabled(ECollisionEnabled::Type CollisionEnabled);

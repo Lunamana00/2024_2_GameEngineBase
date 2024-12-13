@@ -288,12 +288,10 @@ void ACPP_TestCharacter::StopDodge()
 
 
 
-void ACPP_TestCharacter::OnAttackPressed()
+void ACPP_TestCharacter::OnAttackPressed(const FInputActionValue& Value)
 {
-	// 이미 눌려있으면 무시
 	if (bIsPressed)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("OnAttackPressed ignored: Already pressed"));
 		return;
 	}
 
@@ -311,13 +309,13 @@ void ACPP_TestCharacter::OnAttackPressed()
 	// 일정 시간이 지나면 타이머가 실행되어 공격 취소
 	GetWorld()->GetTimerManager().SetTimer(
 		AttackHandle,
-		TFunction<void()>([this]() {
+		TFunction<void()>([this,Value]() {
 			if (!bIsReleased) // 시간이 초과되고 버튼이 아직 떼어지지 않은 경우
 			{
 				bIsPressed = false;
 				bIsReleased = true; // 강제로 버튼이 떼진 상태로 처리
-				//UE_LOG(LogTemp, Warning, TEXT("Attack timed out without releasing"));
-				// 공격 타이머가 끝났음을 알리기 위해 상태 변경
+				
+				AttackComponent->AimDownSight(Value);
 			}
 			}),
 		0.5f, // 대기 시간
@@ -325,13 +323,17 @@ void ACPP_TestCharacter::OnAttackPressed()
 	);
 }
 
-void ACPP_TestCharacter::OnAttackReleased()
+void ACPP_TestCharacter::OnAttackReleased(const FInputActionValue& Value)
 {
+
 	EAttackState AttackState = AttackComponent->GetCurrentAttackState();
 	
+	AttackComponent->AimDownSight(Value);
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->bUseControllerDesiredRotation = false;
+
 	if (!bIsPressed)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("OnAttackReleased ignored: Button not pressed"));
 		return;
 	}
 
@@ -341,25 +343,24 @@ void ACPP_TestCharacter::OnAttackReleased()
 	// 눌려있던 시간 계산
 	float HeldTime = GetWorld()->GetTimeSeconds() - PressedTime;
 
+	
 	// 시간 안에 버튼이 떼어진 경우 공격 실행
 	if (HeldTime < 0.5f) // <= 대신 < 사용
 	{
 		if (AttackState == EAttackState::EAS_Unoccupied)
 		{
 			AttackComponent->UseNormalAttack();
-			UE_LOG(LogTemp, Warning, TEXT("Normal attack executed after %.2f seconds"), HeldTime);
 		}
-		UE_LOG(LogTemp, Warning, TEXT("Normal attack executed after %.2f seconds"), HeldTime);
-		GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Attack timed out, no action taken"));
-		GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
-	}
+
+	AttackComponent->AimDownSight(Value);
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->bUseControllerDesiredRotation = false;
 
 	// 타이머 취소
 	GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
+
+	
 }
 
 
