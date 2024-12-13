@@ -400,6 +400,7 @@ void ACPP_TestCharacter::SetAllowPhysicsRotationDuringAnimRootMotion(bool bAllow
 
 void ACPP_TestCharacter::Die()
 {
+	StopMoving();
 	APlayerController* PC = Cast<APlayerController>(GetController());
 	if (PC)
 	{

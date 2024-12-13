@@ -121,7 +121,7 @@ public:
 
 protected:
 
-	UPROPERTY(VisibleAnywhere, Category = Attribute)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Attribute)
 	UCPP_AttributeForPlayerComponent* Attribute;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attack, meta = (AllowPrivateAccess = "true"))
