@@ -2,8 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "DrawingActor.generated.h"
 
+#include "Runtime/Online/HTTP/Public/Http.h"
+#include "Misc/FileHelper.h"
+#include "DrawingActor.generated.h"
 UCLASS()
 class TEAM4_API ADrawingActor : public AActor
 {
@@ -41,15 +43,17 @@ public:
 	FString PredictedClass;
 
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Prediction")
-	FString PredictionResult; // 블루프린트에서 접근 가능한 변수
-
-	UFUNCTION(BlueprintCallable, Category = "Prediction")
-	bool ExecutePrediction(const FString& ImagePath);
+	FString PredictionResult; // 블루프린트에서 접근 가능한 변
 	
 	UFUNCTION(BlueprintCallable, Category = "Drawing")
 	void SaveDrawing();
-	bool ExecutePrediction(const FString& ImagePath, FString& OutClass);
+
 	void BeginDestroy() override;
+	// Function to send image to the server
+	void SendImageToServer(const FString& ImagePath);
+
+	// Callback function to handle server response
+	void OnServerResponseReceived(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bWasSuccessful);
 
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPredictionComplete);
 

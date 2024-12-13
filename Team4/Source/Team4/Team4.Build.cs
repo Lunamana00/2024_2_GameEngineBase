@@ -8,8 +8,7 @@ public class Team4 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "Renderer", "RenderCore", "RHI","Niagara" });
-
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "Renderer", "RenderCore", "RHI","Niagara","HTTP","Json", "JsonUtilities",});
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
         PrivateDependencyModuleNames.AddRange(new string[] { "EnhancedInput", });
