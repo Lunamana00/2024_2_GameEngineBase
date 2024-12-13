@@ -58,6 +58,16 @@ enum class EAttackState : uint8
     EAS_Dodging UMETA(DisplayName = "Dodging"),
 };
 
+UENUM(BlueprintType)
+enum class EColor : uint8
+{
+    EC_None UMETA(DisplayName = "None"),
+    EC_Blue UMETA(DisplayName = "Blue"),
+    EC_Red UMETA(DisplayName = "Red"),
+    EC_Green UMETA(DisplayName = "Green")
+};
+
+
 // 기본 공격 구조체
 USTRUCT(BlueprintType)
 struct FAttack

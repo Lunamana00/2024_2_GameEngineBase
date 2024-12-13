@@ -45,6 +45,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	EAttackRange CurrentRange = EAttackRange::Melee;
 
+	UPROPERTY(VisibleAnywhere, Category = "Color")
+	EColor CurrentColor = EColor::EC_None;
+
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	bool bIsFlying = false;
 
@@ -67,8 +70,19 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Combat")
 	void ResetAttackState();
 
-	UPROPERTY(EditAnywhere)
 	TSubclassOf<ACPP_Projectile> ProjectileClass;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<ACPP_Projectile> ProjectileClass_R;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<ACPP_Projectile> ProjectileClass_G;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<ACPP_Projectile> ProjectileClass_B;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<ACPP_Projectile> ProjectileClass_N;
 
 	FVector HitLocation;
 
@@ -103,7 +117,6 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Combat")
 	void SpawnProjectile();
 
-
 	bool bIsRangedAttacking = false;
 	FVector CachedHitLocation;
 
@@ -128,19 +141,17 @@ public:
 	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
 	
 	void AimDownSight(const FInputActionValue& Value);
-
-	void AImForDrawing();
-
-	void AImOutDrawing();
 	
+	UFUNCTION(BlueprintCallable)
+	void SetCurrentColor(EColor inColor);
+
 	FORCEINLINE FAttack* GetNormalAttack();
 
 	FORCEINLINE ACharacter* GetCurrentTarget() const { return CurrentTarget; }
 	UFUNCTION(BlueprintCallable)
-
 	FORCEINLINE EAttackState GetCurrentAttackState() const { return AttackState; }
 	UFUNCTION(BlueprintCallable)
-	
+
 	void SetCurrentAttackState(const EAttackState& InAttackState) { AttackState = InAttackState; }
 	
 	void UseNormalAttack();

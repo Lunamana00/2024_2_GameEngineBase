@@ -244,11 +244,49 @@ void UCPP_AttackComponent::SpawnProjectile()
 	AimDirection = AimDirection.GetSafeNormal();
 	FRotator SpawnRotation = AimDirection.Rotation();
 
-	if (ProjectileClass && GetWorld())
+	if (ProjectileClass_N&& ProjectileClass_R && ProjectileClass_G && ProjectileClass_B && GetWorld())
 	{
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = GetOwner();
 		SpawnParams.Instigator = Cast<APawn>(GetOwner());
+
+		switch (CurrentColor)
+		{
+		case EColor::EC_None:		
+			GetWorld()->SpawnActor<ACPP_Projectile>(
+				ProjectileClass_N,
+				MuzzleLocation,
+				SpawnRotation,
+				SpawnParams
+			);
+			break;
+		case EColor::EC_Red:
+			GetWorld()->SpawnActor<ACPP_Projectile>(
+				ProjectileClass_R,
+				MuzzleLocation,
+				SpawnRotation,
+				SpawnParams
+			);
+			break;
+		case EColor::EC_Blue:
+			GetWorld()->SpawnActor<ACPP_Projectile>(
+				ProjectileClass_B,
+				MuzzleLocation,
+				SpawnRotation,
+				SpawnParams
+			);
+			break;
+		case EColor::EC_Green:
+			GetWorld()->SpawnActor<ACPP_Projectile>(
+				ProjectileClass_G,
+				MuzzleLocation,
+				SpawnRotation,
+				SpawnParams
+			);
+			break;
+		default:
+			break;
+		}
 
 		GetWorld()->SpawnActor<ACPP_Projectile>(
 			ProjectileClass,
@@ -327,28 +365,11 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 	}
 }
 
-//void UCPP_AttackComponent::AImForDrawing()
-//{
-//	if (CrosshairWidget && !CrosshairWidget->IsInViewport())
-//	{
-//		CrosshairWidget->AddToViewport();
-//	}
-//	CurrentRange = EAttackRange::Ranged;
-//	Character->GetCharacterMovement()->bOrientRotationToMovement = false;
-//	Character->GetCharacterMovement()->bUseControllerDesiredRotation = true;
-//}
-//
-//void UCPP_AttackComponent::AImOutDrawing()
-//{
-//	if (CrosshairWidget)
-//	{
-//		CrosshairWidget->RemoveFromParent();
-//	}
-//	CurrentRange = EAttackRange::Melee;
-//	ResetCombo();
-//	Character->GetCharacterMovement()->bOrientRotationToMovement = true;
-//	Character->GetCharacterMovement()->bUseControllerDesiredRotation = false;
-//}
+void UCPP_AttackComponent::SetCurrentColor(EColor inColor)
+{
+	CurrentColor = inColor;
+}
+
 
 FAttack* UCPP_AttackComponent::GetNormalAttack()
 {
