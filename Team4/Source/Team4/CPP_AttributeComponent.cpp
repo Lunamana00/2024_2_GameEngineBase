@@ -38,9 +38,13 @@ void UCPP_AttributeComponent::ReceiveDamage(const float DamageAmount)
     if (GetOwner()->HasAuthority())
     {
         CurrentHealth = FMath::Clamp(CurrentHealth - DamageAmount, 0.f, MaxHealth);
+        //서버에서 적용된 데미지
+        UE_LOG(LogTemp, Log, TEXT("Damage applied on Server. New Health: %f"), CurrentHealth);
     }
     else
     {
+        //서버로 데미지 요청함
+        UE_LOG(LogTemp, Log, TEXT("Damage request sent to Server: %f"), DamageAmount);
         Server_ReceiveDamage(DamageAmount);
     }
 }
@@ -87,7 +91,8 @@ bool UCPP_AttributeComponent::IsAlive() const
 void UCPP_AttributeComponent::OnRep_CurrentHealth()
 {
     // 클라이언트에서 UI 업데이트 등의 작업을 수행할 수 있음
-    UE_LOG(LogTemp, Log, TEXT("CurrentHealth updated to: %f"), CurrentHealth);
+    // 체력 로그 보임
+    UE_LOG(LogTemp, Log, TEXT("OnRep_CurrentHealth called on Client. New Health: %f"), CurrentHealth);
 }
 
 void UCPP_AttributeComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
