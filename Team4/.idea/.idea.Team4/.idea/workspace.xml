@@ -14,19 +14,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.patch_0.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.patch_0.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Dataprocess/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Dataprocess/predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/B_HIT_Sphere.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/B_HIT_Sphere.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/B_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/B_Sword.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_HIT_Sphere.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_HIT_Sphere.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/BP_DrawingActor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/BP_DrawingActor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Team4/DrawingActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/DrawingActor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Team4/Team4.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/Team4.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
