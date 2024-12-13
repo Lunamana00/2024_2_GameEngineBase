@@ -21,8 +21,12 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes", ReplicatedUsing = OnRep_CurrentHealth)
 	float CurrentHealth;
+
+	UFUNCTION()
+	void OnRep_CurrentHealth();
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes")
 	float MaxHealth = 100.f;
@@ -53,5 +57,11 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool IsAlive() const;
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_ReceiveDamage(float DamageAmount);
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_HealHealth(float HealAmount);
 
 };
