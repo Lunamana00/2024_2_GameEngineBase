@@ -13,18 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/6/FP/JZIF7POOO0P0IU2AM2D1PE.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/9/BC/OV5ER9PE3UAX7TS9OF1ZZN.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/9/H7/6V4LQMCDCYRWZJL0SKPUF1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/G0/VM97OFF1E6L4DZX8WTOWMV.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/HJ/7TVDW4GLCQ3YX3IAX1ZTHB.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ThirdPersonMap1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ThirdPersonMap1.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/CY/T7MM5TRDLFTKS7IAOAJGME.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/CY/T7MM5TRDLFTKS7IAOAJGME.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/ANIMBP_Blue_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/ANIMBP_Blue_Slime.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/BP_Blue_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/BP_Blue_Slime.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/BP_Red_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/BP_Red_Slime.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +34,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/Team4/AIC_Boss.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/AIC_Boss.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/BP_ControllerTest.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/BP_ControllerTest.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/BTT_Attack_Enemy_1AI.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/BossProjectile.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/BossProjectile.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/CPP_AttackComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/CanvasComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/DrawingActor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/Enemy_1AIController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/Enemy_1AIController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/Team4.Build.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Team4.uproject" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -193,6 +202,8 @@
       <workItem from="1734041899670" duration="17471000" />
       <workItem from="1734093265450" duration="878000" />
       <workItem from="1734102225603" duration="5717000" />
+      <workItem from="1734171789173" duration="3752000" />
+      <workItem from="1734177918219" duration="530000" />
     </task>
     <servers />
   </component>
