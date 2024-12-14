@@ -1,11 +1,14 @@
 #include "BossProjectile.h"
 #include "NiagaraFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "Net/UnrealNetwork.h"
 #include "TimerManager.h"
 
 ABossProjectile::ABossProjectile()
 {
     PrimaryActorTick.bCanEverTick = true;
+    bReplicates = true;            // 발사체 자체를 복제
+    SetReplicateMovement(true);    // 발사체의 이동 복제
     
     CollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionComponent"));
     CollisionComponent->InitSphereRadius(15.0f);

@@ -10,7 +10,7 @@ class UAnimMontage;
 class UParticleSystem;
 class USoundBase;
 
-// ¿ø¼Ò Á¾·ù
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //UENUM(BlueprintType)
 //enum class EElementType : uint8
 //{
@@ -22,15 +22,15 @@ class USoundBase;
 //    Player UMETA(DisplayName = "Player")
 //};
 
-// °ø°Ý ¹üÀ§ Å¸ÀÔ
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½
 UENUM(BlueprintType)
 enum class EAttackRange : uint8
 {
-    Melee UMETA(DisplayName = "Melee"), // ±ÙÁ¢
-    Ranged UMETA(DisplayName = "Ranged") //¿ø°Å¸®
+    Melee UMETA(DisplayName = "Melee"), // ï¿½ï¿½ï¿½ï¿½
+    Ranged UMETA(DisplayName = "Ranged") //ï¿½ï¿½ï¿½Å¸ï¿½
 };
 
-// ½ºÅ³ÀÎÁö ±âº» °ø°ÝÀÎÁö
+// ï¿½ï¿½Å³ï¿½ï¿½ï¿½ï¿½ ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 UENUM(BlueprintType)
 enum class EAttackType : uint8
 {
@@ -38,7 +38,7 @@ enum class EAttackType : uint8
     Skill UMETA(DisplayName = "Skill")
 };
 
-// Ä³¸¯ÅÍ ½ºÅ×ÀÌÆ®
+// Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 UENUM(BlueprintType)
 enum class ECharacterState : uint8
 {
@@ -68,13 +68,13 @@ enum class EColor : uint8
 };
 
 
-// ±âº» °ø°Ý ±¸Á¶Ã¼
+// ï¿½âº» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼
 USTRUCT(BlueprintType)
 struct FAttack
 {
     GENERATED_BODY()
 
-    // ±âº» ¼Ó¼º
+    // ï¿½âº» ï¿½Ó¼ï¿½
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     float DamageMultiplier = 1.0f;
 

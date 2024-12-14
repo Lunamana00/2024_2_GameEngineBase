@@ -295,31 +295,31 @@ void ACPP_TestCharacter::OnAttackPressed(const FInputActionValue& Value)
 		return;
 	}
 
-	// »óÅÂ ÃÊ±âÈ­
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
 	bIsPressed = true;
 	bIsReleased = false;
 	bIsLongPress = false;
 
-	// ¹öÆ°À» ´©¸¥ ½Ã°£À» ±â·Ï
+	// ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	PressedTime = GetWorld()->GetTimeSeconds();
 
-	// ÀÌÀü Å¸ÀÌ¸Ó°¡ ÀÖÀ¸¸é Á¦°Å
+	// ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½Ì¸Ó°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
 
-	// ÀÏÁ¤ ½Ã°£ÀÌ Áö³ª¸é Å¸ÀÌ¸Ó°¡ ½ÇÇàµÇ¾î °ø°İ Ãë¼Ò
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½Ì¸Ó°ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	GetWorld()->GetTimerManager().SetTimer(
 		AttackHandle,
 		TFunction<void()>([this,Value]() {
-			if (!bIsReleased) // ½Ã°£ÀÌ ÃÊ°úµÇ°í ¹öÆ°ÀÌ ¾ÆÁ÷ ¶¼¾îÁöÁö ¾ÊÀº °æ¿ì
+			if (!bIsReleased) // ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ï¿½Ç°ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 			{
 				bIsPressed = false;
-				bIsReleased = true; // °­Á¦·Î ¹öÆ°ÀÌ ¶¼Áø »óÅÂ·Î Ã³¸®
+				bIsReleased = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ Ã³ï¿½ï¿½
 				
 				AttackComponent->AimDownSight(Value);
 			}
 			}),
-		0.5f, // ´ë±â ½Ã°£
-		false // ¹İº¹ ¾È ÇÔ
+		0.5f, // ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+		false // ï¿½İºï¿½ ï¿½ï¿½ ï¿½ï¿½
 	);
 }
 
@@ -340,12 +340,12 @@ void ACPP_TestCharacter::OnAttackReleased(const FInputActionValue& Value)
 	bIsPressed = false;
 	bIsReleased = true;
 
-	// ´­·ÁÀÖ´ø ½Ã°£ °è»ê
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½
 	float HeldTime = GetWorld()->GetTimeSeconds() - PressedTime;
 
 	
-	// ½Ã°£ ¾È¿¡ ¹öÆ°ÀÌ ¶¼¾îÁø °æ¿ì °ø°İ ½ÇÇà
-	if (HeldTime < 0.5f) // <= ´ë½Å < »ç¿ë
+	// ï¿½Ã°ï¿½ ï¿½È¿ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	if (HeldTime < 0.5f) // <= ï¿½ï¿½ï¿½ < ï¿½ï¿½ï¿½
 	{
 		if (AttackState == EAttackState::EAS_Unoccupied)
 		{
@@ -357,7 +357,7 @@ void ACPP_TestCharacter::OnAttackReleased(const FInputActionValue& Value)
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->bUseControllerDesiredRotation = false;
 
-	// Å¸ÀÌ¸Ó Ãë¼Ò
+	// Å¸ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½
 	GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
 
 	
