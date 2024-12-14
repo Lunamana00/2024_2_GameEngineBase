@@ -238,64 +238,79 @@ void UCPP_AttackComponent::RotateToInputDirection(float DeltaTime)
 
 void UCPP_AttackComponent::SpawnProjectile()
 {
-	FVector MuzzleLocation = Character->GetWeapon()->GetWeaponMuzzle()->GetComponentLocation();
+	if (!Character || !ProjectileClass_N || !ProjectileClass_R || !ProjectileClass_B || !ProjectileClass_G) return;
 
+	FVector MuzzleLocation = Character->GetWeapon()->GetWeaponMuzzle()->GetComponentLocation();
 	FVector AimDirection = HitLocation - MuzzleLocation;
 	AimDirection = AimDirection.GetSafeNormal();
 	FRotator SpawnRotation = AimDirection.Rotation();
 
-	if (ProjectileClass_N&& ProjectileClass_R && ProjectileClass_G && ProjectileClass_B && GetWorld())
+	if (GetOwner()->HasAuthority()) // 서버 권한 확인
 	{
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = GetOwner();
-		SpawnParams.Instigator = Cast<APawn>(GetOwner());
+		SpawnProjectile_Internal(MuzzleLocation, SpawnRotation, CurrentColor);
+	}
+	else
+	{
+		// 클라이언트에서 서버로 발사체 생성 요청
+		Server_SpawnProjectile(MuzzleLocation, SpawnRotation, CurrentColor);
+	}
+}
 
-		switch (CurrentColor)
-		{
-		case EColor::EC_None:		
-			GetWorld()->SpawnActor<ACPP_Projectile>(
-				ProjectileClass_N,
-				MuzzleLocation,
-				SpawnRotation,
-				SpawnParams
-			);
-			break;
-		case EColor::EC_Red:
-			GetWorld()->SpawnActor<ACPP_Projectile>(
-				ProjectileClass_R,
-				MuzzleLocation,
-				SpawnRotation,
-				SpawnParams
-			);
-			break;
-		case EColor::EC_Blue:
-			GetWorld()->SpawnActor<ACPP_Projectile>(
-				ProjectileClass_B,
-				MuzzleLocation,
-				SpawnRotation,
-				SpawnParams
-			);
-			break;
-		case EColor::EC_Green:
-			GetWorld()->SpawnActor<ACPP_Projectile>(
-				ProjectileClass_G,
-				MuzzleLocation,
-				SpawnRotation,
-				SpawnParams
-			);
-			break;
-		default:
-			break;
-		}
+void UCPP_AttackComponent::Server_SpawnProjectile_Implementation(FVector MuzzleLocation, FRotator SpawnRotation, EColor ProjectileColor)
+{
+	SpawnProjectile_Internal(MuzzleLocation, SpawnRotation, ProjectileColor);
+}
 
-		GetWorld()->SpawnActor<ACPP_Projectile>(
-			ProjectileClass,
+bool UCPP_AttackComponent::Server_SpawnProjectile_Validate(FVector MuzzleLocation, FRotator SpawnRotation, EColor ProjectileColor)
+{
+	// 추가적인 검증 로직 필요 시 구현 가능
+	return true;
+}
+
+void UCPP_AttackComponent::SpawnProjectile_Internal(FVector MuzzleLocation, FRotator SpawnRotation, EColor ProjectileColor)
+{
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.Owner = GetOwner();
+	SpawnParams.Instigator = Cast<APawn>(GetOwner());
+
+	TSubclassOf<ACPP_Projectile> ChosenProjectileClass = nullptr;
+
+	// 현재 색상에 따른 발사체 클래스 선택
+	switch (ProjectileColor)
+	{
+	case EColor::EC_None:
+		ChosenProjectileClass = ProjectileClass_N;
+		break;
+	case EColor::EC_Red:
+		ChosenProjectileClass = ProjectileClass_R;
+		break;
+	case EColor::EC_Blue:
+		ChosenProjectileClass = ProjectileClass_B;
+		break;
+	case EColor::EC_Green:
+		ChosenProjectileClass = ProjectileClass_G;
+		break;
+	default:
+		break;
+	}
+
+	if (ChosenProjectileClass)
+	{
+		ACPP_Projectile* SpawnedProjectile = GetWorld()->SpawnActor<ACPP_Projectile>(
+			ChosenProjectileClass,
 			MuzzleLocation,
 			SpawnRotation,
 			SpawnParams
 		);
+
+		if (SpawnedProjectile)
+		{
+			// 필요시 추가 설정 가능
+			SpawnedProjectile->SetOwner(GetOwner());
+		}
 	}
 }
+
 
 void UCPP_AttackComponent::TraceUnderCrosshairs(FHitResult& TraceHitResult)
 {

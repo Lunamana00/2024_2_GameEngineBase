@@ -133,6 +133,12 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "CombatUI")
 	UUserWidget* CrosshairWidget;
 
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_SpawnProjectile(FVector MuzzleLocation, FRotator SpawnRotation, EColor ProjectileColor);
+
+	void SpawnProjectile_Internal(FVector MuzzleLocation, FRotator SpawnRotation, EColor ProjectileColor);
+
+
 public:	
 
 	UPROPERTY(BlueprintAssignable)
