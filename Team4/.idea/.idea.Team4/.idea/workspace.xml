@@ -14,16 +14,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Gamemode.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Sword_Canvas_Actor.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Sword_Canvas_Actor.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Magic_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Magic_Canvas_Actor_k.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Sword_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Sword_Canvas_Actor_k.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Tree_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Tree_Canvas_Actor_k.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/Circle/Green_spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Circle/Green_spawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Tree_Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Tree_Blue.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/2/Z0/33BN9JAHZ4NIR5GB04SLVA.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/2/Z0/33BN9JAHZ4NIR5GB04SLVA.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AnimBP_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AnimBP_Semi.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_green.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_green.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Chase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Chase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Slime/AIC_Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Slime/AIC_Blue.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Green.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Green.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Tree_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Tree_Red.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
