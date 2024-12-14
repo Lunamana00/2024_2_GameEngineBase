@@ -12,7 +12,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="" />
+    <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Slime/AIC_Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Slime/AIC_Blue.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Slime/ANIMBP_Red_slime1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Slime/ANIMBP_Red_slime1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Circle/NewBlueprint.uasset" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +199,7 @@
       <workItem from="1734093265450" duration="878000" />
       <workItem from="1734102225603" duration="5717000" />
       <workItem from="1734171789173" duration="3752000" />
-      <workItem from="1734177918219" duration="1835000" />
+      <workItem from="1734177918219" duration="4246000" />
     </task>
     <servers />
   </component>
