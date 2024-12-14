@@ -10,6 +10,7 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Particles/ParticleSystem.h"
+#include "Net/UnrealNetwork.h"
 #include "Sound/SoundCue.h"
 #include "CPP_EnemyTest.h"
 
@@ -18,6 +19,9 @@ ACPP_Projectile::ACPP_Projectile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	bReplicates = true;
+	SetReplicateMovement(true);// 발사체 복제 활성화   // 발사체의 움직임도 복제
 	
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
 	SetRootComponent(CollisionBox);
