@@ -26,6 +26,10 @@ protected:
 		FVector NormalImpulse, const FHitResult& Hit);
 
 public:	
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Attributes")
+	float BaseDamge = 10.f;
+
 	UPROPERTY(EditAnywhere)
 	class UBoxComponent* CollisionBox;
 

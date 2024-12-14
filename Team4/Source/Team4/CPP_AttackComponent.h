@@ -49,7 +49,7 @@ protected:
 	EColor CurrentColor = EColor::EC_None;
 
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
-	bool bIsFlying = false;
+	bool bIsFlying = false;       
 
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	EAttackState AttackState = EAttackState::EAS_Unoccupied;
@@ -117,6 +117,9 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Combat")
 	void SpawnProjectile();
 
+	UFUNCTION(BlueprintCallable, Category = "Combat")
+	void StartFire();
+
 	bool bIsRangedAttacking = false;
 	FVector CachedHitLocation;
 
@@ -170,17 +173,26 @@ public:
 	
 	void ToggleLockOn();
 
-	bool bComboCooldownActive = false;
+	FTimerHandle FireTimerHandle;
 
-	FTimerHandle ComboCooldownTimerHandle;
+	bool bIsFiring = false;
+
+	float FireRate;
 
 	float ComboCooldownTime = 1.0f;
 	
 	UPROPERTY()
 	AActor* CurrentLockOnTargetActor;
+
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bHasLockOnTarget = false;
+	
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;
 
+	UPROPERTY(BlueprintReadOnly, Category = "Combat")
+	bool bIsZoom = false;
+
+	UFUNCTION(BlueprintCallable, Category = "Combat")
+	void EndFire();
 };

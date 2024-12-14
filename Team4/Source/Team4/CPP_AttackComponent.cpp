@@ -256,6 +256,35 @@ void UCPP_AttackComponent::SpawnProjectile()
 	}
 }
 
+void UCPP_AttackComponent::StartFire()
+{
+	if (bIsFiring) return; // 이미 발사 중이라면 중복 실행 방지
+
+	bIsFiring = true;
+
+	SpawnProjectile();
+
+	GetWorld()->GetTimerManager().SetTimer(
+		FireTimerHandle,
+		this, 
+		&UCPP_AttackComponent::SpawnProjectile,
+		1.f / FireRate, 
+		true);
+
+	AttackState = EAttackState::EAS_Unoccupied;
+}
+
+void UCPP_AttackComponent::EndFire()
+{
+	if (!bIsFiring) return;
+
+	bIsFiring = false;
+
+	GetWorld()->GetTimerManager().ClearTimer(FireTimerHandle);
+
+	AttackState = EAttackState::EAS_Unoccupied;
+}
+
 void UCPP_AttackComponent::Server_SpawnProjectile_Implementation(FVector MuzzleLocation, FRotator SpawnRotation, EColor ProjectileColor)
 {
 	SpawnProjectile_Internal(MuzzleLocation, SpawnRotation, ProjectileColor);
@@ -366,17 +395,18 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 		CurrentRange = EAttackRange::Ranged;
 		Character->GetCharacterMovement()->bOrientRotationToMovement = false;
 		Character->GetCharacterMovement()->bUseControllerDesiredRotation = true;
+		
+		bIsZoom = true;
 	}
 	else
 	{
 		if (CrosshairWidget)
 		{
 			CrosshairWidget->RemoveFromParent();
+			bIsZoom = false;
+		
 		}
 		CurrentRange = EAttackRange::Melee;
-		//ResetCombo();
-		//Character->GetCharacterMovement()->bOrientRotationToMovement = true;
-		//Character->GetCharacterMovement()->bUseControllerDesiredRotation = false;
 	}
 }
 
@@ -446,6 +476,7 @@ void UCPP_AttackComponent::UseNormalAttack()
 		}
 	}
 }
+
 void UCPP_AttackComponent::UseRangedAttack()
 {
 	CurrentRange = EAttackRange::Ranged;
@@ -480,17 +511,13 @@ void UCPP_AttackComponent::UseRangedAttack()
 					TraceUnderCrosshairs(TraceResult);
 					CachedHitLocation = TraceResult.ImpactPoint;
 					bIsRangedAttacking = true;
-					SpawnProjectile();
+					StartFire();
 				}
-
-				ComboCount = ComboCount % Attack->AttackMontages.Num();
 				AnimInstance->Montage_Play(Attack->AttackMontages[ComboCount]);
-				ComboCount++;
 			}
 
 		}
 	}
-	AttackState = EAttackState::EAS_Unoccupied;
 }
 
 void UCPP_AttackComponent::StartLockOn()
@@ -558,8 +585,6 @@ void UCPP_AttackComponent::StartLockOn()
 	Character->GetCharacterMovement()->bOrientRotationToMovement = false;
 	Character->GetCharacterMovement()->bUseControllerDesiredRotation = true;
 	Character->GetCameraBoom()->TargetOffset = FVector(0.f, 0.f, 50.f);
-
-	/*IFractEnemyInterface::Execute_OnSelect(CurrentLockOnTargetActor);*/
 
 	OnUpdatedTargetDelegate.Broadcast(CurrentLockOnTargetActor);
 }

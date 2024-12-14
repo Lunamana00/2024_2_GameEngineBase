@@ -295,31 +295,27 @@ void ACPP_TestCharacter::OnAttackPressed(const FInputActionValue& Value)
 		return;
 	}
 
-	// ���� �ʱ�ȭ
 	bIsPressed = true;
 	bIsReleased = false;
 	bIsLongPress = false;
 
-	// ��ư�� ���� �ð��� ���
 	PressedTime = GetWorld()->GetTimeSeconds();
 
-	// ���� Ÿ�̸Ӱ� ������ ����
 	GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
 
-	// ���� �ð��� ������ Ÿ�̸Ӱ� ����Ǿ� ���� ���
 	GetWorld()->GetTimerManager().SetTimer(
 		AttackHandle,
 		TFunction<void()>([this,Value]() {
-			if (!bIsReleased) // �ð��� �ʰ��ǰ� ��ư�� ���� �������� ���� ���
+			if (!bIsReleased) 
 			{
 				bIsPressed = false;
-				bIsReleased = true; // ������ ��ư�� ���� ���·� ó��
+				bIsReleased = true; 
 				
 				AttackComponent->AimDownSight(Value);
 			}
 			}),
-		0.5f, // ��� �ð�
-		false // �ݺ� �� ��
+		0.5f, 
+		false 
 	);
 }
 
@@ -340,12 +336,10 @@ void ACPP_TestCharacter::OnAttackReleased(const FInputActionValue& Value)
 	bIsPressed = false;
 	bIsReleased = true;
 
-	// �����ִ� �ð� ���
 	float HeldTime = GetWorld()->GetTimeSeconds() - PressedTime;
 
 	
-	// �ð� �ȿ� ��ư�� ������ ��� ���� ����
-	if (HeldTime < 0.5f) // <= ��� < ���
+	if (HeldTime < 0.5f)
 	{
 		if (AttackState == EAttackState::EAS_Unoccupied)
 		{
@@ -357,7 +351,6 @@ void ACPP_TestCharacter::OnAttackReleased(const FInputActionValue& Value)
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->bUseControllerDesiredRotation = false;
 
-	// Ÿ�̸� ���
 	GetWorld()->GetTimerManager().ClearTimer(AttackHandle);
 
 	

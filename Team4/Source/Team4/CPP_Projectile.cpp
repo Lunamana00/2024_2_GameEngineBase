@@ -58,10 +58,10 @@ void ACPP_Projectile::BeginPlay()
 
 void ACPP_Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (ACPP_EnemyTest* TargetEnemy = Cast<ACPP_EnemyTest>(OtherActor))
+	if (OtherActor)
 	{
 		FDamageEvent DamageEvent;
-		TargetEnemy->TakeDamage(10.f, DamageEvent, GetWorld()->GetFirstPlayerController(), this);
+		OtherActor->TakeDamage(BaseDamge, DamageEvent, GetWorld()->GetFirstPlayerController(), this);
 	}
 	if (ICPP_HitInterface* HitInterface = Cast<ICPP_HitInterface>(OtherActor))
 	{
