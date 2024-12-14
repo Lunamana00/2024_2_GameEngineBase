@@ -12,16 +12,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/CY/T7MM5TRDLFTKS7IAOAJGME.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/CY/T7MM5TRDLFTKS7IAOAJGME.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/ANIMBP_Blue_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/ANIMBP_Blue_Slime.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/BP_Blue_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Blue_Slime/BP_Blue_Slime.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/BP_Red_Slime.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Red_Slime/BP_Red_Slime.uasset" afterDir="false" />
-    </list>
+    <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +194,7 @@
       <workItem from="1734093265450" duration="878000" />
       <workItem from="1734102225603" duration="5717000" />
       <workItem from="1734171789173" duration="3752000" />
-      <workItem from="1734177918219" duration="530000" />
+      <workItem from="1734177918219" duration="1835000" />
     </task>
     <servers />
   </component>
