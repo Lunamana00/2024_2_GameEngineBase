@@ -37,7 +37,7 @@ def train_model():
     # 모델 학습
     model.fit(
         train_generator,
-        epochs=20,
+        epochs=40,
         validation_data=validation_generator
     )
 
