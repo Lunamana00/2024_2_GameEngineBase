@@ -131,11 +131,9 @@ void ACPP_TestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Started, this, &ACPP_TestCharacter::OnAttackPressed);
 		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Completed, this, &ACPP_TestCharacter::OnAttackReleased);
 
-		
-		
 		EnhancedInputComponent->BindAction(LockOnAction, ETriggerEvent::Started, AttackComponent, &UCPP_AttackComponent::ToggleLockOn);
 
-}
+	}
 
 }
 
