@@ -13,17 +13,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/2/Z0/33BN9JAHZ4NIR5GB04SLVA.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/2/Z0/33BN9JAHZ4NIR5GB04SLVA.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AnimBP_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AnimBP_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_green.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_green.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Chase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Chase.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BTT_Semi_Spawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Slime/AIC_Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Slime/AIC_Blue.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Green.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Green.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Tree_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Tree_Red.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/2/61/XMLNSOBSE8O90I8OPM5C9Y.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/KH/2GTT0RH7DN3YIF0NBWGU1H.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/D/TR/59GUTCOWS12Z38QY08D6E8.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/B_HIT_Sphere.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/B_HIT_Sphere.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_HIT_Sphere.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_HIT_Sphere.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_HIT_Sphere.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_HIT_Sphere.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Tree_Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Tree_Blue.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/Dataprocess/server.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,6 +208,7 @@
       <workItem from="1734102225603" duration="5717000" />
       <workItem from="1734171789173" duration="3752000" />
       <workItem from="1734177918219" duration="4246000" />
+      <workItem from="1734231309391" duration="2037000" />
     </task>
     <servers />
   </component>

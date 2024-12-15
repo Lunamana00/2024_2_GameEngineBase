@@ -2479,3 +2479,804 @@ RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/D
 2024-12-15 01:53:23,499 [DEBUG] STREAM b'IDAT' 41 8192
 2024-12-15 01:53:23,527 [INFO] Prediction result: T
 2024-12-15 01:53:23,528 [INFO] 127.0.0.1 - - [15/Dec/2024 01:53:23] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:18:25,157 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2024-12-15 02:18:25,157 [INFO] [33mPress CTRL+C to quit[0m
+2024-12-15 02:18:25,159 [INFO]  * Restarting with stat
+2024-12-15 02:18:28,378 [WARNING]  * Debugger is active!
+2024-12-15 02:18:28,385 [INFO]  * Debugger PIN: 623-265-763
+2024-12-15 02:19:40,017 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:19:40,017 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:19:40,017 [INFO] Starting prediction...
+2024-12-15 02:19:40,077 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:19:40,094 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:19:40,149 [INFO] 127.0.0.1 - - [15/Dec/2024 02:19:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:19:40,149 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:19:40,150 [INFO] Starting prediction...
+2024-12-15 02:19:40,285 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:19:40,285 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:19:40,327 [INFO] Prediction result: C
+2024-12-15 02:19:40,327 [INFO] 127.0.0.1 - - [15/Dec/2024 02:19:40] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:22:29,359 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:22:29,359 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:22:29,360 [INFO] Starting prediction...
+2024-12-15 02:22:29,404 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:22:29,406 [INFO] 127.0.0.1 - - [15/Dec/2024 02:22:29] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:22:29,452 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:22:29,452 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:22:29,453 [INFO] Starting prediction...
+2024-12-15 02:22:29,469 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:22:29,469 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:22:29,507 [INFO] Prediction result: C
+2024-12-15 02:22:29,508 [INFO] 127.0.0.1 - - [15/Dec/2024 02:22:29] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:23:09,098 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:23:09,098 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:23:09,099 [INFO] Starting prediction...
+2024-12-15 02:23:09,140 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:23:09,144 [INFO] 127.0.0.1 - - [15/Dec/2024 02:23:09] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:23:09,154 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:23:09,154 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:23:09,155 [INFO] Starting prediction...
+2024-12-15 02:23:09,175 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:23:09,175 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:23:09,214 [INFO] Prediction result: C
+2024-12-15 02:23:09,215 [INFO] 127.0.0.1 - - [15/Dec/2024 02:23:09] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:26:03,078 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:26:03,079 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:26:03,079 [INFO] Starting prediction...
+2024-12-15 02:26:03,104 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:26:03,104 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:26:03,136 [INFO] Prediction result: K
+2024-12-15 02:26:03,137 [INFO] 127.0.0.1 - - [15/Dec/2024 02:26:03] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:27:33,125 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:27:33,126 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:27:33,126 [INFO] Starting prediction...
+2024-12-15 02:27:33,150 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:27:33,150 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:27:33,187 [INFO] Prediction result: C
+2024-12-15 02:27:33,188 [INFO] 127.0.0.1 - - [15/Dec/2024 02:27:33] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:32:58,235 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:32:58,236 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:32:58,236 [INFO] Starting prediction...
+2024-12-15 02:32:58,273 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:32:58,273 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:32:58,314 [INFO] Prediction result: C
+2024-12-15 02:32:58,314 [INFO] 127.0.0.1 - - [15/Dec/2024 02:32:58] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:34:37,439 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:34:37,439 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:34:37,440 [INFO] Starting prediction...
+2024-12-15 02:34:37,468 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:34:37,468 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:34:37,498 [INFO] Prediction result: C
+2024-12-15 02:34:37,498 [INFO] 127.0.0.1 - - [15/Dec/2024 02:34:37] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:42:07,207 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:42:07,209 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:42:07,211 [INFO] Starting prediction...
+2024-12-15 02:42:07,239 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:42:07,241 [INFO] 127.0.0.1 - - [15/Dec/2024 02:42:07] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:42:07,327 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:42:07,327 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:42:07,328 [INFO] Starting prediction...
+2024-12-15 02:42:07,347 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:42:07,347 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:42:07,400 [INFO] Prediction result: T
+2024-12-15 02:42:07,401 [INFO] 127.0.0.1 - - [15/Dec/2024 02:42:07] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:43:04,730 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:43:04,731 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:43:04,732 [INFO] Starting prediction...
+2024-12-15 02:43:04,748 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:43:04,749 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:43:04,782 [INFO] Prediction result: K
+2024-12-15 02:43:04,783 [INFO] 127.0.0.1 - - [15/Dec/2024 02:43:04] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:43:22,354 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:43:22,356 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:43:22,356 [INFO] Starting prediction...
+2024-12-15 02:43:22,415 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:43:22,415 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:43:22,451 [INFO] Prediction result: C
+2024-12-15 02:43:22,452 [INFO] 127.0.0.1 - - [15/Dec/2024 02:43:22] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:45:01,432 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:45:01,433 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:45:01,433 [INFO] Starting prediction...
+2024-12-15 02:45:01,447 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:45:01,447 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:45:01,475 [INFO] Prediction result: K
+2024-12-15 02:45:01,476 [INFO] 127.0.0.1 - - [15/Dec/2024 02:45:01] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:45:18,236 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:45:18,237 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:45:18,237 [INFO] Starting prediction...
+2024-12-15 02:45:18,262 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:45:18,263 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:45:18,332 [INFO] Prediction result: T
+2024-12-15 02:45:18,334 [INFO] 127.0.0.1 - - [15/Dec/2024 02:45:18] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:48:41,874 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:48:41,874 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:48:41,875 [INFO] Starting prediction...
+2024-12-15 02:48:41,888 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:48:41,889 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:48:41,930 [INFO] Prediction result: T
+2024-12-15 02:48:41,931 [INFO] 127.0.0.1 - - [15/Dec/2024 02:48:41] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:51:24,235 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:51:24,235 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:51:24,235 [INFO] Starting prediction...
+2024-12-15 02:51:24,258 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:51:24,258 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:51:24,289 [INFO] Prediction result: K
+2024-12-15 02:51:24,289 [INFO] 127.0.0.1 - - [15/Dec/2024 02:51:24] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:51:28,359 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:51:28,359 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:51:28,360 [INFO] Starting prediction...
+2024-12-15 02:51:28,373 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:51:28,376 [INFO] 127.0.0.1 - - [15/Dec/2024 02:51:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:51:28,476 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:51:28,476 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:51:28,477 [INFO] Starting prediction...
+2024-12-15 02:51:28,500 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:51:28,501 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:51:28,558 [INFO] Prediction result: C
+2024-12-15 02:51:28,561 [INFO] 127.0.0.1 - - [15/Dec/2024 02:51:28] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:51:33,434 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:51:33,434 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:51:33,435 [INFO] Starting prediction...
+2024-12-15 02:51:33,454 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:51:33,456 [INFO] 127.0.0.1 - - [15/Dec/2024 02:51:33] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:51:33,502 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:51:33,503 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:51:33,503 [INFO] Starting prediction...
+2024-12-15 02:51:33,516 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:51:33,516 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:51:33,545 [INFO] Prediction result: C
+2024-12-15 02:51:33,546 [INFO] 127.0.0.1 - - [15/Dec/2024 02:51:33] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:52:02,538 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:52:02,539 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:52:02,539 [INFO] Starting prediction...
+2024-12-15 02:52:02,555 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:52:02,555 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:52:02,583 [INFO] Prediction result: K
+2024-12-15 02:52:02,584 [INFO] 127.0.0.1 - - [15/Dec/2024 02:52:02] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:52:21,473 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:52:21,473 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:52:21,473 [INFO] Starting prediction...
+2024-12-15 02:52:21,490 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:52:21,490 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:52:21,521 [INFO] Prediction result: K
+2024-12-15 02:52:21,522 [INFO] 127.0.0.1 - - [15/Dec/2024 02:52:21] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:52:27,770 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:52:27,770 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:52:27,771 [INFO] Starting prediction...
+2024-12-15 02:52:27,788 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:52:27,788 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:52:27,817 [INFO] Prediction result: K
+2024-12-15 02:52:27,817 [INFO] 127.0.0.1 - - [15/Dec/2024 02:52:27] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:52:52,498 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:52:52,499 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:52:52,499 [INFO] Starting prediction...
+2024-12-15 02:52:52,529 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:52:52,532 [INFO] 127.0.0.1 - - [15/Dec/2024 02:52:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:52:52,579 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:52:52,579 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:52:52,580 [INFO] Starting prediction...
+2024-12-15 02:52:52,597 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:52:52,597 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:52:52,637 [INFO] Prediction result: K
+2024-12-15 02:52:52,640 [INFO] 127.0.0.1 - - [15/Dec/2024 02:52:52] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:53:19,638 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:53:19,639 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:53:19,639 [INFO] Starting prediction...
+2024-12-15 02:53:19,654 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:53:19,655 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:53:19,685 [INFO] Prediction result: K
+2024-12-15 02:53:19,686 [INFO] 127.0.0.1 - - [15/Dec/2024 02:53:19] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:54:09,659 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:54:09,660 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:54:09,660 [INFO] Starting prediction...
+2024-12-15 02:54:09,690 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:54:09,691 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:54:09,725 [INFO] Prediction result: K
+2024-12-15 02:54:09,725 [INFO] 127.0.0.1 - - [15/Dec/2024 02:54:09] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:57:52,901 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:57:52,901 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:57:52,901 [INFO] Starting prediction...
+2024-12-15 02:57:52,923 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:57:52,923 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:57:52,956 [INFO] Prediction result: T
+2024-12-15 02:57:52,956 [INFO] 127.0.0.1 - - [15/Dec/2024 02:57:52] "POST /predict HTTP/1.1" 200 -
+2024-12-15 02:59:16,215 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:59:16,215 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:59:16,216 [INFO] Starting prediction...
+2024-12-15 02:59:16,232 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 02:59:16,235 [INFO] 127.0.0.1 - - [15/Dec/2024 02:59:16] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 02:59:16,316 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 02:59:16,317 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 02:59:16,317 [INFO] Starting prediction...
+2024-12-15 02:59:16,334 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 02:59:16,335 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 02:59:16,364 [INFO] Prediction result: K
+2024-12-15 02:59:16,365 [INFO] 127.0.0.1 - - [15/Dec/2024 02:59:16] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:00:17,882 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:00:17,882 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:00:17,883 [INFO] Starting prediction...
+2024-12-15 03:00:17,924 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:00:17,928 [INFO] 127.0.0.1 - - [15/Dec/2024 03:00:17] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:00:17,973 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:00:17,973 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:00:17,974 [INFO] Starting prediction...
+2024-12-15 03:00:17,989 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:00:17,990 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:00:18,022 [INFO] Prediction result: C
+2024-12-15 03:00:18,022 [INFO] 127.0.0.1 - - [15/Dec/2024 03:00:18] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:02:31,742 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:02:31,743 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:02:31,744 [INFO] Starting prediction...
+2024-12-15 03:02:31,758 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:02:31,761 [INFO] 127.0.0.1 - - [15/Dec/2024 03:02:31] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:02:31,843 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:02:31,844 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:02:31,844 [INFO] Starting prediction...
+2024-12-15 03:02:31,859 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:02:31,860 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:02:31,924 [INFO] Prediction result: C
+2024-12-15 03:02:31,924 [INFO] 127.0.0.1 - - [15/Dec/2024 03:02:31] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:02:44,686 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:02:44,686 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:02:44,687 [INFO] Starting prediction...
+2024-12-15 03:02:44,703 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:02:44,704 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:02:44,737 [INFO] Prediction result: K
+2024-12-15 03:02:44,737 [INFO] 127.0.0.1 - - [15/Dec/2024 03:02:44] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:02:58,766 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:02:58,767 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:02:58,767 [INFO] Starting prediction...
+2024-12-15 03:02:58,809 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:02:58,809 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:02:58,839 [INFO] Prediction result: T
+2024-12-15 03:02:58,840 [INFO] 127.0.0.1 - - [15/Dec/2024 03:02:58] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:04:31,259 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:04:31,259 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:04:31,259 [INFO] Starting prediction...
+2024-12-15 03:04:31,276 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:04:31,276 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:04:31,305 [INFO] Prediction result: K
+2024-12-15 03:04:31,305 [INFO] 127.0.0.1 - - [15/Dec/2024 03:04:31] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:04:40,261 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:04:40,262 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:04:40,262 [INFO] Starting prediction...
+2024-12-15 03:04:40,280 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:04:40,281 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:04:40,325 [INFO] Prediction result: T
+2024-12-15 03:04:40,326 [INFO] 127.0.0.1 - - [15/Dec/2024 03:04:40] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:06:07,784 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:06:07,784 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:06:07,784 [INFO] Starting prediction...
+2024-12-15 03:06:07,797 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:06:07,798 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:06:07,824 [INFO] Prediction result: C
+2024-12-15 03:06:07,826 [INFO] 127.0.0.1 - - [15/Dec/2024 03:06:07] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:06:16,546 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:06:16,546 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:06:16,547 [INFO] Starting prediction...
+2024-12-15 03:06:16,563 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:06:16,563 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:06:16,591 [INFO] Prediction result: T
+2024-12-15 03:06:16,591 [INFO] 127.0.0.1 - - [15/Dec/2024 03:06:16] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:11:08,729 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:11:08,730 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:11:08,730 [INFO] Starting prediction...
+2024-12-15 03:11:08,756 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:11:08,756 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:11:08,781 [INFO] Prediction result: C
+2024-12-15 03:11:08,782 [INFO] 127.0.0.1 - - [15/Dec/2024 03:11:08] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:11:25,749 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:11:25,750 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:11:25,750 [INFO] Starting prediction...
+2024-12-15 03:11:25,767 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:11:25,768 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:11:25,818 [INFO] Prediction result: T
+2024-12-15 03:11:25,822 [INFO] 127.0.0.1 - - [15/Dec/2024 03:11:25] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:11:48,126 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:11:48,127 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:11:48,127 [INFO] Starting prediction...
+2024-12-15 03:11:48,140 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:11:48,140 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:11:48,175 [INFO] Prediction result: C
+2024-12-15 03:11:48,175 [INFO] 127.0.0.1 - - [15/Dec/2024 03:11:48] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:11:57,836 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:11:57,837 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:11:57,837 [INFO] Starting prediction...
+2024-12-15 03:11:57,850 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:11:57,853 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:11:57,885 [INFO] Prediction result: T
+2024-12-15 03:11:57,885 [INFO] 127.0.0.1 - - [15/Dec/2024 03:11:57] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:13:53,590 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:13:53,591 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:13:53,591 [INFO] Starting prediction...
+2024-12-15 03:13:53,623 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:13:53,626 [INFO] 127.0.0.1 - - [15/Dec/2024 03:13:53] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:13:53,673 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:13:53,674 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:13:53,674 [INFO] Starting prediction...
+2024-12-15 03:13:53,690 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:13:53,691 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:13:53,721 [INFO] Prediction result: T
+2024-12-15 03:13:53,722 [INFO] 127.0.0.1 - - [15/Dec/2024 03:13:53] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:15:59,086 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:15:59,087 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:15:59,087 [INFO] Starting prediction...
+2024-12-15 03:15:59,116 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:15:59,116 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:15:59,151 [INFO] Prediction result: C
+2024-12-15 03:15:59,152 [INFO] 127.0.0.1 - - [15/Dec/2024 03:15:59] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:16:19,165 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:16:19,166 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:16:19,166 [INFO] Starting prediction...
+2024-12-15 03:16:19,180 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:16:19,181 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:16:19,211 [INFO] Prediction result: T
+2024-12-15 03:16:19,211 [INFO] 127.0.0.1 - - [15/Dec/2024 03:16:19] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:20:37,081 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:20:37,082 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:20:37,082 [INFO] Starting prediction...
+2024-12-15 03:20:37,102 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:20:37,102 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:20:37,128 [INFO] Prediction result: T
+2024-12-15 03:20:37,129 [INFO] 127.0.0.1 - - [15/Dec/2024 03:20:37] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:21:05,785 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:21:05,785 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:21:05,786 [INFO] Starting prediction...
+2024-12-15 03:21:05,801 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:21:05,802 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:21:05,833 [INFO] Prediction result: T
+2024-12-15 03:21:05,834 [INFO] 127.0.0.1 - - [15/Dec/2024 03:21:05] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:21:53,173 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:21:53,174 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:21:53,174 [INFO] Starting prediction...
+2024-12-15 03:21:53,192 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:21:53,192 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:21:53,224 [INFO] Prediction result: T
+2024-12-15 03:21:53,225 [INFO] 127.0.0.1 - - [15/Dec/2024 03:21:53] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:22:49,148 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:22:49,149 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:22:49,149 [INFO] Starting prediction...
+2024-12-15 03:22:49,164 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:22:49,166 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:22:49,197 [INFO] Prediction result: T
+2024-12-15 03:22:49,198 [INFO] 127.0.0.1 - - [15/Dec/2024 03:22:49] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:24:46,471 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:24:46,472 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:24:46,472 [INFO] Starting prediction...
+2024-12-15 03:24:46,491 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:24:46,491 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:24:46,520 [INFO] Prediction result: T
+2024-12-15 03:24:46,521 [INFO] 127.0.0.1 - - [15/Dec/2024 03:24:46] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:25:59,536 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:25:59,537 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:25:59,537 [INFO] Starting prediction...
+2024-12-15 03:25:59,561 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:25:59,561 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:25:59,597 [INFO] Prediction result: C
+2024-12-15 03:25:59,598 [INFO] 127.0.0.1 - - [15/Dec/2024 03:25:59] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:26:07,173 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:26:07,174 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:26:07,176 [INFO] Starting prediction...
+2024-12-15 03:26:07,196 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:26:07,198 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:26:07,243 [INFO] Prediction result: T
+2024-12-15 03:26:07,244 [INFO] 127.0.0.1 - - [15/Dec/2024 03:26:07] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:26:52,618 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:26:52,618 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:26:52,619 [INFO] Starting prediction...
+2024-12-15 03:26:52,632 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:26:52,635 [INFO] 127.0.0.1 - - [15/Dec/2024 03:26:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:26:52,686 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:26:52,686 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:26:52,686 [INFO] Starting prediction...
+2024-12-15 03:26:52,697 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:26:52,700 [INFO] 127.0.0.1 - - [15/Dec/2024 03:26:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:26:52,754 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:26:52,755 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:26:52,755 [INFO] Starting prediction...
+2024-12-15 03:26:52,770 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:26:52,770 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:26:52,801 [INFO] Prediction result: T
+2024-12-15 03:26:52,802 [INFO] 127.0.0.1 - - [15/Dec/2024 03:26:52] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:27:46,395 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:27:46,396 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:27:46,397 [INFO] Starting prediction...
+2024-12-15 03:27:46,448 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:27:46,448 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:27:46,495 [INFO] Prediction result: T
+2024-12-15 03:27:46,496 [INFO] 127.0.0.1 - - [15/Dec/2024 03:27:46] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:29:50,263 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:29:50,263 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:29:50,264 [INFO] Starting prediction...
+2024-12-15 03:29:50,279 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:29:50,279 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:29:50,304 [INFO] Prediction result: C
+2024-12-15 03:29:50,304 [INFO] 127.0.0.1 - - [15/Dec/2024 03:29:50] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:29:58,524 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:29:58,525 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:29:58,525 [INFO] Starting prediction...
+2024-12-15 03:29:58,544 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:29:58,544 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:29:58,577 [INFO] Prediction result: T
+2024-12-15 03:29:58,578 [INFO] 127.0.0.1 - - [15/Dec/2024 03:29:58] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:34:57,590 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:34:57,591 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:34:57,591 [INFO] Starting prediction...
+2024-12-15 03:34:57,612 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:34:57,639 [INFO] 127.0.0.1 - - [15/Dec/2024 03:34:57] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:34:57,689 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:34:57,690 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:34:57,690 [INFO] Starting prediction...
+2024-12-15 03:34:57,713 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:34:57,713 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:34:57,752 [INFO] Prediction result: K
+2024-12-15 03:34:57,754 [INFO] 127.0.0.1 - - [15/Dec/2024 03:34:57] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:35:13,491 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:35:13,492 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:35:13,492 [INFO] Starting prediction...
+2024-12-15 03:35:13,518 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:35:13,518 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:35:13,550 [INFO] Prediction result: K
+2024-12-15 03:35:13,550 [INFO] 127.0.0.1 - - [15/Dec/2024 03:35:13] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:36:10,008 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:36:10,009 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:36:10,009 [INFO] Starting prediction...
+2024-12-15 03:36:10,035 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:36:10,035 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:36:10,075 [INFO] Prediction result: K
+2024-12-15 03:36:10,076 [INFO] 127.0.0.1 - - [15/Dec/2024 03:36:10] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:38:57,945 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:38:57,945 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:38:57,945 [INFO] Starting prediction...
+2024-12-15 03:38:57,965 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:38:57,965 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:38:58,000 [INFO] Prediction result: K
+2024-12-15 03:38:58,001 [INFO] 127.0.0.1 - - [15/Dec/2024 03:38:58] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:43:09,453 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:43:09,453 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:43:09,454 [INFO] Starting prediction...
+2024-12-15 03:43:09,486 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:43:09,486 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:43:09,533 [INFO] Prediction result: K
+2024-12-15 03:43:09,533 [INFO] 127.0.0.1 - - [15/Dec/2024 03:43:09] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:48:38,826 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:48:38,827 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:48:38,827 [INFO] Starting prediction...
+2024-12-15 03:48:38,845 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:48:38,846 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:48:38,881 [INFO] Prediction result: K
+2024-12-15 03:48:38,882 [INFO] 127.0.0.1 - - [15/Dec/2024 03:48:38] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:49:58,558 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:49:58,559 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:49:58,559 [INFO] Starting prediction...
+2024-12-15 03:49:58,604 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:49:58,608 [INFO] 127.0.0.1 - - [15/Dec/2024 03:49:58] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:49:58,655 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:49:58,656 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:49:58,656 [INFO] Starting prediction...
+2024-12-15 03:49:58,681 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:49:58,681 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:49:58,747 [INFO] Prediction result: K
+2024-12-15 03:49:58,748 [INFO] 127.0.0.1 - - [15/Dec/2024 03:49:58] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:57:11,710 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:57:11,711 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:57:11,711 [INFO] Starting prediction...
+2024-12-15 03:57:11,728 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:57:11,731 [INFO] 127.0.0.1 - - [15/Dec/2024 03:57:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:57:11,780 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:57:11,780 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:57:11,780 [INFO] Starting prediction...
+2024-12-15 03:57:11,799 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:57:11,799 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:57:11,826 [INFO] Prediction result: K
+2024-12-15 03:57:11,827 [INFO] 127.0.0.1 - - [15/Dec/2024 03:57:11] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:57:17,478 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:57:17,480 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:57:17,482 [INFO] Starting prediction...
+2024-12-15 03:57:17,500 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:57:17,501 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:57:17,534 [INFO] Prediction result: T
+2024-12-15 03:57:17,534 [INFO] 127.0.0.1 - - [15/Dec/2024 03:57:17] "POST /predict HTTP/1.1" 200 -
+2024-12-15 03:57:20,600 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:57:20,601 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:57:20,601 [INFO] Starting prediction...
+2024-12-15 03:57:20,615 [ERROR] Error during prediction
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 23, in predict_image
+    img = load_img(img_path, target_size=(224, 224))
+  File "C:\Users\kth00\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\utils\image_utils.py", line 422, in load_img
+    with open(path, "rb") as f:
+PermissionError: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\server.py", line 45, in predict
+    prediction = predict_image(file_path)
+  File "C:\Users\kth00\Documents\GitHub\2024_2_GameEngineBase\Team4\Dataprocess\predict.py", line 36, in predict_image
+    raise RuntimeError(f"Prediction failed: {e}")
+RuntimeError: Prediction failed: [Errno 13] Permission denied: 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png'
+2024-12-15 03:57:20,618 [INFO] 127.0.0.1 - - [15/Dec/2024 03:57:20] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2024-12-15 03:57:20,668 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 03:57:20,669 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 03:57:20,669 [INFO] Starting prediction...
+2024-12-15 03:57:20,684 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 03:57:20,684 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 03:57:20,711 [INFO] Prediction result: C
+2024-12-15 03:57:20,711 [INFO] 127.0.0.1 - - [15/Dec/2024 03:57:20] "POST /predict HTTP/1.1" 200 -
+2024-12-15 04:00:20,781 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 04:00:20,782 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 04:00:20,782 [INFO] Starting prediction...
+2024-12-15 04:00:20,805 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 04:00:20,806 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 04:00:20,835 [INFO] Prediction result: T
+2024-12-15 04:00:20,836 [INFO] 127.0.0.1 - - [15/Dec/2024 04:00:20] "POST /predict HTTP/1.1" 200 -
+2024-12-15 04:00:23,828 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 04:00:23,828 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 04:00:23,828 [INFO] Starting prediction...
+2024-12-15 04:00:23,851 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 04:00:23,851 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 04:00:23,880 [INFO] Prediction result: C
+2024-12-15 04:00:23,881 [INFO] 127.0.0.1 - - [15/Dec/2024 04:00:23] "POST /predict HTTP/1.1" 200 -
+2024-12-15 04:00:28,562 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 04:00:28,563 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 04:00:28,563 [INFO] Starting prediction...
+2024-12-15 04:00:28,599 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 04:00:28,599 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 04:00:28,636 [INFO] Prediction result: K
+2024-12-15 04:00:28,637 [INFO] 127.0.0.1 - - [15/Dec/2024 04:00:28] "POST /predict HTTP/1.1" 200 -
+2024-12-15 04:01:04,015 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 04:01:04,015 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 04:01:04,015 [INFO] Starting prediction...
+2024-12-15 04:01:04,029 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 04:01:04,030 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 04:01:04,057 [INFO] Prediction result: C
+2024-12-15 04:01:04,057 [INFO] 127.0.0.1 - - [15/Dec/2024 04:01:04] "POST /predict HTTP/1.1" 200 -
+2024-12-15 04:07:05,428 [DEBUG] Received request: {'file_path': 'C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/'}
+2024-12-15 04:07:05,429 [INFO] File path received: C:/Users/kth00/Documents/GitHub/2024_2_GameEngineBase/Team4/Saved/SavedDrawing.png
+2024-12-15 04:07:05,429 [INFO] Starting prediction...
+2024-12-15 04:07:05,450 [DEBUG] STREAM b'IHDR' 16 13
+2024-12-15 04:07:05,450 [DEBUG] STREAM b'IDAT' 41 8192
+2024-12-15 04:07:05,490 [INFO] Prediction result: T
+2024-12-15 04:07:05,491 [INFO] 127.0.0.1 - - [15/Dec/2024 04:07:05] "POST /predict HTTP/1.1" 200 -
