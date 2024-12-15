@@ -35,6 +35,8 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UPROPERTY(VisibleAnywhere,BlueprintReadWrite, Category = "Color")
+	EColor CurrentColor = EColor::EC_None;
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -44,9 +46,6 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	EAttackRange CurrentRange = EAttackRange::Melee;
-
-	UPROPERTY(VisibleAnywhere, Category = "Color")
-	EColor CurrentColor = EColor::EC_None;
 
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	bool bIsFlying = false;       
@@ -174,6 +173,8 @@ public:
 	void ToggleLockOn();
 
 	FTimerHandle FireTimerHandle;
+
+	FTimerHandle ZoomTimerHandle;
 
 	bool bIsFiring = false;
 

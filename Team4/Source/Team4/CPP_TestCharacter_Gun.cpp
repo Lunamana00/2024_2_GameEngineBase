@@ -50,6 +50,35 @@ void ACPP_TestCharacter_Gun::NormalAttack()
 	EAttackState AttackState = AttackComponent->GetCurrentAttackState();
 	if (AttackState == EAttackState::EAS_Unoccupied)
 	{
+		switch (AttackComponent->CurrentColor)
+		{
+		case EColor::EC_None:
+			break;
+		case EColor::EC_Red:
+			if (RedGage <= 0)
+			{
+				RedGage = 0;
+				AttackComponent->CurrentColor = EColor::EC_None;
+			}
+			else RedGage-=1;
+			break;
+		case EColor::EC_Blue:
+			if (BlueGage <= 0)
+			{
+				BlueGage = 0;
+				AttackComponent->CurrentColor = EColor::EC_None;
+			}
+			else BlueGage--;
+			break;
+		default:
+			if (GreenGage <= 0)
+			{
+				GreenGage = 0;
+				AttackComponent->CurrentColor = EColor::EC_None;
+			}
+			else GreenGage--;
+			break;
+		}
 		AttackComponent->UseRangedAttack();
 	}
 }

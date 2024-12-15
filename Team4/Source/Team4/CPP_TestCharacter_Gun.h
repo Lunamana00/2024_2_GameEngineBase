@@ -20,4 +20,13 @@ class TEAM4_API ACPP_TestCharacter_Gun : public ACPP_TestCharacter
 
 	void NormalAttack() ;
 
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 RedGage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 BlueGage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 GreenGage;
 };
