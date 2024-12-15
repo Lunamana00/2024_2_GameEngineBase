@@ -14,8 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/BluePrint/BP_snowButton.uasset" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +199,7 @@
       <workItem from="1734171789173" duration="3752000" />
       <workItem from="1734177918219" duration="4246000" />
       <workItem from="1734231309391" duration="2037000" />
+      <workItem from="1734254860996" duration="1174000" />
     </task>
     <servers />
   </component>
