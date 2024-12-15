@@ -316,10 +316,8 @@ void UCPP_AttackComponent::SpawnProjectile_Internal(FVector MuzzleLocation, FRot
 	case EColor::EC_Blue:
 		ChosenProjectileClass = ProjectileClass_B;
 		break;
-	case EColor::EC_Green:
-		ChosenProjectileClass = ProjectileClass_G;
-		break;
 	default:
+		ChosenProjectileClass = ProjectileClass_G;
 		break;
 	}
 
@@ -396,7 +394,22 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 		Character->GetCharacterMovement()->bOrientRotationToMovement = false;
 		Character->GetCharacterMovement()->bUseControllerDesiredRotation = true;
 		
-		bIsZoom = true;
+		if (CrosshairWidget && !CrosshairWidget->IsInViewport())
+		{
+			CrosshairWidget->AddToViewport();
+		}
+		CurrentRange = EAttackRange::Ranged;
+		Character->GetCharacterMovement()->bOrientRotationToMovement = false;
+		Character->GetCharacterMovement()->bUseControllerDesiredRotation = true;
+
+		
+		GetWorld()->GetTimerManager().SetTimer(
+			ZoomTimerHandle, 
+			[this]() {bIsZoom = true; },
+			0.4f,                 
+			false                 
+		);
+		
 	}
 	else
 	{
