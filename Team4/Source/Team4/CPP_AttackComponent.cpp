@@ -256,34 +256,6 @@ void UCPP_AttackComponent::SpawnProjectile()
 	}
 }
 
-void UCPP_AttackComponent::StartFire()
-{
-	if (bIsFiring) return; // 이미 발사 중이라면 중복 실행 방지
-
-	bIsFiring = true;
-
-	SpawnProjectile();
-
-	GetWorld()->GetTimerManager().SetTimer(
-		FireTimerHandle,
-		this, 
-		&UCPP_AttackComponent::SpawnProjectile,
-		1.f / FireRate, 
-		true);
-
-	AttackState = EAttackState::EAS_Unoccupied;
-}
-
-void UCPP_AttackComponent::EndFire()
-{
-	if (!bIsFiring) return;
-
-	bIsFiring = false;
-
-	GetWorld()->GetTimerManager().ClearTimer(FireTimerHandle);
-
-	AttackState = EAttackState::EAS_Unoccupied;
-}
 
 void UCPP_AttackComponent::Server_SpawnProjectile_Implementation(FVector MuzzleLocation, FRotator SpawnRotation, EColor ProjectileColor)
 {
@@ -401,14 +373,6 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 		CurrentRange = EAttackRange::Ranged;
 		Character->GetCharacterMovement()->bOrientRotationToMovement = false;
 		Character->GetCharacterMovement()->bUseControllerDesiredRotation = true;
-
-		
-		GetWorld()->GetTimerManager().SetTimer(
-			ZoomTimerHandle, 
-			[this]() {bIsZoom = true; },
-			0.4f,                 
-			false                 
-		);
 		
 	}
 	else
@@ -416,7 +380,6 @@ void UCPP_AttackComponent::AimDownSight(const FInputActionValue& Value)
 		if (CrosshairWidget)
 		{
 			CrosshairWidget->RemoveFromParent();
-			bIsZoom = false;
 		
 		}
 		CurrentRange = EAttackRange::Melee;
@@ -480,7 +443,6 @@ void UCPP_AttackComponent::UseNormalAttack()
 					}
 				}
 
-
 				ComboCount = ComboCount % Attack->AttackMontages.Num();
 				AnimInstance->Montage_Play(Attack->AttackMontages[ComboCount]);
 				ComboCount++;
@@ -524,13 +486,15 @@ void UCPP_AttackComponent::UseRangedAttack()
 					TraceUnderCrosshairs(TraceResult);
 					CachedHitLocation = TraceResult.ImpactPoint;
 					bIsRangedAttacking = true;
-					StartFire();
+					SpawnProjectile();
+					
 				}
 				AnimInstance->Montage_Play(Attack->AttackMontages[ComboCount]);
 			}
 
 		}
 	}
+	ResetAttackState();
 }
 
 void UCPP_AttackComponent::StartLockOn()

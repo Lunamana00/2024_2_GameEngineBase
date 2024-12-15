@@ -116,9 +116,6 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Combat")
 	void SpawnProjectile();
 
-	UFUNCTION(BlueprintCallable, Category = "Combat")
-	void StartFire();
-
 	bool bIsRangedAttacking = false;
 	FVector CachedHitLocation;
 
@@ -191,9 +188,5 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
 	bool bIsAiming = false;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Combat")
-	bool bIsZoom = false;
 
-	UFUNCTION(BlueprintCallable, Category = "Combat")
-	void EndFire();
 };

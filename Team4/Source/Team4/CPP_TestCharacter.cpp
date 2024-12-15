@@ -304,9 +304,7 @@ void ACPP_TestCharacter::OnAttackPressed(const FInputActionValue& Value)
 			if (!bIsReleased) 
 			{
 				bIsPressed = false;
-				bIsReleased = true; 
-				
-				AttackComponent->AimDownSight(Value);
+				bIsReleased = true;
 			}
 			}),
 		0.5f, 

@@ -79,20 +79,6 @@ void ACPP_MeleeWeapon::Tick(float DeltaTime)
 		Box,
 		IgnoreParams);
 
-	//if (bDebugMode)
-	//{
-	//	FVector CenterPoint = UKismetMathLibrary::VLerp(BoxTraceStart->GetComponentLocation(),
-	//		BoxTraceEnd->GetComponentLocation(), 0.5f);
-	//	UKismetSystemLibrary::DrawDebugBox(
-	//		this,
-	//		CenterPoint,
-	//		Box.GetExtent(),
-	//		bHasFoundTargets ? FColor::Green : FColor::Red,
-	//		BoxTraceStart->GetComponentRotation(),
-	//		1.f,
-	//		2.f
-	//	);
-	//}
 
 	FDamageEvent TargetAttackedEvent;
 
@@ -116,12 +102,48 @@ void ACPP_MeleeWeapon::Tick(float DeltaTime)
 			{
 				//GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, "PlayerCharacter");
 				float DamageAmount = PlayerCharacter->GetAttribute()->GetBaseDamage();
-				TargetEnemy ->TakeDamage(DamageAmount, TargetAttackedEvent,
+				TargetEnemy->TakeDamage(DamageAmount, TargetAttackedEvent,
+					PlayerCharacter->GetController(), GetInstigator());
+			}
+			if (ACPP_TestCharacter* PlayerCharacter = Cast<ACPP_TestCharacter>(GetInstigator()))
+			{
+				//GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, "PlayerCharacter");
+				float DamageAmount = PlayerCharacter->GetAttribute()->GetBaseDamage();
+				TargetEnemy->TakeDamage(DamageAmount, TargetAttackedEvent,
 					PlayerCharacter->GetController(), GetInstigator());
 			}
 			TargetsToIgnore.AddUnique(TargetEnemy);
-		};
+		}
+		else if (APawn* TargetEnemy_p = Cast<APawn>(WeaponHit.GetActor()))
+		{
 
+			if (TargetsToIgnore.Contains(TargetEnemy_p)) continue;
+
+			UGameplayStatics::PlayWorldCameraShake(GetWorld(), CamShake, GetActorLocation(),
+				0, 1000.f, 1.f, false);
+
+
+			if (ICPP_HitInterface* HitInterface = Cast<ICPP_HitInterface>(WeaponHit.GetActor()))
+			{
+				HitInterface->GetHit(WeaponHit.ImpactPoint);
+			}
+
+			if (ACPP_TestCharacter* PlayerCharacter = Cast<ACPP_TestCharacter>(GetInstigator()))
+			{
+				//GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, "PlayerCharacter");
+				float DamageAmount = PlayerCharacter->GetAttribute()->GetBaseDamage();
+				TargetEnemy_p->TakeDamage(DamageAmount, TargetAttackedEvent,
+					PlayerCharacter->GetController(), GetInstigator());
+			}
+			if (ACPP_TestCharacter* PlayerCharacter = Cast<ACPP_TestCharacter>(GetInstigator()))
+			{
+				//GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, "PlayerCharacter");
+				float DamageAmount = PlayerCharacter->GetAttribute()->GetBaseDamage();
+				TargetEnemy_p->TakeDamage(DamageAmount, TargetAttackedEvent,
+					PlayerCharacter->GetController(), GetInstigator());
+			}
+			TargetsToIgnore.AddUnique(TargetEnemy_p);
+		}
 	}
 
 
