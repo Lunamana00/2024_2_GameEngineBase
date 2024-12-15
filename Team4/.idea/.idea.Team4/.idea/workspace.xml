@@ -12,29 +12,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/2/N1/86CNUOYV3XRCIKQ3KD32CI.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/3/VG/MPOPYUV0JXMTN1151KI00T.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/4/9F/9PX22R05RZBPFCHYQWR02V.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/6/OE/PV2FO32AEDC4EXSVNUF5WJ.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/9/4F/5CX8IDVEUP6W1CBP9M7XLB.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/A/ME/7A202HUP4JDISO1VVEGBC3.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/A/T4/XSX40OIQODN3KOFX0JV6NN.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/C/0V/5NJJP2VLXGS1W35O4W85T4.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/C/XN/PXRQRWEUNXIYD7W41306S8.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/D/PD/G2S0MVG3LFDSFSD6HOFSZ6.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/D/PL/RIPC83QVDAH13PN48LPA7A.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/F/3C/ZKJGDOF9S7S2X6LFYXUK75.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/F/3R/1RTPP7S3UT0MQGJIBZ29GG.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/AIC_T4_Boss.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/AIC_T4_Boss.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BB_Boss.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BB_Boss.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BP_BOSS_KTH.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BP_BOSS_KTH.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BP_T4_BossProjectile.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/Pattern1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/Pattern1.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" afterDir="false" />
-    </list>
+    <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
