@@ -98,11 +98,11 @@ void ACPP_TestCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 
-	//if (!Attribute->IsAlive() && !bIsDying)
-	//{
-	//	bIsDying = true;
-	//	Die();
-	//}
+	if (!Attribute->IsAlive() && !bIsDying)
+	{
+		bIsDying = true;
+		Die();
+	}
 }
 
 // Called to bind functionality to input
@@ -132,12 +132,9 @@ void ACPP_TestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Completed, this, &ACPP_TestCharacter::OnAttackReleased);
 
 		
-		//EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Triggered, AttackComponent, &UCPP_AttackComponent::AimDownSight);
-		//EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, AttackComponent, &UCPP_AttackComponent::AimDownSight);
 		
 		EnhancedInputComponent->BindAction(LockOnAction, ETriggerEvent::Started, AttackComponent, &UCPP_AttackComponent::ToggleLockOn);
-		//
-		// EnhancedInputComponent->BindAction(SkillAction, ETriggerEvent::Started, AttackComponent, &UCPP_AttackComponent::UseSkill);
+
 }
 
 }
