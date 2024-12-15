@@ -141,9 +141,6 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category = Input)
 	UInputAction* LockOnAction;
-	
-	UPROPERTY(EditDefaultsOnly, Category = Input)
-	UInputAction* SkillAction;
 
 	UPROPERTY(EditDefaultsOnly, Category = Input)
 	UInputAction* StartJumpAction;
@@ -153,8 +150,6 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, Category = Input)
 	FVector2D MovementInputVector;
-
-	//virtual void NormalAttack();
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = Attack, meta = (AllowPrivateAccess = "true"))
 	UMotionWarpingComponent* MotionWarpingComponent;
