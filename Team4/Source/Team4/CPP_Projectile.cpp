@@ -2,16 +2,11 @@
 
 
 #include "CPP_Projectile.h"
-#include "NiagaraComponent.h"
-#include "NiagaraFunctionLibrary.h"
-#include "NiagaraFunctionLibrary.h"
 #include "Components/SphereComponent.h" 
 #include "Engine/DamageEvents.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
-#include "Particles/ParticleSystem.h"
 #include "Net/UnrealNetwork.h"
-#include "Sound/SoundCue.h"
 #include "CPP_EnemyTest.h"
 
 // Sets default values
@@ -26,8 +21,6 @@ ACPP_Projectile::ACPP_Projectile()
 	CollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionSphere"));
 	SetRootComponent(CollisionSphere);
 
-	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
-
 	ProjectileMovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovementComponent"));
 	ProjectileMovementComponent->bRotationFollowsVelocity = true;
 	ProjectileMovementComponent->InitialSpeed = 2000.f;
@@ -39,19 +32,6 @@ ACPP_Projectile::ACPP_Projectile()
 void ACPP_Projectile::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	if (TracerEffect)
-	{
-		UNiagaraFunctionLibrary::SpawnSystemAttached(
-			TracerEffect,
-			GetRootComponent(),          // Attach to the root component or any other component
-			NAME_None,
-			FVector::ZeroVector,         // Relative location
-			FRotator::ZeroRotator,       // Relative rotation
-			EAttachLocation::KeepRelativeOffset,
-			true                         // Auto destroy
-		);
-	}
 
 	CollisionSphere->OnComponentHit.AddDynamic(this, &ACPP_Projectile::OnHit);
 }
@@ -59,14 +39,10 @@ void ACPP_Projectile::BeginPlay()
 void ACPP_Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	if (OtherActor)
-	{
-		FDamageEvent DamageEvent;
+	{FDamageEvent DamageEvent;
 		OtherActor->TakeDamage(BaseDamge, DamageEvent, GetWorld()->GetFirstPlayerController(), this);
 	}
-	if (ICPP_HitInterface* HitInterface = Cast<ICPP_HitInterface>(OtherActor))
-	{
-		HitInterface->GetHit(Hit.ImpactPoint);
-	}
+
 	Destroy();
 }
 
@@ -80,14 +56,5 @@ void ACPP_Projectile::Tick(float DeltaTime)
 void ACPP_Projectile::Destroyed()
 {
 	Super::Destroyed();
-	if (ImpactEffect)
-	{
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), ImpactEffect, GetActorLocation(),
-			GetActorRotation());
-	}
-	if (ImpactSound)
-	{
-		UGameplayStatics::PlaySoundAtLocation(this, ImpactSound, GetActorLocation());
-	}
 }
 

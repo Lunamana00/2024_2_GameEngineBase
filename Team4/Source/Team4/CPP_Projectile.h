@@ -36,18 +36,4 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	class UProjectileMovementComponent* ProjectileMovementComponent;
 
-	UPROPERTY(EditAnywhere)
-	class UNiagaraSystem* TracerEffect;
-
-	UPROPERTY(EditAnywhere)
-	class UNiagaraSystem* ImpactEffect;
-
-	UPROPERTY(EditAnywhere)
-	class UNiagaraComponent* NiagaraComponent;
-
-	UPROPERTY(EditAnywhere)
-	class USoundCue* ImpactSound;
-
-
-
 };
