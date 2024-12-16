@@ -72,6 +72,6 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	class UNiagaraSystem* FireHitNiagaraSystem;
 
-
-
+	UPROPERTY(EditAnywhere)
+	float ImpulsePower=5000.0f;
 };

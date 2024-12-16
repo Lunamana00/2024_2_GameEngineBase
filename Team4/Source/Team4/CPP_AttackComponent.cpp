@@ -47,7 +47,7 @@ void UCPP_AttackComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 	if (UCameraComponent* Camera = Character->GetFollowCamera())
 	{
 		float TargetFOV = bIsAiming ? AimFOV : DefaultFOV;
-		FVector CamTargetLocation = bIsAiming ? DefaultCameraLocation + FVector(0.f, 50.f, 80.f) : DefaultCameraLocation;
+		FVector CamTargetLocation = bIsAiming ? DefaultCameraLocation : DefaultCameraLocation;
 		float NewFOV = FMath::FInterpTo(Camera->FieldOfView, TargetFOV, DeltaTime, 10.f);
 		FVector NewCamLocation = FMath::VInterpTo(Camera->GetRelativeLocation(), CamTargetLocation, DeltaTime, 15.f);
 		Camera->SetRelativeLocation(NewCamLocation);
@@ -456,6 +456,8 @@ void UCPP_AttackComponent::UseRangedAttack()
 {
 	CurrentRange = EAttackRange::Ranged;
 
+	if (bIsRangedAttacking) return;
+
 	if (AttackState == EAttackState::EAS_Unoccupied
 		&& !Character->GetCharacterMovement()->IsFalling())
 	{
@@ -485,15 +487,17 @@ void UCPP_AttackComponent::UseRangedAttack()
 					FHitResult TraceResult;
 					TraceUnderCrosshairs(TraceResult);
 					CachedHitLocation = TraceResult.ImpactPoint;
+
 					bIsRangedAttacking = true;
+
 					SpawnProjectile();
-					
 				}
 				AnimInstance->Montage_Play(Attack->AttackMontages[ComboCount]);
 			}
 
 		}
 	}
+	bIsRangedAttacking = false;
 	ResetAttackState();
 }
 

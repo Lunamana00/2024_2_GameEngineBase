@@ -31,7 +31,7 @@ public:
 	float BaseDamge = 10.f;
 
 	UPROPERTY(EditAnywhere)
-	class UBoxComponent* CollisionBox;
+	class USphereComponent* CollisionSphere;
 
 	UPROPERTY(VisibleAnywhere)
 	class UProjectileMovementComponent* ProjectileMovementComponent;

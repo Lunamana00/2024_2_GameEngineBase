@@ -5,7 +5,7 @@
 #include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraFunctionLibrary.h"
-#include "Components/BoxComponent.h"
+#include "Components/SphereComponent.h" 
 #include "Engine/DamageEvents.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -23,8 +23,8 @@ ACPP_Projectile::ACPP_Projectile()
 	bReplicates = true;
 	SetReplicateMovement(true);// 발사체 복제 활성화   // 발사체의 움직임도 복제
 	
-	CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
-	SetRootComponent(CollisionBox);
+	CollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionSphere"));
+	SetRootComponent(CollisionSphere);
 
 	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
 
@@ -53,7 +53,7 @@ void ACPP_Projectile::BeginPlay()
 		);
 	}
 
-	CollisionBox->OnComponentHit.AddDynamic(this, &ACPP_Projectile::OnHit);
+	CollisionSphere->OnComponentHit.AddDynamic(this, &ACPP_Projectile::OnHit);
 }
 
 void ACPP_Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)

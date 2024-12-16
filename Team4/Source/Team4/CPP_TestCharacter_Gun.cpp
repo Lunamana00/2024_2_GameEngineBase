@@ -40,7 +40,7 @@ void ACPP_TestCharacter_Gun::SetupPlayerInputComponent(UInputComponent* PlayerIn
 		// Attacking
 		EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Triggered, AttackComponent, &UCPP_AttackComponent::AimDownSight);
 		EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, AttackComponent, &UCPP_AttackComponent::AimDownSight);
-		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Triggered, this, &ACPP_TestCharacter_Gun::NormalAttack);
+		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Started, this, &ACPP_TestCharacter_Gun::NormalAttack);
 	}
 }
 
