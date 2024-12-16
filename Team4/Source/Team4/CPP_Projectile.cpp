@@ -33,7 +33,7 @@ void ACPP_Projectile::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CollisionSphere->OnComponentHit.AddDynamic(this, &ACPP_Projectile::OnHit);
+	//CollisionSphere->OnComponentHit.AddDynamic(this, &ACPP_Projectile::OnHit);
 }
 
 void ACPP_Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
@@ -50,7 +50,11 @@ void ACPP_Projectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 void ACPP_Projectile::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
+	if (GetVelocity().Size() == 0.0f)
+	{
+		Destroy();
+	}
 }
 
 void ACPP_Projectile::Destroyed()
