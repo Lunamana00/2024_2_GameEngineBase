@@ -9,8 +9,20 @@
   <component name="ChangeListManager">
     <list default="true" id="919f37fe-979f-4b2f-939c-1acaad7f4ce2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/Team4Editor.target" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/B_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/B_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Magic_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Magic_Canvas_Actor_k.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Sword_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Sword_Canvas_Actor_k.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Tree_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Tree_Canvas_Actor_k.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Circle/Green_spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Circle/Green_spawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Circle/Red_Spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Circle/Red_Spawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Tree_Blue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Tree_Blue.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Tree_Red.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Tree_Red.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Tree/Tree_green.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Tree/Tree_green.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dataprocess/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/Dataprocess/server.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +166,7 @@
       <workItem from="1733569362372" duration="8218000" />
       <workItem from="1733825946377" duration="9155000" />
       <workItem from="1734115318550" duration="1377000" />
-      <workItem from="1734348211938" duration="1302000" />
+      <workItem from="1734348211938" duration="5360000" />
     </task>
     <servers />
   </component>
