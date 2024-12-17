@@ -43,6 +43,7 @@ ACPP_TestCharacter::ACPP_TestCharacter()
 	GetCharacterMovement()->MinAnalogWalkSpeed = 20.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
+	
 
 
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -130,6 +131,9 @@ void ACPP_TestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 		// Attacking
 		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Started, this, &ACPP_TestCharacter::OnAttackPressed);
 		EnhancedInputComponent->BindAction(NormalAttackAction, ETriggerEvent::Completed, this, &ACPP_TestCharacter::OnAttackReleased);
+
+		EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Triggered, AttackComponent, &UCPP_AttackComponent::AimDownSight);
+		EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, AttackComponent, &UCPP_AttackComponent::AimDownSight);
 
 		EnhancedInputComponent->BindAction(LockOnAction, ETriggerEvent::Started, AttackComponent, &UCPP_AttackComponent::ToggleLockOn);
 
@@ -305,6 +309,7 @@ void ACPP_TestCharacter::OnAttackPressed(const FInputActionValue& Value)
 			{
 				bIsPressed = false;
 				bIsReleased = true;
+				
 			}
 			}),
 		0.5f, 

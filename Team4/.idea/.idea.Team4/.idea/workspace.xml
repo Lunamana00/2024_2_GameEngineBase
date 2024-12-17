@@ -13,17 +13,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cded6d7e-29d0-4be2-8001-bdeb47dcfa82" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameEngineBase/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush" beforeDir="false" afterPath="$PROJECT_DIR$/../GameEngineBase/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameEngineBase/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush" beforeDir="false" afterPath="$PROJECT_DIR$/../GameEngineBase/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameEngineBase/Intermediate/ShaderAutogen/VULKAN_SM6/AutogenShaderHeaders.ush" beforeDir="false" afterPath="$PROJECT_DIR$/../GameEngineBase/Intermediate/ShaderAutogen/VULKAN_SM6/AutogenShaderHeaders.ush" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameEngineBase/Saved/Logs/Map.log" beforeDir="false" afterPath="$PROJECT_DIR$/../GameEngineBase/Saved/Logs/Map.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameEngineBase/Saved/ShaderDebugInfo/PCD3D_SM6/WorldGridMaterial_be532c94ae75ea51/Default/DDCKey-Editor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameEngineBase/Saved/ShaderDebugInfo/PCD3D_SM6/WorldGridMaterial_be532c94ae75ea51/Default/DDCKey-Editor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameEngineBase/Saved/Telemetry/Telemetry.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameEngineBase/Saved/Telemetry/Telemetry.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Binaries/Win64/UnrealEditor-Team4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Projectile.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_Projectile.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_TestCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_CPP_TestCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_Test_CPP_Gamemode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Blueprint/BP_Test_CPP_Gamemode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerMovement/Input/TestInput.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerMovement/Input/TestInput.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PolygonNature/MainMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/kth/ThirdPersonMap1/B/HB/HSBSUTT7RODUIXYAOGCNHU.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/BossHP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/BossHP.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/hyunwoo_UI/MainMenuMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BP_BOSS_KTH.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BP_BOSS_KTH.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BT_Boss.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/BT_Boss.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/Pattern1.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/Pattern1.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/Pattern2.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/Boss/AI/Pattern2.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/AIC_Semi.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/AI/SemiBoss/BP_Semi.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/kth/ATK/B_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/B_Sword.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/G_Sword.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/ATK/R_Sword.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/BP_kth_Gamemode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/BP_kth_Gamemode.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Magic_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Magic_Canvas_Actor_k.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Sword_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Sword_Canvas_Actor_k.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/kth/Canva/Tree_Canvas_Actor_k.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Canva/Tree_Canvas_Actor_k.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Circle/Blue_Spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Circle/Blue_Spawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Circle/Green_spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Circle/Green_spawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/kth/Circle/Red_Spawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/kth/Circle/Red_Spawn.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dataprocess/server.log" beforeDir="false" afterPath="$PROJECT_DIR$/Dataprocess/server.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/CPP_MeleeWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/CPP_MeleeWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/CPP_MeleeWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/CPP_MeleeWeapon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Team4/CPP_TestCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Team4/CPP_TestCharacter.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +60,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Programs/AutomationTool/Gauntlet/Platform/Windows/Gauntlet.WindowsPGO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Programs/Shared/EpicGames.Build/Automation/ProcessSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/AIC_Boss.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/AIC_Boss.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/BP_ControllerTest.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -45,6 +70,10 @@
     <setting file="file://$PROJECT_DIR$/Source/Team4/BossProjectile.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/BossProjectile.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/CPP_AttackComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/CPP_AttackComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/CPP_MeleeWeapon.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/CPP_MeleeWeapon.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Team4/CPP_TestCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/CanvasComponent.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/DrawingActor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Team4/DrawingActor.h" root0="FORCE_HIGHLIGHTING" />
@@ -212,6 +241,14 @@
       <workItem from="1734259251095" duration="290000" />
       <workItem from="1734268401180" duration="802000" />
       <workItem from="1734356182355" duration="1788000" />
+      <workItem from="1734429648718" duration="1733000" />
+      <workItem from="1734437042466" duration="331000" />
+      <workItem from="1734437615356" duration="2424000" />
+      <workItem from="1734442768369" duration="361000" />
+      <workItem from="1734445403032" duration="100000" />
+      <workItem from="1734445569803" duration="486000" />
+      <workItem from="1734447803677" duration="421000" />
+      <workItem from="1734449985957" duration="2767000" />
     </task>
     <servers />
   </component>

@@ -99,6 +99,7 @@ void ACPP_MeleeWeapon::Tick(float DeltaTime)
 				FVector PlayerLocation = PlayerCharacter->GetActorLocation();
 				FVector TargetLocation = TargetEnemy->GetActorLocation();
 				FVector DirectionToPush = TargetLocation - PlayerLocation;
+				DirectionToPush.Z=0;
 
 				UAnimInstance* AnimInstance = TargetEnemy->GetMesh()->GetAnimInstance();
 				if (AnimInstance)
